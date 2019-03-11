@@ -1,0 +1,284 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../libraries/fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaBold;
+  src: url(../libraries/fonts/Karla-Bold.ttf);
+}
+
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  font-family: MontserratRegular;
+  -webkit-transition: all 0.35s !important;
+  -webkit-transition: all 0.45s !important;
+  transition: all 0.45s !important;
+  max-width: 14000px !important;
+  /*Submenu Dropdown*/
+}
+
+.navbar-default .navbar-header .navbar-brand {
+  color: #fff;
+  font-family: MontserratRegular;
+  text-transform: uppercase;
+  padding: 9px 15px;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
+  color: #27C566;
+}
+
+.navbar-default .navbar-header .navbar-toggle {
+  font-weight: 700;
+  font-size: 12px;
+  color: #27C566;
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: transparent;
+  color: #27C566;
+}
+
+.navbar-default .nav > li {
+  padding: 20px;
+  padding-bottom: 10px;
+  font-family: MontserratRegular;
+}
+
+.navbar-default .nav > li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff !important;
+  background-color: transparent;
+  padding: 2px 0;
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus,
+.navbar-default .nav > li > a:focus:hover,
+.navbar-default .nav > li.active > a:focus,
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
+  background-color: transparent;
+  color: #27C566 !important;
+}
+
+.navbar-default .phone-contact {
+  margin-top: -7px;
+}
+
+.navbar-default .phone-contact img {
+  background: #dcdcdd;
+  height: 34px;
+  padding: 10px;
+  float: left;
+}
+
+.navbar-default .phone-contact h5 {
+  padding: 0;
+  margin: 0;
+  height: 34px;
+  width: 180px;
+  padding-top: 8.5px;
+  background: #d0d0d4;
+  color: #333333;
+  font-family: MontserratRegular;
+}
+
+.navbar-default .phone-contact h5 span {
+  padding-left: 8px;
+  font-family: MontserratRegular;
+}
+
+.navbar-default .dropdown-menu {
+  background: #fff;
+  border: none;
+  border-radius: 2px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  min-width: auto;
+  left: 0 !important;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 23px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.navbar-default .dropdown-menu .fa-caret-up {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  font-size: 21px;
+  color: #fff;
+}
+
+.navbar-default .dropdown-menu > li > a {
+  border: none;
+  margin-bottom: 0 !important;
+  transition: all 0.09s ease-in-out;
+  border: none;
+  margin-bottom: 0 !important;
+  -webkit-transition: all 0.09s ease-in-out;
+  transition: all 0.09s ease-in-out;
+  display: block !important;
+  padding: 3px 0;
+  margin: 0;
+  width: auto !important;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-transform: capitalize !important;
+  color: #36383f !important;
+}
+
+.navbar-default .dropdown-menu > li > a:hover {
+  color: #27C566 !important;
+  text-shadow: none;
+  border: none !important;
+  text-decoration: none;
+  background: transparent;
+}
+
+.navbar-default .dropdown-submenu {
+  position: relative;
+}
+
+.navbar-default ul.nav li:hover > ul.dropdown-menu {
+  display: block;
+}
+
+.top-nav-collapse.navbar-default {
+  background-color: white;
+  position: fixed;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 16px 4px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 16px 4px;
+  -webkit-transition: all 0.35s !important;
+  -webkit-transition: all 0.45s !important;
+  transition: all 0.45s !important;
+}
+
+.top-nav-collapse.navbar-default .navbar-header .navbar-brand {
+  color: #fff;
+  font-family: MontserratRegular;
+  text-transform: uppercase;
+}
+
+.top-nav-collapse.navbar-default .navbar-header .navbar-brand:hover, .top-nav-collapse.navbar-default .navbar-header .navbar-brand:focus {
+  color: #27C566;
+}
+
+.top-nav-collapse.navbar-default .navbar-header .navbar-toggle {
+  font-weight: 700;
+  font-size: 12px;
+  color: #27C566;
+  text-transform: uppercase;
+}
+
+.top-nav-collapse.navbar-default .navbar-nav > .active > a,
+.top-nav-collapse.navbar-default .navbar-nav > .active > a:focus,
+.top-nav-collapse.navbar-default .navbar-nav > .active > a:hover {
+  background-color: transparent;
+  color: #333333;
+}
+
+.top-nav-collapse.navbar-default .nav > li {
+  padding: 20px;
+  padding-bottom: 10px;
+  font-family: MontserratRegular;
+}
+
+.top-nav-collapse.navbar-default .nav > li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #333333 !important;
+  background-color: transparent;
+  padding: 2px 0;
+}
+
+.top-nav-collapse.navbar-default .nav > li > a:hover,
+.top-nav-collapse.navbar-default .nav > li > a:focus,
+.top-nav-collapse.navbar-default .nav > li > a:focus:hover,
+.top-nav-collapse.navbar-default .nav > li.active > a:focus,
+.top-nav-collapse.navbar-default .nav > li.active > a:hover,
+.top-nav-collapse.navbar-default .nav > li.active > a:focus:hover {
+  background-color: transparent;
+  color: #27C566 !important;
+}
+
+.top-nav-collapse.navbar-default .dropdown-menu > li > a {
+  border: none;
+  margin-bottom: 0 !important;
+  transition: all 0.09s ease-in-out;
+  border: none;
+  margin-bottom: 0 !important;
+  -webkit-transition: all 0.09s ease-in-out;
+  transition: all 0.09s ease-in-out;
+  display: block !important;
+  padding: 3px 0;
+  margin: 0;
+  width: auto !important;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-transform: capitalize !important;
+  color: #36383f !important;
+}
+
+.top-nav-collapse.navbar-default .dropdown-menu > li > a:hover {
+  color: #27C566 !important;
+  text-shadow: none;
+  border: none !important;
+  text-decoration: none;
+  background: transparent;
+}
+/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,302 @@
+@import "variables.scss";
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    font-family: MontserratRegular;
+
+    .fade-carousel {
+        position: relative;
+        height: 100vh;
+    }
+
+    .fade-carousel .carousel-inner .item {
+        height: 100vh;
+    }
+
+    .fade-carousel .carousel-indicators>li {
+        margin: 0 2px;
+        background-color: #f39c12;
+        border-color: #f39c12;
+        opacity: .7;
+    }
+
+    .fade-carousel .carousel-indicators>li.active {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+
+    /********************************/
+    /*          Hero Headers        */
+    /********************************/
+    .hero {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 3;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .75);
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0);
+        -o-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        background: rgba(255, 255, 255, .05);
+        padding-top: 20px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 10px;
+    }
+
+    .hero h1 {
+        font-size: 6em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fade-carousel .carousel-inner .item .hero {
+        opacity: 0;
+        -webkit-transition: 2s all ease-in-out .1s;
+        -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+        -o-transition: 2s all ease-in-out .1s;
+        transition: 2s all ease-in-out .1s;
+    }
+
+    .fade-carousel .carousel-inner .item.active .hero {
+        opacity: 1;
+        -webkit-transition: 2s all ease-in-out .1s;
+        -moz-transition: 2s all ease-in-out .1s;
+        -ms-transition: 2s all ease-in-out .1s;
+        -o-transition: 2s all ease-in-out .1s;
+        transition: 2s all ease-in-out .1s;
+    }
+
+    /********************************/
+    /*            Overlay           */
+    /********************************/
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        // background-color: #080d15;
+        opacity: .7;
+    }
+
+    /********************************/
+    /*          Custom Buttons      */
+    /********************************/
+    .btn.btn-lg {
+        padding: 10px 40px;
+    }
+
+    .btn.btn-hero,
+    .btn.btn-hero:hover,
+    .btn.btn-hero:focus {
+        color: #fff;
+        background-color: #1abc9c;
+        border-color: #1abc9c;
+        outline: none;
+        margin: 20px auto;
+    }
+
+    /********************************/
+    /*       Slides backgrounds     */
+    /********************************/
+    .fade-carousel .slides .slide-1,
+    .fade-carousel .slides .slide-2,
+    .fade-carousel .slides .slide-3 {
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .fade-carousel .slides .slide-1 {
+        background-image: url(../img/Office.jpg);
+    }
+
+    .fade-carousel .slides .slide-2 {
+        background-image: url(../img/product/Alpha16Super.jpg);
+    }
+
+    .fade-carousel .slides .slide-3 {
+        background-image: url(../img/product/Alpuz.jpg);
+    }
+
+    /********************************/
+    /*          Media Queries       */
+    /********************************/
+    @media screen and (min-width: 980px) {
+        .hero {
+            width: 980px;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .hero h1 {
+            font-size: 4em;
+        }
+    }
+}
+
+// .carousel-inner {
+//     height: 100vh;
+// }
+
+.item.active .carousel-caption.fadeIn {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+// .banner-carousel {
+//     img {
+//         width: 100%;
+//         height: 100% !important;
+//         -webkit-background-size: cover;
+//         -moz-background-size: cover;
+//         background-size: cover;
+//         -o-background-size: cover;
+//         background-position: center;
+//     }
+// }
+
+.carousel-product-page {
+    margin-top: 90px;
+
+    /* Carousel Styles */
+    .carousel-indicators .active {
+        background-color: #2980b9;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        max-height: 460px
+    }
+
+    .carousel-control {
+        width: 0;
+    }
+
+    .carousel-control.left,
+    .carousel-control.right {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        background-image: none;
+        background-repeat: no-repeat;
+        text-shadow: none;
+    }
+
+    .carousel-control.left span {
+        padding: 15px;
+    }
+
+    .carousel-control.right span {
+        padding: 15px;
+    }
+
+    .carousel-control .glyphicon-chevron-left,
+    .carousel-control .glyphicon-chevron-right,
+    .carousel-control .icon-prev,
+    .carousel-control .icon-next {
+        position: absolute;
+        top: 45%;
+        z-index: 5;
+        display: inline-block;
+    }
+
+    .carousel-control .glyphicon-chevron-left,
+    .carousel-control .icon-prev {
+        left: 0;
+    }
+
+    .carousel-control .glyphicon-chevron-right,
+    .carousel-control .icon-next {
+        right: 0;
+    }
+
+    .carousel-control.left span,
+    .carousel-control.right span {
+        background-color: #000;
+    }
+
+    .carousel-control.left span:hover,
+    .carousel-control.right span:hover {
+        opacity: .7;
+        filter: alpha(opacity=70);
+    }
+
+    @media screen and (min-width: 840px) {
+
+        .carousel-control.left span,
+        .carousel-control.right span {
+            background-color: transparent;
+        }
+
+
+        .carousel-control .glyphicon-chevron-left,
+        .carousel-control .icon-prev {
+            left: 15px;
+        }
+
+        .carousel-control .glyphicon-chevron-right,
+        .carousel-control .icon-next {
+            right: 45px;
+        }
+
+    }
+
+    /* Carousel Header Styles */
+    .header-text {
+        position: absolute;
+        top: 20%;
+        left: 1.8%;
+        right: auto;
+        width: 96.66666666666666%;
+        color: #fff;
+    }
+
+    .header-text h2 {
+        font-size: 40px;
+    }
+
+    .header-text h2 span {
+        background-color: #2980b9;
+        padding: 10px;
+    }
+
+    .header-text h3 span {
+        background-color: #000;
+        padding: 15px;
+    }
+
+    .btn-min-block {
+        min-width: 170px;
+        line-height: 26px;
+    }
+
+    .btn-theme {
+        color: #fff;
+        background-color: transparent;
+        border: 2px solid #fff;
+        margin-right: 15px;
+    }
+
+    .btn-theme:hover {
+        color: #000;
+        background-color: #fff;
+        border-color: #fff;
+    }
+}

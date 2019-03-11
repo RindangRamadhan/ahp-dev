@@ -1,0 +1,250 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+.navbar-default {
+  background-color: white;
+  border: none;
+  font-family: MontserratRegular;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.navbar-default .navbar-header .navbar-brand {
+  color: #fff;
+  font-family: MontserratRegular;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+  color: #27c566;
+}
+.navbar-default .navbar-header .navbar-toggle {
+  font-weight: 700;
+  font-size: 12px;
+  color: #27c566;
+  text-transform: uppercase;
+}
+.navbar-default .nav > li {
+  padding-top: 10px;
+  font-family: MontserratRegular;
+}
+.navbar-default .nav > li > a {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff !important;
+  background-color: transparent;
+}
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus,
+.navbar-default .nav > li > a:focus:hover,
+.navbar-default .nav > li.active > a:focus {
+  color: #27c566 !important;
+  background-color: transparent;
+}
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
+  background-color: transparent;
+}
+.navbar-default .phone-contact {
+  margin-top: -7px;
+}
+.navbar-default .phone-contact img {
+  background: #dcdcdd;
+  height: 34px;
+  padding: 10px;
+  float: left;
+}
+.navbar-default .phone-contact h5 {
+  padding: 0;
+  margin: 0;
+  height: 34px;
+  width: 180px;
+  padding-top: 8.5px;
+  background: #d0d0d4;
+  color: #333333;
+  font-family: MontserratRegular;
+}
+.navbar-default .phone-contact h5 span {
+  padding-left: 8px;
+  font-family: MontserratRegular;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: transparent;
+  color: #27c566;
+}
+.navbar-right {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .navbar-default .navbar-header .navbar-brand:hover,
+  .navbar-default .navbar-header .navbar-brand:focus {
+    color: white;
+  }
+  .navbar-default .nav > li > a,
+  .navbar-default .nav > li > a:focus {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .navbar-default .nav > li > a:hover,
+  .navbar-default .nav > li > a:focus:hover {
+    color: white;
+  }
+  .navbar-default.affix {
+    background-color: white;
+    border-color: rgba(34, 34, 34, 0.05);
+  }
+  .navbar-default.affix .navbar-header .navbar-brand {
+    color: #f05f40;
+    font-size: 14px;
+  }
+  .navbar-default.affix .navbar-header .navbar-brand:hover,
+  .navbar-default.affix .navbar-header .navbar-brand:focus {
+    color: #eb3812;
+  }
+  .navbar-default.affix .nav > li > a,
+  .navbar-default.affix .nav > li > a:focus {
+    color: #222222;
+  }
+  .navbar-default.affix .nav > li > a:hover,
+  .navbar-default.affix .nav > li > a:focus:hover {
+    color: #f05f40;
+  }
+}
+.top-nav-collapse.navbar-default {
+  background-color: #fff;
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 16px 4px;
+  -webkit-transition: all 0.35s !important;
+  -moz-transition: all 0.35s !important;
+  transition: all 0.45s !important;
+}
+.navbar-default {
+  background-color: #fff;
+  border: none;
+  -webkit-transition: all 0.35s !important;
+  -moz-transition: all 0.35s !important;
+  transition: all 0.45s !important;
+  max-width: 14000px !important;
+}
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+.dropdown-menu {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-width: auto;
+  padding: 8px 0;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  left: 0 !important;
+}
+.dropdown-menu .fa-caret-up {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -8px;
+  font-size: 20px;
+  color: #fff;
+}
+.dropdown-menu > li > a {
+  color: #27c566;
+  border: none;
+  margin-bottom: 0 !important;
+  transition: all 0.09s ease-in-out;
+}
+.dropdown-menu > li > a:hover {
+  text-shadow: none;
+  border: none !important;
+}
+.dropdown-menu > li > a {
+  color: #333;
+  border: none;
+  margin-bottom: 0 !important;
+  -webkit-transition: all 0.09s ease-in-out;
+  transition: all 0.09s ease-in-out;
+  display: inline-block !important;
+  padding: 0;
+  margin: 0;
+  width: auto !important;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover {
+  text-decoration: none;
+  background: transparent;
+  color: #fff !important;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: -1px;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0;
+}
+.dropdown-submenu > a:after {
+  display: block;
+  float: right;
+  margin-right: -15px;
+  margin-top: 2px;
+  font-family: "FontAwesome";
+  content: "\f105";
+  font-size: 14px;
+}
+.dropdown-submenu:hover > a:after {
+  border: none;
+}
+@media (min-width: 768px) {
+  ul.nav li:hover > ul.dropdown-menu {
+    display: block;
+  }
+  #navbar {
+    text-align: center;
+  }
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 30px;
+}

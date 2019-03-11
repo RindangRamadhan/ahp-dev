@@ -1,0 +1,207 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../libraries/fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaBold;
+  src: url(../libraries/fonts/Karla-Bold.ttf);
+}
+
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+}
+
+.reset-col {
+  margin: 0;
+  padding: 0;
+}
+
+/*.reset-col>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}*/
+.reset-l {
+  margin: 0;
+  padding-left: 0;
+}
+
+.reset-r {
+  margin: 0;
+  padding-right: 0;
+}
+
+html,
+body {
+  height: 100% !important;
+  width: 100% !important;
+  font-family: MontserratRegular;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  min-height: 100%;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.btn {
+  outline: none !important;
+}
+
+a {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #fff;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+a:hover, a:focus {
+  color: #fff;
+  text-decoration: none !important;
+  opacity: 0.8;
+}
+
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+
+img::selection {
+  color: white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+
+.transition-all {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.background-cover {
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/*-====================================================Separated==================================================-*/
+.scroll-up {
+  position: fixed;
+  display: none;
+  z-index: 999;
+  bottom: 2em;
+  right: 2em;
+}
+
+.scroll-up a {
+  background-color: rgba(135, 135, 135, 0.5);
+  display: block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+/*Bootstrap Resetter*/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(39, 197, 102, 0.6) !important;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 2px rgba(39, 197, 102, 0.6) !important;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 2px rgba(39, 197, 102, 0.6) !important;
+  outline: 0 none;
+}
+
+.general-search {
+  position: absolute !important;
+  bottom: -30px;
+  right: 20px;
+  font-size: 40px;
+  text-align: center;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  color: #222222 !important;
+}
+
+.general-search .fa {
+  color: #000;
+  z-index: 100;
+  font-size: 40px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,548 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../libraries/fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaBold;
+  src: url(../libraries/fonts/Karla-Bold.ttf);
+}
+
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+}
+
+/*-====================================================General==================================================-*/
+.section-name {
+  margin: 0;
+  padding: 0;
+  font: 14px KarlaBold;
+  line-height: auto;
+  color: #b2b2b2;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.section-title {
+  margin: 0;
+  padding: 0;
+  font: 42px MerriweatherRegular;
+  line-height: 60px;
+  color: #292929;
+  padding-top: 30px;
+}
+
+.section-desc {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font: 16px KarlaRegular;
+  line-height: 28px;
+  color: #757575;
+  padding-bottom: 15px;
+}
+
+.border-devide {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.border-devide hr {
+  margin: 0;
+}
+
+.border-devide .first-dot {
+  display: inline-table;
+  border: none;
+  border-top: 2px solid #89b4cc;
+  height: 2px;
+  width: 12px;
+}
+
+.border-devide .second-dot {
+  display: inline-table;
+  border: none;
+  border-top: 2px solid #80bc73;
+  height: 2px;
+  width: 70px;
+  margin-left: 7px;
+}
+
+.wrap-btn-detail {
+  margin-top: 10px;
+}
+
+.wrap-btn-detail .btn-detail {
+  margin: 0;
+  padding: 0;
+  font: 14px KarlaBold;
+  line-height: 16px;
+  color: #80bc73;
+  text-transform: uppercase;
+  border-bottom: 1px solid #80bc73;
+  padding-bottom: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+}
+
+.wrap-btn-detail .btn-detail:hover {
+  color: #80bc73 !important;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.wrap-btn-detail .btn-detail .plus-mark {
+  padding-left: 15px;
+}
+
+.about-us {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-family: KarlaRegular;
+}
+
+.benefit {
+  position: relative;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.benefit .lparagraph {
+  padding-right: 10%;
+  padding-left: 0;
+}
+
+.benefit .rparagraph2 {
+  padding-right: 5%;
+  padding-top: 6%;
+  padding-left: 5%;
+}
+
+.benefit .rparagraph2 .section-desc {
+  padding-bottom: 50px;
+}
+
+.benefit .img-abs {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  z-index: 0;
+}
+
+.benefit .bg-name {
+  position: absolute;
+  left: -25%;
+  top: -37%;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  font: 200px MerriweatherRegular;
+  line-height: auto;
+  color: #f5f5f5;
+  text-transform: capitalize;
+}
+
+.fade {
+  opacity: 1;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -webkit-transition-duration: .7s;
+  transition-duration: .7s;
+}
+
+.product-promo {
+  background-color: #eeecec69;
+  padding: 0;
+  padding-top: 60px;
+  color: #36383f;
+}
+
+.product-promo .nav-tabs > li {
+  float: none;
+  display: inline-block;
+  zoom: 1;
+}
+
+.product-promo .nav-tabs {
+  text-align: center;
+  border: none;
+}
+
+.product-promo .nav-tabs > li > a {
+  cursor: pointer;
+  color: #36383f;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.42857143;
+  margin: 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+.product-promo .nav-tabs > li > a:hover {
+  border: none;
+}
+
+.product-promo .nav > li > a:focus,
+.product-promo .nav > li > a:hover {
+  outline: none;
+  text-decoration: none;
+  color: #80bc73;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #80bc73;
+}
+
+.product-promo .nav-tabs > li.active > a,
+.product-promo .nav-tabs > li.active > a:focus,
+.product-promo .nav-tabs > li.active > a:hover {
+  color: #80bc73;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #80bc73;
+}
+
+.product-promo .pp-content {
+  text-align: center;
+}
+
+.product-promo .pp-content .pp-title {
+  font-size: 40px;
+}
+
+.product-promo .pp-tabs {
+  border-top: 0.5px solid #f5f5f5;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.product-promo .pp-tabs .tab-content {
+  padding: 7px;
+}
+
+.product-promo .pp-tabs a:hover {
+  opacity: 0.9;
+}
+
+.product-promo a {
+  text-decoration: none;
+}
+
+.product-promo a:hover {
+  opacity: 0.8;
+}
+
+.product-promo .pp-overlay {
+  position: relative;
+  padding: 7px;
+}
+
+.product-promo .pp-overlay img {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  border-radius: 2px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.product-promo .pp-overlay .pp-product-name {
+  position: absolute;
+  width: 100%;
+  bottom: -3px;
+  left: 0;
+  z-index: 1;
+  padding: 5px 15px;
+  padding-left: 15px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #36383f;
+}
+
+.news {
+  padding: 60px 15px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  background: #e5e5e5;
+}
+
+.news img {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.news .updates {
+  padding-top: 30px;
+}
+
+.news .updates .utitle {
+  padding: 0;
+  margin: 0;
+  color: #000;
+  font-family: MontserratRegular;
+  font-size: 18px;
+  line-height: auto;
+  padding-bottom: 10px;
+}
+
+.news .updates .ndate {
+  padding: 0;
+  margin: 0;
+  color: rgba(51, 51, 61, 0.7);
+  font-family: MontserratRegular;
+  font-size: 14px;
+  line-height: auto;
+  padding-bottom: 25px;
+}
+
+.news .updates .ntitle {
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  font-family: MontserratSemiBold;
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.news .updates .ntitle:hover {
+  color: #213964;
+  cursor: pointer;
+}
+
+.news .updates .ndesc {
+  padding: 0;
+  margin: 0;
+  color: rgba(51, 51, 61, 0.8);
+  font-family: MontserratRegular;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.news .updates .uallapdate {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  color: rgba(51, 51, 61, 0.6);
+  font-family: MontserratRegular;
+  font-size: 14px;
+  line-height: auto;
+  padding-bottom: 10px;
+}
+
+.news .updates .uallapdate a {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  color: rgba(51, 51, 61, 0.6);
+  font-family: MontserratRegular;
+  font-size: 14px;
+  line-height: auto;
+}
+
+.news .unews {
+  padding-left: 30px;
+}
+
+.news .unews .loop-list {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.news .unews .unews-date {
+  padding: 0;
+  margin: 0;
+  color: rgba(51, 51, 61, 0.7);
+  font-family: MontserratRegular;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.news .unews .unews-desc {
+  padding: 0;
+  margin: 0;
+  color: #000;
+  font-family: MontserratRegular;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.our-partners {
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.our-partners .partners_slider {
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  background-color: transparent;
+}
+
+.our-partners .partners_slider .inner {
+  outline: none;
+  padding: 15px;
+}
+
+.our-partners .partners_slider img {
+  width: 90%;
+  height: auto;
+}
+
+.our-partners .partners_slider img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.s-katalog {
+  padding: 0;
+}
+
+.s-katalog .container-fluid {
+  padding: 0;
+}
+
+.s-katalog .lcontent {
+  padding-right: 70px;
+}
+
+.s-katalog .lcontent .form-box {
+  padding: 40px;
+  background: #fff;
+  -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1), 0 30px 50px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1), 0 30px 50px rgba(0, 0, 0, 0.12);
+  margin-bottom: -50px;
+  border-radius: 4px;
+}
+
+.s-katalog .lcontent .form-box .title {
+  margin: 0;
+  padding: 0;
+  font: 30px MerriweatherRegular;
+  color: #80bc73;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.s-katalog .lcontent .form-box .input-group-btn {
+  border: 1px solid #ccc;
+  border-right: 0;
+  color: #757575;
+}
+
+.s-katalog .lcontent .form-box .input-group-btn select {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+  -webkit-appearance: none !important;
+}
+
+.s-katalog .lcontent .form-box .form-group {
+  margin-bottom: 25px;
+}
+
+.s-katalog .lcontent .form-box .form-group label {
+  padding: 0;
+  margin: 0;
+  font: 14px KarlaRegular;
+  color: #757575;
+}
+
+.s-katalog .lcontent .form-box .form-group input {
+  height: 40px;
+  outline: none;
+  font: 16px KarlaRegular;
+  color: #292929;
+}
+
+.s-katalog .lcontent .form-box .btn-submit {
+  margin-top: 10px;
+  font: 16px KarlaBold;
+  color: #fff;
+  text-transform: uppercase;
+  background: #80bc73;
+  padding: 15px 40px;
+}
+
+.s-katalog .lcontent .form-box .btn-submit:hover {
+  opacity: 0.8;
+}
+
+.s-katalog .bg-setup {
+  background-color: #f7f9fc;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.s-katalog .rcontent {
+  padding-top: 30px;
+}
+
+.s-katalog .rcontent .title {
+  padding: 0;
+  margin: 0;
+  font: 50px KarlaBold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.s-katalog .rcontent .desc {
+  padding: 0;
+  margin: 0;
+  font: 20px MerriweatherRegular;
+  line-height: 24px;
+  color: #fff;
+  padding-bottom: 15px;
+}
+/*# sourceMappingURL=home.css.map */

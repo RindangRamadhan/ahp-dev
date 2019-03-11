@@ -1,0 +1,306 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../libraries/fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaBold;
+  src: url(../libraries/fonts/Karla-Bold.ttf);
+}
+
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+}
+
+/*-==========================================Footer=========================================-*/
+.footer {
+  margin-top: -50px;
+  background-color: #191919;
+  padding-bottom: 30px;
+}
+
+.footer .less-footer {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.footer .less-footer .less-footer-button {
+  text-decoration: none;
+  padding: 9px 30px;
+  background-color: #1f1f1f;
+  border-radius: 0px 0px 20px 20px;
+  font-size: 12px;
+  color: #7F7F7F;
+  letter-spacing: 1px;
+  line-height: 15px;
+}
+
+.footer .foot-logo {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 0;
+}
+
+.footer .foot-logo img {
+  margin: 0 auto;
+  max-width: 240px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+}
+
+.footer .foot-logo a,
+.footer .foot-logo p {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 18px;
+  color: #7F7F7F;
+}
+
+.footer .title {
+  font-size: 14px;
+  color: #7F7F7F;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.footer a,
+.footer p {
+  font-size: 12px;
+  color: #7F7F7F;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+  color: #fff;
+}
+
+.footer .get-apps {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.footer .get-apps i {
+  width: 20px;
+  text-align: center;
+}
+
+.footer .get-apps p {
+  padding-right: 15px;
+}
+
+.v-x540 {
+  display: none;
+}
+
+@media only screen and (max-width: 540px) {
+  .x540 {
+    width: 100%;
+  }
+  .x540-center {
+    display: block;
+    padding-top: 30px;
+  }
+  .hd-x540 {
+    display: none;
+  }
+  .v-x540 {
+    display: block;
+    padding-top: 20px;
+  }
+  .x-540-50 {
+    width: 50%;
+  }
+}
+
+.scroll-up {
+  position: fixed;
+  display: none;
+  z-index: 999;
+  bottom: 2em;
+  right: 2em;
+}
+
+.scroll-up a {
+  background-color: rgba(135, 135, 135, 0.5);
+  display: block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.modal {
+  text-align: center;
+  padding: 0 !important;
+  z-index: 9999;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal .m-thumb {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  background: #fff;
+}
+
+.modal .m-thumb .m-header {
+  background: #394141;
+  height: 45px;
+}
+
+.modal .m-thumb .m-header .head-title,
+.modal .m-thumb .m-header h5 {
+  padding: 0;
+  margin: 0;
+  font: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+.modal .m-thumb .m-header .m-close {
+  padding: 0;
+  margin: 0;
+  padding-top: 1px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.modal .m-thumb .m-header .m-close:hover {
+  color: #eee;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.modal .m-thumb .m-body {
+  background: #fff;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal .m-thumb .m-footer {
+  padding: 10px;
+  text-align: right;
+  background-color: #222;
+}
+
+.modal .m-thumb .m-footer a {
+  font-family: AvenirMedium;
+  font-size: 11px;
+  width: 100%;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  display: inline-block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 100px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.modal .m-thumb .m-footer a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+#carouselproduct .carousel-inner img {
+  width: 100%;
+}
+
+#carouselproduct .carousel-control {
+  background: none;
+  color: #fff;
+  font-size: 2.3em;
+  text-shadow: none;
+  top: 50%;
+}
+
+#carouselproduct .carousel-control:hover {
+  color: #eee;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+#carouselproduct .carousel-control.left {
+  left: 20px;
+}
+
+#carouselproduct .carousel-control.right {
+  right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .modal {
+    padding: 0;
+    width: 100%;
+  }
+  .modal:before {
+    vertical-align: inherit;
+    height: auto;
+  }
+  .modal .m-thumb {
+    width: 98%;
+    vertical-align: inherit;
+    margin: 0;
+    margin-top: 110px;
+    margin-bottom: 5%;
+  }
+}
+
+/*Bootstrap Resetter*/
+/*# sourceMappingURL=footer.css.map */

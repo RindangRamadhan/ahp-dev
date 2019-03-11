@@ -1,0 +1,598 @@
+@import "variables.scss";
+
+.about-us-page {
+    padding-top: 70px;
+    padding-bottom: 0px;
+    background: #f7f9fc;
+    font: 16px KarlaRegular;
+    line-height: 28px;
+    color: #757575;
+
+    .content {
+        padding-top: 5%;
+        padding-bottom: 15px;
+    }
+
+    .section-title {
+        padding-top: 0;
+        padding-bottom: 0;
+
+    }
+}
+
+.vision {
+    position: relative;
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .content {
+        .border-devide {
+            margin-bottom: 10px;
+        }
+
+        .content-desc {
+            padding-right: 15%;
+            padding-bottom: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .section-title {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .lparagraph {
+        padding-left: 0;
+
+        .section-desc {
+            padding-right: 20%;
+        }
+    }
+
+    .rparagraph2 {
+        padding: 50px 40px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .bg-name {
+        position: absolute;
+        left: -17%;
+        bottom: -30%;
+        z-index: -1;
+        margin: 0;
+        padding: 0;
+        font: 150px MerriweatherRegular;
+        line-height: auto;
+        color: #f5f5f5;
+    }
+
+    .list-content {
+        padding-top: 30px;
+
+        .l-title {
+            margin: 0;
+            padding: 0;
+            font: 24px MerriweatherRegular;
+            line-height: 36px;
+            color: #292929;
+            padding-bottom: 35px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-left: 18px;
+
+            li {
+                margin: 0;
+                padding: 0;
+                font: 16px KarlaRegular;
+                line-height: 30px;
+                color: #757575;
+            }
+        }
+    }
+}
+
+.services {
+    padding-top: 30px;
+    padding-bottom: 0px;
+    background: #f7f9fc;
+    font: 16px KarlaRegular;
+    line-height: 28px;
+    color: #757575;
+
+    .content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .section-title {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .list-content {
+        padding-top: 30px;
+        padding-bottom: 100px;
+
+        .l-title {
+            margin: 0;
+            padding: 0;
+            font: 24px MerriweatherRegular;
+            line-height: 36px;
+            color: #292929;
+            padding-bottom: 35px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-left: 18px;
+
+            li {
+                margin: 0;
+                padding: 0;
+                font: 16px KarlaRegular;
+                line-height: 30px;
+                color: #757575;
+
+                .list-title {
+                    margin: 0;
+                    padding: 0;
+                    font: 18px KarlaBold;
+                    line-height: 30px;
+                    color: #292929;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .vision {
+        .lparagraph {
+            $font-size: 18px;
+            $line-height: 2.1;
+            $lines-to-show: 7;
+
+            .section-desc {
+                display: block;
+                display: -webkit-box;
+                max-width: 767px;
+                height: $font-size*$line-height*$lines-to-show;
+                font-size: $font-size;
+                line-height: $line-height;
+                -webkit-line-clamp: $lines-to-show;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .vision {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .content {
+            .border-devide {
+                margin-bottom: 10px;
+            }
+
+            .content-desc {
+                padding-right: 0;
+                padding-bottom: 0;
+                margin-bottom: 0px;
+            }
+        }
+
+        .section-title {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .lparagraph {
+            padding-bottom: 0;
+
+            .section-desc {
+                padding-right: 0;
+                padding-bottom: 30px;
+            }
+        }
+
+        .rparagraph2 {
+            padding-left: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .img-abs {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .bg-name {
+            position: absolute;
+            left: 17%;
+            bottom: -30%;
+            z-index: -1;
+            margin: 0;
+            padding: 0;
+            font: 150px MerriweatherRegular;
+            line-height: auto;
+            color: #f5f5f5;
+        }
+
+        .list-content {
+            padding-top: 30px;
+
+            .l-title {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .services {
+        .paragraph {
+            .content-desc {
+                padding-bottom: 0;
+                margin-bottom: 50px;
+            }
+        }
+
+        .section-title {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .list-content {
+            padding-top: 0px;
+            padding-bottom: 50px;
+
+            .l-title {
+                margin: 0;
+                padding: 0;
+                font: 24px MerriweatherRegular;
+                line-height: 36px;
+                color: #292929;
+                padding-bottom: 20px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                padding-left: 18px;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    font: 16px KarlaRegular;
+                    line-height: 30px;
+                    color: #757575;
+
+                    .list-title {
+                        margin: 0;
+                        padding: 0;
+                        font: 18px KarlaBold;
+                        line-height: 30px;
+                        color: #292929;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .vision {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .content {
+            padding: 0;
+            margin: 0;
+
+            .border-devide {
+                margin-bottom: 10px;
+            }
+
+            .content-desc {
+                padding-right: 0;
+                padding-bottom: 0;
+                margin-bottom: 0px;
+            }
+        }
+
+        .section-title {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .lparagraph {
+            padding: 15px;
+            padding-bottom: 0;
+
+            .section-desc {
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .rparagraph2 {
+            padding: 15px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .img-abs {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .bg-name {
+            position: absolute;
+            left: 17%;
+            bottom: -30%;
+            z-index: -1;
+            margin: 0;
+            padding: 0;
+            font: 150px MerriweatherRegular;
+            line-height: auto;
+            color: #f5f5f5;
+        }
+
+        .list-content {
+            padding-top: 30px;
+            padding-left: 15px;
+
+            .l-title {
+                margin: 0;
+                padding: 0;
+                font: 24px MerriweatherRegular;
+                line-height: 36px;
+                color: #292929;
+                padding-bottom: 20px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                padding-left: 18px;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    font: 16px KarlaRegular;
+                    line-height: 30px;
+                    color: #757575;
+                }
+            }
+        }
+    }
+
+    .services {
+        padding-top: 60px;
+        padding-bottom: 0px;
+        background: #f7f9fc;
+
+        .content {
+            padding-top: 5%;
+        }
+
+        .section-title {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+////////// Our Team
+.about-content {
+    padding: 0;
+    background: #eee;
+    margin-top: 15px;
+    font: 16px KarlaRegular;
+
+    .ac-head {
+        text-align: center;
+
+        p {
+            padding: 10px 15%;
+            padding-bottom: 50px;
+            color: #333;
+            font-style: italic;
+        }
+    }
+
+    .ac-mission {
+        img {
+            width: 100%;
+            padding: 0 5px;
+        }
+
+        .acm-numbers {
+            padding-left: 5px;
+            color: #cccccc;
+            font-weight: 700;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .acm-desc {
+            padding-left: 10px;
+            padding-right: 5px;
+
+            h6 {
+                color: #ff4320;
+                font-weight: 700;
+                font-size: 14px;
+                font-style: italic;
+            }
+
+            h5 {
+                color: #222222;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            p {
+                color: #666666;
+                font-size: 14px;
+                padding-top: 3px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.story {
+    .story-content {
+        background-color: #fff;
+        padding: 30px 0;
+
+        .lcontent {
+            .carousel-inner {
+                .item {
+                    opacity: 0.6;
+                    -webkit-transition-property: opacity;
+                    -moz-transition-property: opacity;
+                    -o-transition-property: opacity;
+                    transition-property: opacity;
+                }
+
+                .active {
+                    opacity: 1;
+                }
+            }
+
+            .custom-control {
+                background: #fff;
+                padding: 10px 20px;
+                position: absolute;
+                bottom: 50px;
+                right: 50px;
+
+                a {
+                    color: #b7b7b7;
+
+                    &:hover {
+                        color: #88c07c;
+                    }
+                }
+
+                .active {
+                    color: #88c07c;
+                }
+
+                .num-active {
+                    font: 30px KarlaRegular;
+                    color: #292929;
+                    margin-right: 15px;
+                    margin-left: 30px;
+                }
+
+                .num-total {
+                    font: 14px KarlaRegular;
+                    color: #292929;
+                    margin-left: 5px;
+                    margin-right: 30px;
+                }
+
+                .fa {
+                    font-size: 26px;
+                }
+            }
+
+            .play-set {
+                img {
+                    width: 80px;
+                }
+
+                position: absolute;
+                top: 45%;
+                right: -40px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .rcontent {
+            padding: 10px 5%;
+            position: relative;
+
+            .quote-left {
+                position: absolute;
+                top: 60px;
+                left: 12%;
+            }
+
+            .quote-right {
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                bottom: 10px;
+                right: 12%;
+            }
+
+            .section-desc {
+                margin-top: -20px;
+                padding-bottom: 30px;
+            }
+
+            .quotes-desc {
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                span,
+                a,
+                p {
+                    margin: 0;
+                    padding: 0;
+                    font: 20px MerriweatherRegular;
+                    line-height: 35px;
+                    color: #292929;
+                    padding-top: 0px;
+                }
+            }
+
+            .people-quote {
+                padding-top: 30px;
+
+                img {
+                    width: 50px;
+                    float: left;
+                    margin-right: 30px;
+                }
+
+                .people-name {
+                    padding: 0;
+                    margin: 0;
+                    font: 16px KarlaRegular;
+                    line-height: 24px;
+                    color: #b2b2b2;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
