@@ -1,0 +1,164 @@
+@import "variables.scss";
+
+.reset-col {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*.reset-col>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}*/
+
+.reset-l {
+    margin: 0;
+    padding-left: 0;
+}
+
+.reset-r {
+    margin: 0;
+    padding-right: 0;
+}
+
+html,
+body {
+    height: 100% !important;
+    width: 100% !important;
+    font-family: MontserratRegular;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    min-height: 100%;
+    padding-bottom: 40px;
+    overflow-x: hidden;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.btn {
+    outline: none !important;
+}
+
+a {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+    color: #fff;
+    outline: none !important;
+    text-decoration: none !important;
+
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        text-decoration: none !important;
+        opacity: 0.8;
+    }
+}
+
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: #222222;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: #222222;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+.transition-all {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.background-cover {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+/*-====================================================Separated==================================================-*/
+.scroll-up {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    bottom: 2em;
+    right: 2em;
+
+    a {
+        background-color: rgba(135, 135, 135, 0.5);
+        display: block;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+
+/*Bootstrap Resetter*/
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: rgba(39, 197, 102, 0.6) !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 2px rgba(39, 197, 102, 0.6) !important;
+    outline: 0 none;
+}
+
+.general-search {
+    position: absolute !important;
+    bottom: -30px;
+    right: 20px;
+    font-size: 40px;
+
+    text-align: center;
+    background: #fff;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    color: #222222 !important;
+
+    .fa {
+        color: #000;
+        z-index: 100;
+        font-size: 40px;
+    }
+}

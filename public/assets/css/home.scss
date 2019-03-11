@@ -1,0 +1,519 @@
+@import "variables.scss";
+/*-====================================================General==================================================-*/
+
+.section-name {
+    margin: 0;
+    padding: 0;
+    font: 14px KarlaBold;
+    line-height: auto;
+    color: #b2b2b2;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.section-title {
+    margin: 0;
+    padding: 0;
+    font: 42px MerriweatherRegular;
+    line-height: 60px;
+    color: #292929;
+    padding-top: 30px;
+}
+
+.section-desc {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font: 16px KarlaRegular;
+    line-height: 28px;
+    color: #757575;
+    padding-bottom: 15px;
+}
+
+.border-devide {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    hr {
+        margin: 0;
+    }
+
+    .first-dot {
+        display: inline-table;
+        border: none;
+        border-top: 2px solid #89b4cc;
+        height: 2px;
+        width: 12px;
+    }
+
+    .second-dot {
+        display: inline-table;
+        border: none;
+        border-top: 2px solid $GreenBtn;
+        height: 2px;
+        width: 70px;
+        margin-left: 7px;
+    }
+}
+
+.wrap-btn-detail {
+    margin-top: 10px;
+
+    .btn-detail {
+        margin: 0;
+        padding: 0;
+        font: 14px KarlaBold;
+        line-height: 16px;
+        color: $GreenBtn;
+        text-transform: uppercase;
+        border-bottom: 1px solid $GreenBtn;
+        padding-bottom: 10px;
+        box-shadow: none;
+        border-radius: 0;
+
+        &:hover {
+            color: $GreenBtn !important;
+            opacity: 0.8;
+            text-decoration: none;
+        }
+
+        .plus-mark {
+            padding-left: 15px;
+        }
+    }
+}
+
+/////////////////////////////////////////////////// End General
+.about-us {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-family: KarlaRegular;
+}
+
+.benefit {
+    position: relative;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    .lparagraph {
+        padding-right: 10%;
+        padding-left: 0;
+    }
+
+    .rparagraph2 {
+        padding-right: 5%;
+        padding-top: 6%;
+        padding-left: 5%;
+
+        .section-desc {
+            padding-bottom: 50px;
+        }
+    }
+
+    .img-abs {
+        position: absolute;
+        right: 0;
+        top: -4px;
+        z-index: 0;
+    }
+
+    .bg-name {
+        position: absolute;
+        left: -25%;
+        top: -37%;
+        z-index: -1;
+        margin: 0;
+        padding: 0;
+        font: 200px MerriweatherRegular;
+        line-height: auto;
+        color: #f5f5f5;
+        text-transform: capitalize;
+    }
+}
+
+//////// Tabs Animation
+.fade {
+    opacity: 1;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transition-duration: .7s;
+    -o-transition-duration: .7s;
+    transition-duration: .7s;
+}
+
+
+.product-promo {
+    // background-color: #f5f5f569;
+    background-color: #eeecec69;
+    padding: 0;
+    padding-top: 60px;
+    color: $DarkBg;
+
+
+    .nav-tabs>li {
+        float: none;
+        display: inline-block;
+        zoom: 1;
+    }
+
+    .nav-tabs {
+        text-align: center;
+        border: none;
+    }
+
+    .nav-tabs>li>a {
+        cursor: pointer;
+        color: $DarkBg;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.42857143;
+        margin: 0 15px;
+        outline: none;
+        border: none;
+        border-radius: 0;
+        text-decoration: none;
+
+        &:hover {
+            border: none;
+        }
+    }
+
+    .nav>li>a:focus,
+    .nav>li>a:hover {
+        outline: none;
+        text-decoration: none;
+        color: $GreenBtn;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $GreenBtn;
+    }
+
+
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+        color: $GreenBtn;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $GreenBtn;
+    }
+
+    .pp-content {
+        text-align: center;
+
+        .pp-title {
+            font-size: 40px;
+        }
+    }
+
+
+    .pp-tabs {
+        border-top: 0.5px solid #f5f5f5;
+        padding: 30px 0;
+        margin-top: 60px;
+
+        .tab-content {
+            padding: 7px;
+
+        }
+
+        a {
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .pp-overlay {
+        position: relative;
+        padding: 7px;
+
+        img {
+            -webkit-box-shadow: 0 10px 6px -6px #777;
+            -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+            border-radius: 2px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+
+        .pp-product-name {
+            position: absolute;
+            width: 100%;
+            bottom: -3px;
+            left: 0;
+            z-index: 1;
+            padding: 5px 15px;
+            padding-left: 15px;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            color: $DarkBg;
+        }
+    }
+
+}
+
+
+
+.news {
+    padding: 60px 15px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    background: #e5e5e5;
+
+    img {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .updates {
+        padding-top: 30px;
+
+        .utitle {
+            padding: 0;
+            margin: 0;
+            color: #000;
+            font-family: MontserratRegular;
+            font-size: 18px;
+            line-height: auto;
+            padding-bottom: 10px;
+        }
+
+        .ndate {
+            padding: 0;
+            margin: 0;
+            color: rgba(51, 51, 61, 0.7);
+            font-family: MontserratRegular;
+            font-size: 14px;
+            line-height: auto;
+            padding-bottom: 25px;
+        }
+
+        .ntitle {
+            color: #333333;
+            padding: 0;
+            margin: 0;
+            font-family: MontserratSemiBold;
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 20px;
+
+            &:hover {
+                color: #213964;
+                cursor: pointer;
+            }
+        }
+
+        .ndesc {
+            padding: 0;
+            margin: 0;
+            color: rgba(51, 51, 61, 0.8);
+            font-family: MontserratRegular;
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        .uallapdate {
+            text-align: right;
+            padding: 0;
+            margin: 0;
+            color: rgba(51, 51, 61, 0.6);
+            font-family: MontserratRegular;
+            font-size: 14px;
+            line-height: auto;
+            padding-bottom: 10px;
+
+            a {
+                text-align: right;
+                padding: 0;
+                margin: 0;
+                color: rgba(51, 51, 61, 0.6);
+                font-family: MontserratRegular;
+                font-size: 14px;
+                line-height: auto;
+            }
+        }
+    }
+
+    .unews {
+        padding-left: 30px;
+
+        .loop-list {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .unews-date {
+            padding: 0;
+            margin: 0;
+            color: rgba(51, 51, 61, 0.7);
+            font-family: MontserratRegular;
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        .unews-desc {
+            padding: 0;
+            margin: 0;
+            color: #000;
+            font-family: MontserratRegular;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+}
+
+/////// Our Partners
+.our-partners {
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    .partners_slider {
+        border: none;
+        flex: 1 1 0;
+        background-color: transparent;
+
+        .inner {
+            outline: none;
+            padding: 15px;
+        }
+
+        img {
+            width: 90%;
+            height: auto;
+        }
+
+        img:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+    }
+}
+
+//////// Download Katalog
+
+.s-katalog {
+    padding: 0;
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .lcontent {
+        padding-right: 70px;
+
+        .form-box {
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1),
+                0 30px 50px rgba(0, 0, 0, 0.12);
+            margin-bottom: -50px;
+            border-radius: 4px;
+
+            .title {
+                margin: 0;
+                padding: 0;
+                font: 30px MerriweatherRegular;
+                color: #80bc73;
+                text-align: center;
+                padding-bottom: 40px;
+            }
+
+            .input-group-btn {
+                border: 1px solid #ccc;
+                border-right: 0;
+                color: #757575;
+
+                select {
+                    border: none;
+                    box-shadow: none;
+                    background: transparent;
+                    -webkit-appearance: none !important;
+                }
+            }
+
+            .form-group {
+                margin-bottom: 25px;
+
+                label {
+                    padding: 0;
+                    margin: 0;
+                    font: 14px KarlaRegular;
+                    color: #757575;
+                }
+
+                input {
+                    height: 40px;
+                    outline: none;
+                    font: 16px KarlaRegular;
+                    color: #292929;
+                }
+            }
+
+            .btn-submit {
+                margin-top: 10px;
+                font: 16px KarlaBold;
+                color: #fff;
+                text-transform: uppercase;
+                background: #80bc73;
+                padding: 15px 40px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .bg-setup {
+        background-color: #f7f9fc;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        padding-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .rcontent {
+        padding-top: 30px;
+
+        .title {
+            padding: 0;
+            margin: 0;
+            font: 50px KarlaBold;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .desc {
+            padding: 0;
+            margin: 0;
+            font: 20px MerriweatherRegular;
+            line-height: 24px;
+            color: #fff;
+            padding-bottom: 15px;
+        }
+    }
+}

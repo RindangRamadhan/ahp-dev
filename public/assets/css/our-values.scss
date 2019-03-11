@@ -1,0 +1,796 @@
+@import "variables.scss";
+
+.faq {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    .page-name {
+        margin: 0;
+        padding: 0;
+        font: 42px MerriweatherRegular;
+        line-height: 60px;
+        color: #292929;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .question {
+        margin: 0;
+        padding: 0;
+        font: 20px MerriweatherRegular;
+        color: #292929;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .answer {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font: 16px KarlaRegular;
+        line-height: 24px;
+        color: #757575;
+    }
+}
+
+.privacy-policy {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    .page-name {
+        margin: 0;
+        padding: 0;
+        font: 42px MerriweatherRegular;
+        line-height: 60px;
+        color: #292929;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    .question {
+        margin: 0;
+        padding: 0;
+        font: 20px MerriweatherRegular;
+        color: #292929;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .answer {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font: 16px KarlaRegular;
+        line-height: 24px;
+        color: #757575;
+        padding-bottom: 20px;
+    }
+
+    .info-update {
+        margin: 0;
+        padding: 0;
+        font: 16px KarlaRegular;
+        color: #757575;
+        padding-bottom: 50px;
+    }
+
+    .mid-desc {
+        margin: 0;
+        padding: 0;
+        font: 20px KarlaRegular;
+        line-height: 36px;
+        color: #292929;
+        padding-bottom: 50px;
+    }
+
+    .small-desc {
+        margin: 0;
+        padding: 0;
+        font: 14px KarlaRegular;
+        line-height: 24px;
+        color: #757575;
+        padding-bottom: 30px;
+    }
+
+    .btn-print {
+        margin-top: 50px;
+        font: 16px KarlaBold;
+        color: #fff;
+        text-transform: uppercase;
+        background: #80bc73;
+        padding: 15px 40px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .faq {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .page-name {
+            font: 30px MerriweatherRegular;
+            line-height: -25px;
+            padding-bottom: 10px;
+        }
+
+        .question {
+            line-height: 30px;
+            padding-top: 50px;
+        }
+    }
+
+    .privacy-policy {
+        padding-top: 100px;
+        padding-bottom: 40px;
+
+        .page-name {
+            font: 30px MerriweatherRegular;
+            line-height: -25px;
+            padding-bottom: 10px;
+        }
+
+        .question {
+            line-height: 30px;
+            padding-top: 50px;
+        }
+
+        .answer {
+            padding-bottom: 0px;
+        }
+
+        .mid-desc {
+            font: 18px KarlaRegular;
+            line-height: 30px;
+        }
+
+        .small-desc {
+            padding-bottom: 20px;
+        }
+
+        .btn-print {
+            width: 100%;
+        }
+    }
+}
+
+////////////////////////////////////////Others///////////////////////
+.centered {
+    .content {
+        background: #eee;
+
+        img {
+            margin: 0 auto;
+            width: 120px;
+            padding-bottom: 40px;
+        }
+
+        .content-wrap {
+            border-radius: 5px;
+            background: #fff;
+            border-top: 5px solid #89b4cc;
+            text-align: center;
+            padding: 50px;
+
+            .title {
+                margin: 0;
+                padding: 0;
+                font: 24px KarlaBold;
+                color: #292929;
+                text-align: left;
+                padding-bottom: 40px;
+            }
+
+            .desc {
+                margin: 0;
+                padding: 0;
+                font: 16px KarlaRegular;
+                line-height: 24px;
+                color: #292929;
+                text-align: left;
+                padding-bottom: 40px;
+            }
+
+            .btn-print {
+                font: 16px KarlaBold;
+                color: #fff;
+                text-transform: uppercase;
+                background: #80bc73;
+                padding: 15px 40px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .socialbtns {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+
+        .rights {
+            margin: 0;
+            padding: 0;
+            font: 12px KarlaRegular;
+            color: #292929;
+            padding-top: 25px;
+        }
+
+        img {
+            margin: 0 auto;
+            width: 80px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .socialbtns ul,
+    .socialbtns li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .socialbtns li {
+        list-style: none outside none;
+        display: inline-block;
+    }
+
+    .socialbtns .fa {
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        color: #FFF;
+        font-size: 8px;
+        background-color: #bdbdbd;
+        padding-top: 6px;
+        transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+
+    .socialbtns .fa:hover {
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+
+    /// Thank You
+    .header-content {
+        background: url(../img/others/ty-header.png);
+        padding: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .centered {
+        height: 100%;
+        display: table;
+
+        .vertical-center-row {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .centered {
+        padding-top: 25%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .centered {
+        .content {
+            img {
+                padding-bottom: 30px;
+            }
+
+            .content-wrap {
+                padding: 20px;
+
+                .title {
+                    font: 22px KarlaBold;
+                    padding-bottom: 40px;
+                }
+
+                .desc {
+                    font: 14px KarlaRegular;
+                    line-height: 18px;
+                    padding-bottom: 40px;
+                }
+
+                .btn-print {
+                    font-size: 12px;
+                    padding: 10px 0px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .socialbtns {
+            margin-top: 10px;
+
+            .rights {
+                font: 12px KarlaRegular;
+                padding-top: 5px;
+            }
+
+            img {
+                width: 80px;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.centered-ty {
+    padding-top: 50px;
+
+    .content {
+        background: #eee;
+
+        img {
+            margin: 0 auto;
+            width: 120px;
+            padding-bottom: 40px;
+        }
+
+        .content-wrap {
+            border-radius: 5px;
+            background: #fff;
+            text-align: center;
+            padding: 0;
+
+            .title {
+                margin: 0;
+                padding: 0;
+                font: 24px KarlaBold;
+                color: #292929;
+                text-align: left;
+                padding-bottom: 40px;
+            }
+
+            .desc {
+                margin: 0;
+                padding: 0;
+                font: 16px KarlaRegular;
+                line-height: 24px;
+                color: #292929;
+                text-align: left;
+                padding-bottom: 40px;
+            }
+
+            .btn-print {
+                font: 16px KarlaBold;
+                color: #fff;
+                text-transform: uppercase;
+                background: #80bc73;
+                padding: 15px 40px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .socialbtns {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+
+        .rights {
+            margin: 0;
+            padding: 0;
+            font: 12px KarlaRegular;
+            color: #292929;
+            padding-top: 25px;
+        }
+
+        img {
+            margin: 0 auto;
+            width: 80px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .socialbtns ul,
+    .socialbtns li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .socialbtns li {
+        list-style: none outside none;
+        display: inline-block;
+    }
+
+    .socialbtns .fa {
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        color: #FFF;
+        font-size: 8px;
+        background-color: #bdbdbd;
+        padding-top: 6px;
+        transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+
+    .socialbtns .fa:hover {
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+
+    /// Thank You
+    .header-content {
+        background: url(../img/others/ty-header.png) 100% no-repeat;
+        background-size: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .head-title {
+            margin: 0;
+            padding: 0;
+            font: 60px MerriweatherBold;
+            color: #fff;
+            padding: 50px 0;
+        }
+    }
+
+    .content-desc {
+        padding: 30px 50px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .centered-ty {
+        .content {
+            img {
+                padding-bottom: 30px;
+            }
+
+            .content-wrap {
+                .title {
+                    font: 22px KarlaBold;
+                    padding-bottom: 40px;
+                }
+
+                .desc {
+                    font: 14px KarlaRegular;
+                    line-height: 18px;
+                    padding-bottom: 40px;
+                }
+
+                .btn-print {
+                    font-size: 12px;
+                    padding: 10px 0px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .socialbtns {
+            margin: 0;
+            padding: 0;
+            margin-top: 10px;
+
+            .rights {
+                font: 12px KarlaRegular;
+                padding-top: 5px;
+            }
+
+            img {
+                width: 80px;
+                padding-top: 20px;
+            }
+        }
+
+        .header-content {
+            .head-title {
+                font: 30px MerriweatherBold;
+                padding: 30px 0;
+            }
+        }
+
+        .content-desc {
+            padding: 30px 30px;
+            padding-bottom: 0;
+            margin: 0;
+        }
+    }
+}
+
+.centered-ew {
+    padding-top: 50px;
+
+    .content {
+        background: #eee;
+
+        .top-logo {
+            margin: 0 auto;
+            width: 120px;
+            padding-bottom: 40px;
+        }
+
+        .content-wrap {
+            border-radius: 5px;
+            background: #fff;
+            text-align: center;
+            padding: 0;
+            padding-bottom: 50px;
+
+            .title {
+                margin: 0;
+                padding: 0;
+                font: 24px KarlaBold;
+                color: #292929;
+                text-align: left;
+                padding-bottom: 40px;
+            }
+
+            .desc {
+                margin: 0;
+                padding: 0;
+                font: 16px KarlaRegular;
+                line-height: 24px;
+                color: #292929;
+                text-align: left;
+                padding-bottom: 40px;
+            }
+
+            .btn-print {
+                font: 16px KarlaBold;
+                color: #fff;
+                text-transform: uppercase;
+                background: #80bc73;
+                padding: 15px 40px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .socialbtns {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+
+        .rights {
+            margin: 0;
+            padding: 0;
+            font: 12px KarlaRegular;
+            color: #292929;
+            padding-top: 25px;
+        }
+
+        img {
+            margin: 0 auto;
+            width: 80px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .socialbtns ul,
+    .socialbtns li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .socialbtns li {
+        list-style: none outside none;
+        display: inline-block;
+    }
+
+    .socialbtns .fa {
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        color: #FFF;
+        font-size: 8px;
+        background-color: #bdbdbd;
+        padding-top: 6px;
+        transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+
+    .socialbtns .fa:hover {
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+
+    /// Thank You
+    .header-content {
+        background: url(../img/others/ty-header.png) 100% no-repeat;
+        background-size: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .head-title {
+            margin: 0;
+            padding: 0;
+            font: 48px MerriweatherBold;
+            color: #fff;
+            padding: 50px 0;
+        }
+    }
+
+    .content-desc {
+        padding: 30px 50px;
+        padding-bottom: 0;
+        margin: 0;
+        text-align: center;
+
+        .username {
+            text-transform: capitalize;
+        }
+
+        .step-loop {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 40px;
+
+            img {
+                margin: 0 auto;
+                width: 45px;
+                margin-bottom: 20px;
+            }
+
+            .subdesc {
+                margin: 0;
+                padding: 0;
+                font: 18px KarlaRegular;
+                color: #80bc73;
+                padding: 0 15%;
+            }
+        }
+    }
+
+    .bottom-info {
+        border-radius: 5px;
+        background: #80bc73;
+        text-align: center;
+        padding: 40px 50px;
+        margin-top: 25px;
+
+        .b-title {
+            margin: 0;
+            padding: 0;
+            font: 24px KarlaBold;
+            line-height: 24px;
+            color: #fff;
+            padding-bottom: 20px;
+        }
+
+        .b-desc {
+            margin: 0;
+            padding: 0;
+            font: 16px KarlaRegular;
+            line-height: 24px;
+            color: #fff;
+            text-align: justify;
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .centered-ew {
+        .content {
+            img {
+                padding-bottom: 30px;
+            }
+
+            .content-wrap {
+                .title {
+                    font: 22px KarlaBold;
+                    padding-bottom: 40px;
+                }
+
+                .desc {
+                    font: 14px KarlaRegular;
+                    line-height: 18px;
+                    padding-bottom: 40px;
+                }
+
+                .btn-print {
+                    font-size: 14px;
+                    padding: 15px 0px;
+                    width: 100%;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .socialbtns {
+            margin: 0;
+            padding: 0;
+            margin-top: 10px;
+
+            .rights {
+                font: 12px KarlaRegular;
+                padding-top: 5px;
+            }
+
+            img {
+                width: 80px;
+                padding-top: 20px;
+            }
+        }
+
+        .header-content {
+            .head-title {
+                font: 24px MerriweatherBold;
+                padding: 30px 0;
+            }
+        }
+
+        .content-desc {
+            padding: 30px 30px;
+            padding-bottom: 0;
+            margin: 0;
+
+            .step-loop {
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 30px;
+
+                img {
+                    margin-bottom: 0;
+                    padding-bottom: 10px;
+                }
+
+                .subdesc {
+                    font: 16px KarlaRegular;
+                    padding: 0 5%;
+                }
+            }
+        }
+
+        .bottom-info {
+            .b-title {
+                font: 18px KarlaBold;
+                line-height: 18px;
+                padding-bottom: 20px;
+            }
+
+            .b-desc {
+                font: 14px KarlaRegular;
+                line-height: 20px;
+            }
+        }
+    }
+}

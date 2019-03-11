@@ -1,0 +1,401 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../libraries/fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaBold;
+  src: url(../libraries/fonts/Karla-Bold.ttf);
+}
+
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+}
+
+/*-====================================================Banner==================================================-*/
+.section-pages-banner {
+  margin-top: 60px;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: MontserratLight;
+}
+
+.section-pages-banner .image-bg {
+  width: 100%;
+}
+
+.section-pages-banner .banner-box {
+  position: relative;
+}
+
+.section-pages-banner .banner-box .banner-title {
+  position: absolute;
+  bottom: 20px;
+}
+
+.section-pages-banner .banner-box .banner-title h2 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font: 40px MontserratLight;
+  float: left;
+  margin-right: 35px;
+  padding-left: 10px;
+}
+
+.section-pages-banner .image-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.section-pages-banner .image-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(35, 49, 34, 0.4);
+}
+
+.section-contact-us-content .wrap-side-content {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.section-contact-us-content .wrap-side-content .left-content {
+  padding-bottom: 41px;
+}
+
+.section-contact-us-content .wrap-side-content .title-left hr {
+  padding: 0;
+  margin: 0;
+  color: #27C566;
+  background-color: #27C566;
+  height: 1.5px;
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+.section-contact-us-content .wrap-side-content .title-left h4 {
+  padding: 0;
+  margin: 0;
+  color: #595959;
+  font: 18px MontserratLight;
+}
+
+.section-contact-us-content .wrap-side-content .title-left h3 {
+  padding: 0;
+  margin: 0;
+  color: #595959;
+  font: 30px MontserratLight;
+  margin-bottom: 25px;
+}
+
+.section-contact-us-content .wrap-side-content .title-left p {
+  padding: 0;
+  margin: 0;
+  color: #525252;
+  font: 14px MontserratLight;
+  text-align: justify;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.section-contact-us-content .wrap-side-content .detail-contact hr {
+  padding: 0;
+  margin: 0;
+  color: #27C566;
+  background-color: #27C566;
+  height: 1px;
+  width: 20px;
+  margin-bottom: 5px;
+  margin-top: 35px;
+}
+
+.section-contact-us-content .wrap-side-content .detail-contact h4 {
+  padding: 0;
+  margin: 0;
+  color: #595959;
+  font: 14px MontserratLight;
+}
+
+.section-contact-us-content .wrap-side-content .detail-contact p {
+  padding: 0;
+  margin: 0;
+  color: #525252;
+  font: 14px MontserratLight;
+  text-align: justify;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.section-contact-us-content .wrap-side-content .title-right hr {
+  padding: 0;
+  margin: 0;
+  color: #27C566;
+  background-color: #27C566;
+  height: 1.5px;
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+.section-contact-us-content .wrap-side-content .title-right h4 {
+  padding: 0;
+  margin: 0;
+  color: #595959;
+  font: 18px MontserratLight;
+}
+
+.section-contact-us-content .wrap-side-content .title-right h3 {
+  padding: 0;
+  margin: 0;
+  color: #595959;
+  font: 30px MontserratLight;
+  margin-bottom: 25px;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact {
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact .form-group {
+  padding: 0;
+  margin: 0;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact .form-group input {
+  border-radius: 0;
+  font: 12px MontserratLight;
+  color: #525252;
+  margin-bottom: 11px;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact .form-group textarea {
+  resize: none;
+  font: 12px MontserratLight;
+  color: #525252;
+  margin-bottom: 21px;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact .form-control::-webkit-input-placeholder {
+  color: #a0a9b6;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact .form-control:-moz-placeholder {
+  color: #a0a9b6;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact .form-control::-moz-placeholder {
+  color: #a0a9b6;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact .form-control:-ms-input-placeholder {
+  color: #a0a9b6;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact button {
+  font-family: MontserratMedium;
+  font-size: 14px;
+  width: 100%;
+  background-color: #7F7F7F;
+  border-radius: 0px;
+  border: none;
+  color: #ffffff;
+  display: inline-block;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact button:hover {
+  opacity: 0.8;
+}
+
+.section-contact-us-content .wrap-side-content .form-contact button i {
+  padding-left: 10px;
+}
+
+.section-contact {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.section-contact a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-family: MontserratLight;
+  font-size: 14px;
+  color: #202020;
+}
+
+.section-contact a:hover {
+  text-decoration: none;
+}
+
+.section-contact .title-left .image-ico {
+  float: left;
+  height: 100px;
+  padding-right: 35px;
+}
+
+.section-contact .title-left .desc-ico h3 {
+  padding: 0;
+  margin: 0;
+  font-family: MontserratRegular;
+  font-size: 24px;
+  color: #595959;
+  padding-top: 8px;
+}
+
+.section-contact .title-right .image-ico {
+  float: left;
+  height: 60px;
+  padding-right: 35px;
+}
+
+.section-contact .title-right .desc-ico h3 {
+  padding: 0;
+  margin: 0;
+  font-family: MontserratRegular;
+  font-size: 24px;
+  color: #595959;
+  padding-top: 8px;
+}
+
+.section-contact .detail-contact .image-ico {
+  float: left;
+  height: 120px;
+  padding-right: 40px;
+}
+
+.section-contact .detail-contact .desc-ico p {
+  padding: 0;
+  margin: 0;
+  font-family: MontserratLight;
+  font-size: 14px;
+  color: #202020;
+}
+
+.section-contact .form-contact {
+  padding: 10px 10px;
+}
+
+.section-contact .form-contact .form-group input {
+  border-radius: 0;
+  font-family: MontserratLight;
+}
+
+.section-contact .form-contact .form-group textarea {
+  resize: none;
+  font-family: MontserratLight;
+}
+
+.section-contact .form-contact button {
+  font-family: MontserratMedium;
+  font-size: 14px;
+  width: 100%;
+  background-color: #27C566;
+  border-radius: 0px;
+  border: none;
+  color: #ffffff;
+  display: inline-block;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.section-contact .form-contact button:hover {
+  opacity: 0.8;
+}
+
+.section-contact .form-contact button i {
+  padding-left: 10px;
+}
+
+.section-contact .form-contact .contact-group {
+  margin-bottom: 15px;
+}
+
+.maps iframe {
+  min-height: 300px;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .section-pages-banner .image-bg {
+    height: 140px;
+  }
+  .section-pages-banner .banner-box .banner-title {
+    bottom: 10px;
+  }
+  .section-pages-banner .banner-box .banner-title h2 {
+    font: 28px MontserratLight;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-pages-banner .image-bg {
+    height: 90px;
+  }
+  .section-pages-banner .banner-box .banner-title {
+    bottom: 10px;
+  }
+  .section-pages-banner .banner-box .banner-title h2 {
+    font: 24px MontserratLight;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-pages-banner .banner-box .banner-title {
+    left: 25px;
+  }
+  .section-contact-us-content {
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

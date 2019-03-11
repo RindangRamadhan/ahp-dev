@@ -1,0 +1,275 @@
+@import "variables.scss";
+
+
+.navbar-default {
+    background-color: transparent;
+    border: none;
+    font-family: MontserratRegular;
+    -webkit-transition: all 0.35s !important;
+    -moz-transition: all 0.35s !important;
+    transition: all 0.45s !important;
+    max-width: 14000px !important;
+
+    .navbar-header {
+        .navbar-brand {
+            color: #fff;
+            font-family: MontserratRegular;
+            text-transform: uppercase;
+            padding: 9px 15px;
+
+            &:hover,
+            &:focus {
+                color: $GreenTheme;
+            }
+        }
+
+        .navbar-toggle {
+            font-weight: 700;
+            font-size: 12px;
+            color: $GreenTheme;
+            text-transform: uppercase;
+        }
+    }
+
+    .navbar-nav>.active>a,
+    .navbar-nav>.active>a:focus,
+    .navbar-nav>.active>a:hover {
+        background-color: transparent;
+        color: $GreenTheme;
+    }
+
+    .nav>li {
+        padding: 20px;
+        padding-bottom: 10px;
+        font-family: MontserratRegular;
+
+        a {
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #fff !important;
+            background-color: transparent;
+            padding: 2px 0;
+        }
+
+    }
+
+    .nav>li>a:hover,
+    .nav>li>a:focus,
+    .nav>li>a:focus:hover,
+    .nav>li.active>a:focus,
+    .nav>li.active>a:hover,
+    .nav>li.active>a:focus:hover {
+        background-color: transparent;
+        color: $GreenTheme !important;
+    }
+
+
+    .phone-contact {
+        margin-top: -7px;
+
+        img {
+            background: #dcdcdd;
+            height: 34px;
+            padding: 10px;
+            float: left;
+        }
+
+        h5 {
+            padding: 0;
+            margin: 0;
+            height: 34px;
+            width: 180px;
+            padding-top: 8.5px;
+            background: #d0d0d4;
+            color: #333333;
+            font-family: MontserratRegular;
+
+            span {
+                padding-left: 8px;
+                font-family: MontserratRegular;
+            }
+        }
+    }
+
+    /*Submenu Dropdown*/
+    .dropdown-menu {
+        background: #fff;
+        border: none;
+        border-radius: 2px;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        min-width: auto;
+        left: 0 !important;
+        padding-top: 5px;
+        padding-bottom: 6px;
+        padding-left: 23px;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        letter-spacing: 0.5px;
+
+        .fa-caret-up {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            margin-left: -10px;
+            width: 20px;
+            font-size: 21px;
+            color: #fff;
+        }
+    }
+
+    .dropdown-menu>li>a {
+        border: none;
+        margin-bottom: 0 !important;
+        transition: all 0.09s ease-in-out;
+        border: none;
+        margin-bottom: 0 !important;
+        -webkit-transition: all 0.09s ease-in-out;
+        transition: all 0.09s ease-in-out;
+        display: block !important;
+        padding: 3px 0;
+        margin: 0;
+        width: auto !important;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.42857143;
+        $GreenTheme-space: nowrap;
+        text-transform: capitalize !important;
+        color: $DarkBg !important;
+
+        &:hover {
+            color: $GreenTheme !important;
+            text-shadow: none;
+            border: none !important;
+            text-decoration: none;
+            background: transparent;
+        }
+    }
+
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    // .dropdown-submenu>.dropdown-menu {
+    //     top: -1px;
+    //     left: 100%;
+    //     margin-top: -6px;
+    //     margin-left: -1px;
+    //     border-radius: 0;
+    // }
+
+    // .dropdown-submenu>a:after {
+    //     display: block;
+    //     float: right;
+    //     margin-right: -15px;
+    //     margin-top: 2px;
+    //     font-family: "FontAwesome";
+    //     content: "\f105";
+    //     font-size: 14px;
+    // }
+
+    // .dropdown-submenu:hover>a:after {
+    //     border: none;
+    // }
+
+    // @media (max-width: 767px) {}
+
+    // @media (min-width: 768px) {}
+
+    ul.nav li:hover>ul.dropdown-menu {
+        display: block;
+    }
+}
+
+
+.top-nav-collapse.navbar-default {
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 16px 4px;
+    -webkit-transition: all 0.35s !important;
+    -moz-transition: all 0.35s !important;
+    transition: all 0.45s !important;
+
+    .navbar-header {
+        .navbar-brand {
+            color: #fff;
+            font-family: MontserratRegular;
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+                color: $GreenTheme;
+            }
+        }
+
+        .navbar-toggle {
+            font-weight: 700;
+            font-size: 12px;
+            color: $GreenTheme;
+            text-transform: uppercase;
+        }
+    }
+
+    .navbar-nav>.active>a,
+    .navbar-nav>.active>a:focus,
+    .navbar-nav>.active>a:hover {
+        background-color: transparent;
+        color: #333333;
+    }
+
+    .nav>li {
+        padding: 20px;
+        padding-bottom: 10px;
+        font-family: MontserratRegular;
+
+        a {
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #333333 !important;
+            background-color: transparent;
+            padding: 2px 0;
+        }
+
+    }
+
+    .nav>li>a:hover,
+    .nav>li>a:focus,
+    .nav>li>a:focus:hover,
+    .nav>li.active>a:focus,
+    .nav>li.active>a:hover,
+    .nav>li.active>a:focus:hover {
+        background-color: transparent;
+        color: $GreenTheme !important;
+    }
+
+
+    .dropdown-menu>li>a {
+        border: none;
+        margin-bottom: 0 !important;
+        transition: all 0.09s ease-in-out;
+        border: none;
+        margin-bottom: 0 !important;
+        -webkit-transition: all 0.09s ease-in-out;
+        transition: all 0.09s ease-in-out;
+        display: block !important;
+        padding: 3px 0;
+        margin: 0;
+        width: auto !important;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.42857143;
+        $GreenTheme-space: nowrap;
+        text-transform: capitalize !important;
+        color: $DarkBg !important;
+
+        &:hover {
+            color: $GreenTheme !important;
+            text-shadow: none;
+            border: none !important;
+            text-decoration: none;
+            background: transparent;
+        }
+    }
+
+}

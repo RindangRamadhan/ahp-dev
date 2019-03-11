@@ -1,0 +1,277 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../libraries/fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaBold;
+  src: url(../libraries/fonts/Karla-Bold.ttf);
+}
+
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  font-family: MontserratRegular;
+}
+
+header .header-content {
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+header .header-content .header-content-inner {
+  background: rgba(240, 234, 234, 0.01);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+header .header-content .header-content-inner .search-box {
+  position: relative;
+  padding-top: 10px;
+  color: #000;
+  font-family: KarlaRegular;
+}
+
+header .header-content .header-content-inner .search-box .input-group-btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+header .header-content .header-content-inner .search-box .btn-search {
+  background: transparent;
+  border-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #fff;
+  border: none;
+  height: 34px;
+}
+
+header .header-content .header-content-inner .search-box .btn-search:link,
+header .header-content .header-content-inner .search-box .btn-search:visited {
+  color: #fff;
+}
+
+header .header-content .header-content-inner .search-box input {
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  border: 2px solid #fff;
+  height: 34px;
+  padding-right: 20px;
+  color: #fff;
+}
+
+header .header-content .header-content-inner .head-title {
+  border-left: 6px solid #27C566;
+  padding-left: 15px;
+}
+
+header .header-content .header-content-inner .head-title h3 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  line-height: 45px;
+  font-family: KarlaRegular;
+  color: #27C566;
+  padding-bottom: 10px;
+  text-shadow: 0.5px 0.3px 2px gray;
+}
+
+header .header-content .header-content-inner .head-title h5 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: KarlaRegular;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 0 .1px 3px lightgray;
+}
+
+header .header-content .header-content-inner .head-desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: KarlaRegular;
+  color: #fff;
+  margin-top: 15px;
+  text-shadow: 0 .1px 1px lightgray;
+}
+
+header .btn-scroll {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  z-index: 1000;
+}
+
+header .btn-scroll:hover, header .btn-scroll:active, header .btn-scroll:focus {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.8;
+}
+
+header .btn-scroll img {
+  margin: 0 auto;
+  max-width: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.site-content {
+  position: relative;
+  z-index: 99;
+  top: 80px;
+  padding: 1em;
+  width: 350px;
+  background: white;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.owl-carousel {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  min-height: auto;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.owl-carousel div:not(.owl-controls) {
+  height: 100%;
+}
+
+.owl-carousel .owl-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.owl-carousel .owl-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.owl-carousel .owl-controls .owl-buttons div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: #fff;
+  display: inline-block;
+  zoom: 1;
+  margin: 0;
+  width: 50px;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 30px;
+  background: #000;
+  opacity: 0.2;
+  border-radius: 0;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-prev {
+  left: 0;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-next {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  header {
+    min-height: 100%;
+  }
+  header .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  header .header-content .header-content-inner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .header-content .header-content-inner p {
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*# sourceMappingURL=header.css.map */

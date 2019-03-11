@@ -1,0 +1,583 @@
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaRegular;
+  src: url(../libraries/fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: KarlaBold;
+  src: url(../libraries/fonts/Karla-Bold.ttf);
+}
+
+@font-face {
+  font-family: ArapeyRegular;
+  src: url(../libraries/fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArapeyItalic;
+  src: url(../libraries/fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../libraries/fonts/Montserrat-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../libraries/fonts/Montserrat-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../libraries/fonts/Montserrat-SemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url(../libraries/fonts/Montserrat-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+}
+
+.about-us-page {
+  padding-top: 70px;
+  padding-bottom: 0px;
+  background: #f7f9fc;
+  font: 16px KarlaRegular;
+  line-height: 28px;
+  color: #757575;
+}
+
+.about-us-page .content {
+  padding-top: 5%;
+  padding-bottom: 15px;
+}
+
+.about-us-page .section-title {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.vision {
+  position: relative;
+  text-align: left;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.vision .content .border-devide {
+  margin-bottom: 10px;
+}
+
+.vision .content .content-desc {
+  padding-right: 15%;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+
+.vision .section-title {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.vision .lparagraph {
+  padding-left: 0;
+}
+
+.vision .lparagraph .section-desc {
+  padding-right: 20%;
+}
+
+.vision .rparagraph2 {
+  padding: 50px 40px;
+}
+
+.vision img {
+  width: 100%;
+}
+
+.vision .bg-name {
+  position: absolute;
+  left: -17%;
+  bottom: -30%;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  font: 150px MerriweatherRegular;
+  line-height: auto;
+  color: #f5f5f5;
+}
+
+.vision .list-content {
+  padding-top: 30px;
+}
+
+.vision .list-content .l-title {
+  margin: 0;
+  padding: 0;
+  font: 24px MerriweatherRegular;
+  line-height: 36px;
+  color: #292929;
+  padding-bottom: 35px;
+}
+
+.vision .list-content ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 18px;
+}
+
+.vision .list-content ul li {
+  margin: 0;
+  padding: 0;
+  font: 16px KarlaRegular;
+  line-height: 30px;
+  color: #757575;
+}
+
+.services {
+  padding-top: 30px;
+  padding-bottom: 0px;
+  background: #f7f9fc;
+  font: 16px KarlaRegular;
+  line-height: 28px;
+  color: #757575;
+}
+
+.services .content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.services .section-title {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.services .list-content {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.services .list-content .l-title {
+  margin: 0;
+  padding: 0;
+  font: 24px MerriweatherRegular;
+  line-height: 36px;
+  color: #292929;
+  padding-bottom: 35px;
+}
+
+.services .list-content ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 18px;
+}
+
+.services .list-content ul li {
+  margin: 0;
+  padding: 0;
+  font: 16px KarlaRegular;
+  line-height: 30px;
+  color: #757575;
+}
+
+.services .list-content ul li .list-title {
+  margin: 0;
+  padding: 0;
+  font: 18px KarlaBold;
+  line-height: 30px;
+  color: #292929;
+}
+
+@media only screen and (min-width: 992px) {
+  .vision .lparagraph .section-desc {
+    display: block;
+    display: -webkit-box;
+    max-width: 767px;
+    height: 264.6px;
+    font-size: 18px;
+    line-height: 2.1;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .vision {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .vision .content .border-devide {
+    margin-bottom: 10px;
+  }
+  .vision .content .content-desc {
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+  }
+  .vision .section-title {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .vision .lparagraph {
+    padding-bottom: 0;
+  }
+  .vision .lparagraph .section-desc {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+  .vision .rparagraph2 {
+    padding-left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .vision .img-abs {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .vision .bg-name {
+    position: absolute;
+    left: 17%;
+    bottom: -30%;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    font: 150px MerriweatherRegular;
+    line-height: auto;
+    color: #f5f5f5;
+  }
+  .vision .list-content {
+    padding-top: 30px;
+  }
+  .vision .list-content .l-title {
+    padding-bottom: 20px;
+  }
+  .services .paragraph .content-desc {
+    padding-bottom: 0;
+    margin-bottom: 50px;
+  }
+  .services .section-title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .services .list-content {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+  .services .list-content .l-title {
+    margin: 0;
+    padding: 0;
+    font: 24px MerriweatherRegular;
+    line-height: 36px;
+    color: #292929;
+    padding-bottom: 20px;
+  }
+  .services .list-content ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 18px;
+  }
+  .services .list-content ul li {
+    margin: 0;
+    padding: 0;
+    font: 16px KarlaRegular;
+    line-height: 30px;
+    color: #757575;
+  }
+  .services .list-content ul li .list-title {
+    margin: 0;
+    padding: 0;
+    font: 18px KarlaBold;
+    line-height: 30px;
+    color: #292929;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .vision {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .vision .content {
+    padding: 0;
+    margin: 0;
+  }
+  .vision .content .border-devide {
+    margin-bottom: 10px;
+  }
+  .vision .content .content-desc {
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+  }
+  .vision .section-title {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .vision .lparagraph {
+    padding: 15px;
+    padding-bottom: 0;
+  }
+  .vision .lparagraph .section-desc {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .vision .rparagraph2 {
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .vision .img-abs {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .vision .bg-name {
+    position: absolute;
+    left: 17%;
+    bottom: -30%;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    font: 150px MerriweatherRegular;
+    line-height: auto;
+    color: #f5f5f5;
+  }
+  .vision .list-content {
+    padding-top: 30px;
+    padding-left: 15px;
+  }
+  .vision .list-content .l-title {
+    margin: 0;
+    padding: 0;
+    font: 24px MerriweatherRegular;
+    line-height: 36px;
+    color: #292929;
+    padding-bottom: 20px;
+  }
+  .vision .list-content ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 18px;
+  }
+  .vision .list-content ul li {
+    margin: 0;
+    padding: 0;
+    font: 16px KarlaRegular;
+    line-height: 30px;
+    color: #757575;
+  }
+  .services {
+    padding-top: 60px;
+    padding-bottom: 0px;
+    background: #f7f9fc;
+  }
+  .services .content {
+    padding-top: 5%;
+  }
+  .services .section-title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.about-content {
+  padding: 0;
+  background: #eee;
+  margin-top: 15px;
+  font: 16px KarlaRegular;
+}
+
+.about-content .ac-head {
+  text-align: center;
+}
+
+.about-content .ac-head p {
+  padding: 10px 15%;
+  padding-bottom: 50px;
+  color: #333;
+  font-style: italic;
+}
+
+.about-content .ac-mission img {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.about-content .ac-mission .acm-numbers {
+  padding-left: 5px;
+  color: #cccccc;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+}
+
+.about-content .ac-mission .acm-desc {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.about-content .ac-mission .acm-desc h6 {
+  color: #ff4320;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.about-content .ac-mission .acm-desc h5 {
+  color: #222222;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.about-content .ac-mission .acm-desc p {
+  color: #666666;
+  font-size: 14px;
+  padding-top: 3px;
+  line-height: 20px;
+}
+
+.story .story-content {
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.story .story-content .lcontent .carousel-inner .item {
+  opacity: 0.6;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.story .story-content .lcontent .carousel-inner .active {
+  opacity: 1;
+}
+
+.story .story-content .lcontent .custom-control {
+  background: #fff;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.story .story-content .lcontent .custom-control a {
+  color: #b7b7b7;
+}
+
+.story .story-content .lcontent .custom-control a:hover {
+  color: #88c07c;
+}
+
+.story .story-content .lcontent .custom-control .active {
+  color: #88c07c;
+}
+
+.story .story-content .lcontent .custom-control .num-active {
+  font: 30px KarlaRegular;
+  color: #292929;
+  margin-right: 15px;
+  margin-left: 30px;
+}
+
+.story .story-content .lcontent .custom-control .num-total {
+  font: 14px KarlaRegular;
+  color: #292929;
+  margin-left: 5px;
+  margin-right: 30px;
+}
+
+.story .story-content .lcontent .custom-control .fa {
+  font-size: 26px;
+}
+
+.story .story-content .lcontent .play-set {
+  position: absolute;
+  top: 45%;
+  right: -40px;
+}
+
+.story .story-content .lcontent .play-set img {
+  width: 80px;
+}
+
+.story .story-content .lcontent .play-set:hover {
+  opacity: 0.8;
+}
+
+.story .story-content .rcontent {
+  padding: 10px 5%;
+  position: relative;
+}
+
+.story .story-content .rcontent .quote-left {
+  position: absolute;
+  top: 60px;
+  left: 12%;
+}
+
+.story .story-content .rcontent .quote-right {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 12%;
+}
+
+.story .story-content .rcontent .section-desc {
+  margin-top: -20px;
+  padding-bottom: 30px;
+}
+
+.story .story-content .rcontent .quotes-desc h1,
+.story .story-content .rcontent .quotes-desc h2,
+.story .story-content .rcontent .quotes-desc h3,
+.story .story-content .rcontent .quotes-desc h4,
+.story .story-content .rcontent .quotes-desc h5,
+.story .story-content .rcontent .quotes-desc h6,
+.story .story-content .rcontent .quotes-desc span,
+.story .story-content .rcontent .quotes-desc a,
+.story .story-content .rcontent .quotes-desc p {
+  margin: 0;
+  padding: 0;
+  font: 20px MerriweatherRegular;
+  line-height: 35px;
+  color: #292929;
+  padding-top: 0px;
+}
+
+.story .story-content .rcontent .people-quote {
+  padding-top: 30px;
+}
+
+.story .story-content .rcontent .people-quote img {
+  width: 50px;
+  float: left;
+  margin-right: 30px;
+}
+
+.story .story-content .rcontent .people-quote .people-name {
+  padding: 0;
+  margin: 0;
+  font: 16px KarlaRegular;
+  line-height: 24px;
+  color: #b2b2b2;
+  padding-top: 10px;
+}
+/*# sourceMappingURL=about-us.css.map */
