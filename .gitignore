@@ -1,7 +1,5 @@
 /node_modules
 /public/hot
-/public/assets/img
-/public/assets/Materi AHP
 /public/storage
 /storage/*.key
 /vendor
