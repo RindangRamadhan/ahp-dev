@@ -19,3 +19,16 @@
  */
 
 Encore\Admin\Form::forget(['map']);
+use Encore\Admin\Facades\Admin;
+use Encore\Admin\Layout\Content;
+
+Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
+    $navbar->right('
+        <li>
+            <a href="/" target="_blank">
+                <i class="fa fa-globe"></i>
+                <span>Lihat Website</span>
+            </a>
+        </li>
+    ');
+});
