@@ -18,5 +18,6 @@ Route::group([
     $router->resource('auth/term-of-use', TermOfUseController::class);
     $router->resource('auth/faq', FaqController::class);
     $router->resource('auth/about-us', TentangKamiController::class);
+    $router->resource('auth/benefit', BenefitController::class);
 
 });
