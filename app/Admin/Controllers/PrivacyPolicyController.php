@@ -93,6 +93,11 @@ class PrivacyPolicyController extends Controller
         });
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
+        $grid->actions(function (Grid\Displayers\Actions $actions) {
+            if (Admin::user()->cannot('auth.management')) {
+                $actions->disableDelete();
+            }
+        });
 
         return $grid;
     }
