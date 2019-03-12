@@ -9,6 +9,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use Encore\Admin\Facades\Admin;
 
 class FaqController extends Controller
 {
@@ -23,8 +24,8 @@ class FaqController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
-            ->description('description')
+            ->header('FAQ')
+            ->description('List')
             ->body($this->grid());
     }
 
@@ -38,8 +39,8 @@ class FaqController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Detail')
-            ->description('description')
+            ->header('FAQ')
+            ->description('Detail')
             ->body($this->detail($id));
     }
 
@@ -53,8 +54,8 @@ class FaqController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
-            ->description('description')
+            ->header('FAQ')
+            ->description('Edit')
             ->body($this->form()->edit($id));
     }
 
@@ -67,8 +68,8 @@ class FaqController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
-            ->description('description')
+            ->header('FAQ')
+            ->description('Create')
             ->body($this->form());
     }
 
@@ -82,6 +83,11 @@ class FaqController extends Controller
         $grid = new Grid(new Faq);
 
         $grid->id('Id');
+        
+        if (Admin::user()->cannot('auth.management')) {
+            $grid->disableCreateButton();
+        }
+
         $grid->deskripsi('Deskripsi')->display(function ($deskripsi) {
             return $deskripsi;
         });
@@ -118,7 +124,7 @@ class FaqController extends Controller
     {
         $form = new Form(new Faq);
 
-        $form->textarea('deskripsi', 'Deskripsi');
+        $form->editor('deskripsi', 'Deskripsi');
 
         return $form;
     }

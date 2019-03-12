@@ -23,8 +23,8 @@ class ProductCategoryController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('List')
-            ->description('Product Category')
+            ->header('Product Category')
+            ->description('List')
             ->body($this->grid());
     }
 
@@ -38,8 +38,8 @@ class ProductCategoryController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Detail')
-            ->description('Product Category')
+            ->header('Product Category')
+            ->description('Detail')
             ->body($this->detail($id));
     }
 
@@ -53,8 +53,8 @@ class ProductCategoryController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
-            ->description('Product Category')
+            ->header('Product Category')
+            ->description('Edit')
             ->body($this->form()->edit($id));
     }
 
@@ -67,8 +67,8 @@ class ProductCategoryController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
-            ->description('Product Category')
+            ->header('Product Category')
+            ->description('Create')
             ->body($this->form());
     }
 
