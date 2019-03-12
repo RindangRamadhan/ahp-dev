@@ -19,5 +19,6 @@ Route::group([
     $router->resource('auth/faq', FaqController::class);
     $router->resource('auth/about-us', TentangKamiController::class);
     $router->resource('auth/benefit', BenefitController::class);
+    $router->resource('auth/product-groups', ProductGroupController::class);
 
 });
