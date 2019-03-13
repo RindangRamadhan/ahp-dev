@@ -22,5 +22,6 @@ Route::group([
     $router->resource('auth/product-groups', ProductGroupController::class);
     $router->resource('auth/banners', BannerController::class);
     $router->resource('auth/our-partner', OurPartnerController::class);
+    $router->resource('auth/news', NewsController::class);
 
 });
