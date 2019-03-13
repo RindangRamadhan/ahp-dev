@@ -20,5 +20,7 @@ Route::group([
     $router->resource('auth/about-us', TentangKamiController::class);
     $router->resource('auth/benefit', BenefitController::class);
     $router->resource('auth/product-groups', ProductGroupController::class);
+    $router->resource('auth/banners', BannerController::class);
+    $router->resource('auth/our-partner', OurPartnerController::class);
 
 });
