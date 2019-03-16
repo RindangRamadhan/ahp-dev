@@ -1,5 +1,6 @@
 <?php
 
+use App\Pengunjung;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,28 @@
 */
 // HOME
 Route::get('/', function () {
+    $ip      = Pengunjung::Ip();
+    $browser = Pengunjung::Browser();
+    $os      = Pengunjung::Os();
+
+    // Check bila sebelumnya data pengunjung sudah terrekam
+    if (! isset($_COOKIE['VISITOR'])) {
+
+			// Masa akan direkam kembali
+			// Tujuan untuk menghindari merekam pengunjung yang sama dihari yang sama.
+			// Cookie akan disimpan selama 24 jam
+			$duration = time()+60*60*24;
+
+			// simpan kedalam cookie browser
+			setcookie('VISITOR', $browser, $duration);
+
+			$kas = Pengunjung::create([
+				'ip'    	=> $ip,
+				'os'			=> $os,
+				'browser'	=> $browser,
+			]);
+    }
+    
     return view('homepage');
 });
 // ABOUT US

@@ -26,5 +26,6 @@ Route::group([
     $router->resource('auth/banners', BannerController::class);
     $router->resource('auth/our-partner', OurPartnerController::class);
     $router->resource('auth/news', NewsController::class);
+    $router->resource('auth/pengunjung', PengunjungController::class);
 
 });

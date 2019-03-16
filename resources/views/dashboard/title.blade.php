@@ -37,7 +37,7 @@
             <div class="inner">
                 <h3>150</h3>
 
-                <p>Semua Produk</p>
+                <p>Produk</p>
             </div>
             <div class="icon">
                 <i class="fa fa-cubes"></i>
@@ -50,7 +50,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
             <div class="inner">
-                <h3>2</h3>
+                <h3>{{ number_format($user, 0, ',', '.') }}</h3>
 
                 <p>User</p>
                 </div>
@@ -65,14 +65,14 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
             <div class="inner">
-                <h3>44</h3>
+                <h3>{{ number_format($news, 0, ',', '.') }}</h3>
 
-                <p>Riwayat</p>
+                <p>Berita</p>
             </div>
             <div class="icon">
-                <i class="fa fa-history"></i>
+                <i class="fa fa-newspaper-o"></i>
             </div>
-            <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('/admin/auth/news') }}" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -80,14 +80,14 @@
         <!-- small box -->
         <div class="small-box bg-red">
             <div class="inner">
-                <h3>65</h3>
+                <h3>{{ number_format($pengunjung, 0, ',', '.') }}</h3>
 
                 <p>Pengunjung</p>
             </div>
             <div class="icon">
                 <i class="fa fa-area-chart"></i>
             </div>
-            <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('/admin/auth/pengunjung') }}" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->

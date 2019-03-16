@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
+use App\Pengunjung;
 use Encore\Admin\Admin;
+use Illuminate\Support\Facades\DB;
 
 class Dashboard
 {
@@ -11,7 +14,15 @@ class Dashboard
      */
     public static function title()
     {
-        return view('dashboard.title');
+        $pengunjung = Pengunjung::count();
+        $news = News::count();
+        $user = DB::table('admin_users')->count();
+
+        return view('dashboard.title', [
+            'pengunjung' => $pengunjung,
+            'news' => $news,
+            'user' => $user
+        ]);
     }
 
     /**

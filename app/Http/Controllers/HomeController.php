@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pengunjung;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $ip      = Pengunjung::getIp();
+        $browser = Pengunjung::getBrowser();
+        $os      = Pengunjung::getOs();
+        $data = [$ip, $browser, $os];
+        
+        return view('home', ['data' => $data]);
     }
 }
