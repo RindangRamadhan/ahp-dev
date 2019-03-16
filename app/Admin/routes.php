@@ -10,6 +10,9 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
 
+    $router->get('/auth/login', function () {
+        return view('login');
+    });
     $router->get('/', 'HomeController@index');
     $router->resource('auth/product-categorys', ProductCategoryController::class);
     $router->resource('auth/products', ProductController::class);
