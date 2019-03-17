@@ -513,15 +513,15 @@
                         <form class="form-vertical" role="form">
                             <div class="form-group col-sm-6">
                                 <label for="input-fn" class="control-label">Nama Lengkap (*)</label>
-                                <input type="text" class="form-control" id="input-fn" placeholder="">
+                                <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" id="input-fn" required >
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="input-ln" class="control-label">Perusahaan</label>
-                                <input type="text" class="form-control" id="input-ln" placeholder="">
+                                <input type="text" name="perusahaan" id="perusahaan" class="form-control" id="input-ln" >
                             </div>
                             <div class="form-group col-sm-12">
                                 <label for="input-email" class="control-label">E-mail</label>
-                                <input type="text" class="form-control" id="input-email" placeholder="">
+                                <input type="email" name="email" id="email" class="form-control" id="input-email" required >
                             </div>
                             <div class="form-group col-sm-12">
                                 <label for="input-phone" class="control-label">Nomor Telepon (*)</label>
@@ -532,16 +532,18 @@
                                             <option>+ 21</option>
                                         </select>
                                     </span>
-                                    <input class="form-control" id="phone-number" name="phone-number" type="text"
-                                        maxlength="14" placeholder="___- ____ - ____">
+                                    <input class="form-control" id="phone-number" name="no_telp" type="text"
+                                        maxlength="14" placeholder="___- ____ - ____" required>
                                 </div>
                             </div>
+                            
+                            <a id="btnPdf" href="{{ url('/download/katalog.pdf') }}" download></a>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-default btn-submit" id="btnDownload" type="button">
+                                    Download Katalog
+                                </button>
+                            </div>
                         </form>
-                        <div class="col-md-12 text-center">
-                            <button class="btn btn-default btn-submit" type="submit">
-                                Download Katalog
-                            </button>
-                        </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>

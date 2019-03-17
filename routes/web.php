@@ -26,3 +26,10 @@ Route::get('/contact', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('download', 'DownloadKatalogController');
+
+//DOWNLOAD KATALOG
+Route::post('/download-katalog', [
+    'as'         => 'downloadKatalog',
+    'uses'       => 'DownloadKatalogController@downloadKatalog',
+]);

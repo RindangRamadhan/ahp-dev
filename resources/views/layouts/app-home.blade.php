@@ -48,4 +48,27 @@
 	<script src="{{ asset('assets/libraries/jquery-mobile-custom/jquery.mobile.custom.min.js') }}"></script>
 	<script src="{{ asset('assets/js/main.js') }}"></script>
 	@yield('scripts')
+  <!-- Download Katalog -->
+  <script>
+    $(document).ready(function(e){
+        $("#btnDownload").on("click", function () {
+            let nama_lengkap = $("#nama_lengkap").val();
+            let perusahaan = $("#perusahaan").val();
+            let email = $("#email").val();
+            let no_telp = $("#phone-number").val();
+
+            $.post('{{ route('downloadKatalog') }}',{'_token': $('meta[name=csrf-token]').attr('content'), nama_lengkap:nama_lengkap, perusahaan:perusahaan, email:email, no_telp:no_telp}, function(data){
+              if(data == 200) {
+                $("#btnPdf").click();
+
+                
+                $("#nama_lengkap").val('');
+                $("#perusahaan").val('');
+                $("#email").val('');
+                $("#phone-number").val('');
+              }
+            });
+        })
+    });
+</script>
 </html>
