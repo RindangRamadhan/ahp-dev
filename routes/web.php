@@ -22,6 +22,8 @@ Route::get('/about-us', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+// privacy-policy
+Route::get('/privacy-policy', 'PrivacyPolicyController@index');
 
 Auth::routes();
 
