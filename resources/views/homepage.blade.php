@@ -68,17 +68,7 @@
 				</div>
 				<div class="col-md-8 col-md-offset-2 col-sm-12 paragraph">
 					<p class="section-desc">
-						PT. Andall Hasa Prima didirikan di Bandar Lampung pada tanggal 23
-						Agustus 1999 oleh 3 orang
-						pendiri yaitu: Ir. Poedjoasmoro, Zakaria Halim dan Ir. Achmad Lutfi. Bidang Usaha PT.
-						Andall Hasa Prima mencakup;
-						Bidang Perdagangan umum, pengembangan pertanian dan pengadaan industri. Aktifitas perseroan
-						saat ini adalah sebagai
-						distributor pestisida, pemegang merk pestisida, benih dan alat alat pertanian. PT Andall
-						Hasa Prima merupakan
-						distributor pestisida dan importir alat-alat pertanian yang kian melebarkan sayap
-						menjangkau berbagai pasar bidang
-						pertanian di sejumlah daerah dan kota di Indonesia
+						{{ strip_tags($tentangKami->deskripsi) }}
 					</p>
 				</div>
 				<div class="col-md-12 reset-col wrap-btn-detail">
@@ -93,36 +83,26 @@
 		<div class="row">
 			<div class="col-md-12 content">
 				<h5 class="section-name">benefit</h5>
-				<h5 class="section-title">Beralih ke Produk Kami</h5>
+				<h5 class="section-title">{{ $benefits->title }}</h5>
 				<div class="border-devide">
 					<hr class="first-dot">
 					<hr class="second-dot">
 				</div>
 				<a href="#">
-					<img src="../assets/img/why-1.jpg" class="img-responsive img-abs hidden-sm hidden-xs" alt="">
+					<img src="{{ url('../storage/'.$benefits->image1) }}" class="img-responsive img-abs hidden-sm hidden-xs" alt="">
 				</a>
 				<div class="clearfix"></div>
 				<div class="col-md-12 reset-col">
 					<div class="col-md-6 lparagraph">
 						<div class="col-md-12 reset-col paragraph">
 							<p class="section-desc">
-								Teknik pertanian merupakan pendekatan teknik (engineering)
-								secara luas dalam bidang pertanian
-								yang sangat dibutuhkan untuk melakukan transformasi sumberdaya alam secara efisien
-								dan efektif untuk pemanfaatannya
-								oleh manusia. Dalam sistematika keilmuan, bidang teknik pertanian
-								tetap bertumpu pada bidang ilmu
-								teknik untuk memcahkan berbagai permasalahan di bidang pertanian.
+                                {{ strip_tags($benefits->benefit1) }}
 							</p>
-							<p class="section-desc">
-								Oleh karena itu teknologi pertanian sangat dibutuhkan demi mensejahterakan
-								kehidupan petani dan untuk memenuhi
-								kebutuhan akan produk hasil pertanian dalam skala yang besar.</p>
 						</div>
 					</div>
 					<div class="col-md-6 rparagraph reset-col">
 						<a href="#">
-								<img src="../assets/img/why-2.png" class="img-responsive" alt="">
+								<img src="{{ url('../storage/'.$benefits->image2) }}" class="img-responsive" alt="">
 						</a>
 					</div>
 				</div>
@@ -132,13 +112,7 @@
 							<h1 class="bg-name">benefit</h1>
 							<div class="col-md-12 reset-col paragraph">
 								<p class="section-desc">
-									Dampak positif penggunaan teknologi pertanian seperti pengolahan lahan yang lebih
-									mudah karena tidak dikerakan lagi
-									secara manual melainkan dengan mesin. Produk hasil pertanian yang awalnya mudah
-									rusak bisa dia atasi dengan teknologi
-									pengolahan hasil pertanian. Adanya teknologi juga bisa menjamin kegiatan pertanian
-									yang lebih pasti tanpa adanya
-									kekhawatiran akan gagal panen dan kerusakan pada lahan pertanian.
+                                    {{ strip_tags($benefits->benefit2) }}
 								</p>
 							</div>
 							<div class="col-md-12 reset-col wrap-btn-detail">
@@ -147,7 +121,7 @@
 					</div>
 					<div class="col-md-6 col-md-pull-6 reset-col lparagraph2 hidden-xs hidden-sm">
 						<a href="#">
-							<img src="../assets/img/why-3.jpg" class="img-responsive pull-right" alt="">
+							<img src="{{ url('../storage/'.$benefits->image3) }}" class="img-responsive pull-right" alt="">
 						</a>
 					</div>
 				</div>
@@ -609,17 +583,9 @@
         </div>
         <div class="col-md-12 reset-col gallery-slider">
             <div class="gallery gallery-responsive partners_slider">
-                <div class="inner"><img src="../assets/img/partners/1.png"></div>
-                <div class="inner"><img src="../assets/img/partners/10.png"></div>
-                <div class="inner"><img src="../assets/img/partners/11.png"></div>
-                <div class="inner"><img src="../assets/img/partners/2-1.png"></div>
-                <div class="inner"><img src="../assets/img/partners/3.png"></div>
-                <div class="inner"><img src="../assets/img/partners/4.png"></div>
-                <div class="inner"><img src="../assets/img/partners/5.png"></div>
-                <div class="inner"><img src="../assets/img/partners/6-1.png"></div>
-                <div class="inner"><img src="../assets/img/partners/7-1.png"></div>
-                <div class="inner"><img src="../assets/img/partners/8.png"></div>
-                <div class="inner"><img src="../assets/img/partners/9.png"></div>
+                @foreach ($ourPartners as $ourPartner)
+                <div class="inner"><img src="{{ url('../storage/'.$ourPartner->logo) }}"></div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -631,70 +597,46 @@
 <div class="container-fluid">
     <div class="row news">
         <div class="col-md-12">
-            <h3 class="gtitle">News &amp; updates</h3>
+            <h3 class="gtitle">News &amp; Updates</h3>
         </div>
         <div class="col-md-12 reset-col">
-            <div class="col-md-4 updates">
-                <a href="#">
-                    <img src="../assets/img/news1.jpg" alt="">
-                    <h5 class="ndate">Our Team / 01 February 2019</h5>
-                    <h4 class="ntitle">Nullam Ligula Tristique Egestas Aenean Nu</h4>
-                    <p class="ndesc">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis
-                        lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies
-                        vehicula.</p>
-                </a>
-            </div>
-            <div class="col-md-4 updates">
-                <a href="#">
-                    <img src="../assets/img/news2.jpg" alt="">
-                    <h5 class="ndate">Panen Bawang Melimpah / 01 February 2019</h5>
-                    <h4 class="ntitle">Nullam Ligula Tristique Egestas Aenean Nu</h4>
-                    <p class="ndesc">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis
-                        lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies
-                        vehicula.</p>
-                </a>
-
+            <div class="col-md-8 updates">
+                <div class="col-md-12">                    
+                @foreach ($news as $data)
+                    <div class="col-md-6 updates">
+                        <a href="#">
+                            <img src="{{ url('../storage/'.$data->image) }}" alt="">
+                            <h5 class="ndate">{{ date('d/m/Y', strtotime($data->created_at)) }}</h5>
+                            <h4 class="ntitle">{{ $data->title }}</h4>
+                            <p class="ndesc">
+                                {{ strip_tags(substr($data->description, 0, 140)) }}
+                            </p>
+                        </a>
+                    </div>
+                @endforeach
+                </div>
             </div>
             <div class="col-md-4 updates unews">
                 <h5 class="utitle pull-left">NEWS</h5>
                 <h5 class="uallapdate pull-right"><a href="#">selengkapnya <i class="fa fa-long-arrow-right"
                             aria-hidden="true"></i></a></h5>
                 <div class="clearfix"></div>
+                @foreach ($news as $data)
                 <div class="col-md-12 reset-col loop-list">
                     <a href="#">
-                        <div class="col-md-5 reset-col"><span class="unews-date">01 February 2019</span></div>
-                        <div class="col-md-7 reset-col"><span class="unews-desc">Commodo Ipsum Euismod Parturient
-                                Dolor Fermentum Bibendum Parturient Commodo</span></div>
+                        <div class="col-md-5 reset-col">
+                            <span class="unews-date">
+                                {{ date('d/m/Y', strtotime($data->created_at)) }}
+                            </span>
+                        </div>
+                        <div class="col-md-7 reset-col">
+                            <span class="unews-desc">
+                                {{ strip_tags(substr($data->description, 0, 100)) }}
+                            </span>
+                        </div>
                     </a>
                 </div>
-                <div class="col-md-12 reset-col loop-list">
-                    <a href="#">
-                        <div class="col-md-5 reset-col"><span class="unews-date">02 February 2019</span></div>
-                        <div class="col-md-7 reset-col"><span class="unews-desc">Consectetur Vulputate Mattis
-                            </span></div>
-                    </a>
-                </div>
-                <div class="col-md-12 reset-col loop-list">
-                    <a href="#">
-                        <div class="col-md-5 reset-col"><span class="unews-date">03 February 2019</span></div>
-                        <div class="col-md-7 reset-col"><span class="unews-desc">Mollis Purus Vulputate Bibendum
-                                Consectetur Etiam Nibh Ridiculus Dolor</span></div>
-                    </a>
-                </div>
-                <div class="col-md-12 reset-col loop-list">
-                    <a href="#">
-                        <div class="col-md-5 reset-col"><span class="unews-date">03 February 2019</span></div>
-                        <div class="col-md-7 reset-col"><span class="unews-desc">Inceptos Tellus Ridiculus
-                                Sollicitudin</span></div>
-                    </a>
-                </div>
-                <div class="col-md-12 reset-col loop-list">
-                    <a href="#">
-                        <div class="col-md-5 reset-col"><span class="unews-date">04 February 2019</span></div>
-                        <div class="col-md-7 reset-col"><span class="unews-desc">Venenatis Dapibus Fringilla Porta
-                                Fusce Tristique Fringilla</span></div>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
