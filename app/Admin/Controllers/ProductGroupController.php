@@ -82,6 +82,12 @@ class ProductGroupController extends Controller
         $grid = new Grid(new ProductGroup);
 
         $grid->id('Id');
+        $grid->filter(function($filter){
+        
+            // Add a column filter
+            $filter->like('group_name', 'Nama Kelompok');
+            
+        });
         $grid->group_name('Nama Kelompok');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');

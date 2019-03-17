@@ -82,6 +82,12 @@ class TestimonialController extends Controller
         $grid = new Grid(new Testimonial);
 
         $grid->id('Id');
+        $grid->filter(function($filter){
+        
+            // Add a column filter
+            $filter->like('nama', 'Nama');
+            $filter->like('jenis_kelamin', 'Jenis Kelamin');
+        });
         $grid->nama('Nama');
         $grid->jenis_kelamin('Jenis kelamin')->display(function($jenis_kelamin)
         {
