@@ -82,7 +82,16 @@ class ProductCategoryController extends Controller
         $grid = new Grid(new ProductCategory);
 
         $grid->id('Category id');
-        $grid->category_name('Category name');
+        $grid->filter(function($filter){
+        
+            // Add a column filter
+            $filter->like('category_name', 'Category Name');
+
+
+        
+        });
+
+        $grid->category_name('Category Name');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 
