@@ -94,6 +94,12 @@ class OurPartnerController extends Controller
         $grid->logo('Logo')->display(function ($logo) use ($app) {
             return $app->displayImage($logo);
         });
+        $grid->filter(function($filter){
+        
+            // Add a column filter
+            $filter->like('mitra', 'Mitra');
+        });
+
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 

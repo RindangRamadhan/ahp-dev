@@ -92,6 +92,9 @@ class NewsController extends Controller
         
             // Add a column filter
             $filter->like('title', 'Title');
+            $filter->like('description', 'Description');
+            $filter->like('Source');
+
         
         });
 

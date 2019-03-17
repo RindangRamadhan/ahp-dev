@@ -116,7 +116,16 @@ class ProductCategoryController extends Controller
     {
         $form = new Form(new ProductCategory);
 
-        $form->text('category_name', 'Category Name');
+        $form->text('category_name', 'Category Name')->rules(function($form) {
+            if (!$id = $form->model()->id) {
+                return 'required|unique:product_categories,category_name';
+                # code...
+            }else {
+                return 'required|unique:product_categories,category_name,'.$id;
+                # code...
+            }
+        });
+
 
         return $form;
     }

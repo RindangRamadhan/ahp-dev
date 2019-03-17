@@ -117,6 +117,12 @@ class BenefitController extends Controller
             return $app->displayImage($image3);
         });
 
+        $grid->filter(function($filter){
+        
+            // Add a column filter
+            $filter->like('title', 'Judul');
+        });
+
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 

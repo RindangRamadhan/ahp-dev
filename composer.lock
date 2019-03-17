@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "beafa7f21312bb53e75cda1e57bb996b",
+    "content-hash": "983224d6f8e292eb22d2c34ff74e7659",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -499,16 +499,16 @@
         },
         {
             "name": "encore/laravel-admin",
-            "version": "v1.6.9",
+            "version": "v1.6.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/z-song/laravel-admin.git",
-                "reference": "ca52f71b1dfd2d830ff52f927c19d284e460e8e9"
+                "reference": "f412485946265f9a8fd3bfb53071ff43bec9a56c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/ca52f71b1dfd2d830ff52f927c19d284e460e8e9",
-                "reference": "ca52f71b1dfd2d830ff52f927c19d284e460e8e9",
+                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/f412485946265f9a8fd3bfb53071ff43bec9a56c",
+                "reference": "f412485946265f9a8fd3bfb53071ff43bec9a56c",
                 "shasum": ""
             },
             "require": {
@@ -566,7 +566,7 @@
                 "grid",
                 "laravel"
             ],
-            "time": "2019-01-13T04:07:28+00:00"
+            "time": "2019-03-10T16:55:45+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -938,6 +938,59 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "laravel-admin-ext/summernote",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-admin-extensions/summernote.git",
+                "reference": "1193b17ccd70e52854cc25f80964c177cd5c35f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-admin-extensions/summernote/zipball/1193b17ccd70e52854cc25f80964c177cd5c35f9",
+                "reference": "1193b17ccd70e52854cc25f80964c177cd5c35f9",
+                "shasum": ""
+            },
+            "require": {
+                "encore/laravel-admin": "~1.6",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Encore\\Summernote\\SummernoteServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Encore\\Summernote\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "song",
+                    "email": "zsong@126.com"
+                }
+            ],
+            "description": "Summernote extension for laravel-admin",
+            "homepage": "https://github.com/laravel-admin-ext/summernote",
+            "keywords": [
+                "editor",
+                "extension",
+                "laravel-admin"
+            ],
+            "time": "2019-03-04T08:27:18+00:00"
         },
         {
             "name": "laravel/framework",
