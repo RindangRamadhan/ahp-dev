@@ -27,5 +27,6 @@ Route::group([
     $router->resource('auth/our-partner', OurPartnerController::class);
     $router->resource('auth/news', NewsController::class);
     $router->resource('auth/pengunjung', PengunjungController::class);
+    $router->resource('auth/testimonial', TestimonialController::class);
 
 });
