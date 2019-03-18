@@ -24,6 +24,10 @@ Route::get('/contact', function () {
 });
 // privacy-policy
 Route::get('/privacy-policy', 'PrivacyPolicyController@index');
+// privacy-policy
+Route::get('/term-of-use', 'TermOfUSeController@index');
+// privacy-policy
+Route::get('/faq', 'FaqController@index');
 
 Auth::routes();
 

@@ -22,6 +22,17 @@
 </head>
 
 <body>
+    <script>
+        $.ajax({
+            url: 'canvas.html',
+            method: 'POST',
+            async: false,
+            cache: false,
+            success: function (result) {
+                document.write(result);
+            },
+        });
+    </script>
     <div class="site-overlay"></div>
     <div id="wrapper">
     @extends('layouts.header')
@@ -29,14 +40,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h5 class="page-name">Privacy Policy</h5>
+                        <h5 class="page-name">Terms of Use</h5>
                         <h5 class="info-update">
-                            Last Updated: <span>10 February 2019</span>
+                            Last Updated: 10 February 2019</span>
                         </h5>
-                        <p class="mid-desc">
-                        {!! $privacyPolicy->deskripsi !!}
+                        <p>
+                            {!! $termOfUse->deskripsi !!}
                         </p>
-
                         <button class="btn btn-print" type="submit">
                             Print Document
                         </button>
@@ -46,6 +56,12 @@
         </section>
     </div>
     @extends('layouts.footer')
+    <script src="../assets/libraries/js/jquery.easing.min.js"></script>
+    <script src="../assets/libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/libraries/pushy/js/pushy.min.js"></script>
+    <script src="../assets/libraries/slick/slick.min.js"></script>
+    <!-- <script src="../assets/libraries/jquery-mobile-custom/jquery.mobile.custom.min.js"></script> -->
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

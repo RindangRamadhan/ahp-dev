@@ -88,8 +88,8 @@
                 <h2 class="title">Sitemap</h2>
                 <ul class="list-unstyled">
                     <li> <a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
-                    <li><a href="term-of-use.html">Term of Use</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="{{ url('/term-of-use')}}">Term of Use</a></li>
+                    <li><a href="{{ url('/faq')}}">FAQ</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-12 get-apps clear-x">
