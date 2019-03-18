@@ -35,7 +35,7 @@
                     <ul class="dropdown-menu">
                         <i class="fa fa-caret-up"></i>
                         <li><a href="{{ url('/about-us') }}">Profile</a></li>
-                        <li><a href="news.html">News</a></li>
+                        <li><a href="{{ url('/news')}}">News</a></li>
                     </ul>
                 </li>
                 <li>
