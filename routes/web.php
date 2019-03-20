@@ -43,3 +43,7 @@ Route::post('/download-katalog', [
     'as'         => 'downloadKatalog',
     'uses'       => 'DownloadKatalogController@downloadKatalog',
 ]);
+
+Route::post('contact', [
+'as'        =>'contact',
+'uses'      =>'ContactController@sendEmail']);
