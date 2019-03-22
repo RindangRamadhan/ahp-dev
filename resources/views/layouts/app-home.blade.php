@@ -17,15 +17,6 @@
     <link rel="stylesheet" href="../assets/libraries/slick/slick.css" type="text/css">
     <link rel="stylesheet" href="../assets/libraries/slick/slick-theme.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-    <!-- <link rel="stylesheet" href="../assets/css/navbar.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/main.scss" type="text/css">
-    <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/footer.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/home.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/product-list.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/carousel.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/product-detail.css" type="text/css"> -->
-
 </head>
 <body id="homepage">
   <div class="site-overlay"></div>
