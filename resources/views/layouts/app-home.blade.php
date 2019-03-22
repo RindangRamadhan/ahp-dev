@@ -16,15 +16,15 @@
     <link rel="stylesheet" href="../assets/libraries/css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="../assets/libraries/slick/slick.css" type="text/css">
     <link rel="stylesheet" href="../assets/libraries/slick/slick-theme.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/variables.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="../assets/css/navbar.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/main.scss" type="text/css">
     <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/footer.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/home.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/product-list.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/carousel.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/product-detail.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/product-detail.css" type="text/css"> -->
 
 </head>
 <body id="homepage">
@@ -45,7 +45,7 @@
 	<script src="{{ asset('assets/libraries/pushy/js/pushy.min.js') }}"></script>
 	<script src="{{ asset('assets/libraries/slick/slick.js') }}"></script>
 	<script src="{{ asset('assets/libraries/js/jquery.touchSwipe.min.js') }}"></script>
-	<script src="{{ asset('assets/libraries/jquery-mobile-custom/jquery.mobile.custom.min.js') }}"></script>
+	<!-- <script src="{{ asset('assets/libraries/jquery-mobile-custom/jquery.mobile.custom.min.js') }}"></script> -->
 	<script src="{{ asset('assets/js/main.js') }}"></script>
 	@yield('scripts')
   <!-- Download Katalog -->

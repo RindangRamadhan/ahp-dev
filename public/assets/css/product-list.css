@@ -45,7 +45,7 @@
 
 @font-face {
   font-family: Raleway;
-  src: url(https://fonts.googleapis.com/css?family=Raleway);
+  src: url(../libraries/fonts/Raleway-Regular.ttf);
 }
 
 *,
@@ -382,7 +382,7 @@
 }
 
 .product-caption-animate figure.snip0016 {
-  font-family: "Raleway", Arial, sans-serif;
+  font-family: Raleway;
   color: #fff;
   position: relative;
   overflow: hidden;

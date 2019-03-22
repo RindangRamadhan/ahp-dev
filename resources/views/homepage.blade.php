@@ -1,7 +1,7 @@
 @extends('layouts.app-home')
 
 @section('content')
-<header class="banner get-image" data-image="{{ asset('assets/img/product/Alpha 16 Super.jpg') }}">
+<header class="banner get-image" data-image="">
     <!-- <div class="overlay"></div> -->
 	<section>
 		<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="30000" id="homecarousel">
