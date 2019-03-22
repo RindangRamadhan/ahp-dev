@@ -3,131 +3,131 @@
 @section('content')
 <header class="banner get-image" data-image="">
     <!-- <div class="overlay"></div> -->
-	<section>
-		<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="30000" id="homecarousel">
-			<ol class="carousel-indicators">
-				<li data-target="#homecarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#homecarousel" data-slide-to="1"></li>
-				<li data-target="#homecarousel" data-slide-to="2"></li>
-			</ol>
+    <section>
+        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="30000" id="homecarousel">
+            <ol class="carousel-indicators">
+                <li data-target="#homecarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#homecarousel" data-slide-to="1"></li>
+                <li data-target="#homecarousel" data-slide-to="2"></li>
+            </ol>
 
-			<div class="carousel-inner">
-				<div class="item slides active">
-					<div class="slide-1"></div>
-					<div class="hero">
-						<hgroup>
-							<h1>PT ANDALL HASA PRIMA</h1>
-							<h3>Your Agrochemicals Solution</h3>
-						</hgroup>
-							<a href="{{ url('/about-us') }}" class="btn btn-hero btn-lg" style="z-index:1000;">
-								Learn More
-							</a>
-					</div>
-				</div>
-				<div class="item slides">
-					<div class="slide-2"></div>
-					<div class="hero">
-							<hgroup>
-								<h1>Produk Kami</h1>
-								<h3>Hadirkan solusi dengan produk terbaik</h3>
-							</hgroup>
-							<a href="product-herbisida.html" class="btn btn-hero btn-lg" style="z-index:1000;">
-								See All Product
-							</a>
-					</div>
-				</div>
-				<div class="item slides">
-					<div class="slide-3"></div>
-					<div class="hero">
-						<hgroup>
-							<h1>Modern Machine</h1>
-							<h3>Mengoptimalkan hasil dengan mesin berteknologi mutakhir</h3>
-						</hgroup>
-							<a href="product-herbisida.html" class="btn btn-hero btn-lg" style="z-index:1000;">
-								See All Alsintan
-							</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<a href="#scrolldirect" class="btn-scroll page-scroll hidden-xs">
-		<img src="../assets/img/home/scrolldown.gif" alt="" class="img-responsive">
-		<h6>scroll for more info</h6>
-	</a>
+            <div class="carousel-inner">
+                <div class="item slides active">
+                    <div class="slide-1"></div>
+                    <div class="hero">
+                        <hgroup>
+                            <h1>PT ANDALL HASA PRIMA</h1>
+                            <h3>Your Agrochemicals Solution</h3>
+                        </hgroup>
+                            <a href="{{ url('/about-us') }}" class="btn btn-hero btn-lg" style="z-index:1000;">
+                                Learn More
+                            </a>
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-2"></div>
+                    <div class="hero">
+                            <hgroup>
+                                <h1>Produk Kami</h1>
+                                <h3>Hadirkan solusi dengan produk terbaik</h3>
+                            </hgroup>
+                            <a href="product-herbisida.html" class="btn btn-hero btn-lg" style="z-index:1000;">
+                                See All Product
+                            </a>
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-3"></div>
+                    <div class="hero">
+                        <hgroup>
+                            <h1>Modern Machine</h1>
+                            <h3>Mengoptimalkan hasil dengan mesin berteknologi mutakhir</h3>
+                        </hgroup>
+                            <a href="product-herbisida.html" class="btn btn-hero btn-lg" style="z-index:1000;">
+                                See All Alsintan
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="#scrolldirect" class="btn-scroll page-scroll hidden-xs">
+        <img src="../assets/img/home/scrolldown.gif" alt="" class="img-responsive">
+        <h6>scroll for more info</h6>
+    </a>
 </header>
 <section class="about-us" id="scrolldirect">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<h5 class="section-name">About Us</h5>
-				<h5 class="section-title">PT Andall Hasa Prima</h5>
-				<div class="border-devide">
-					<hr class="first-dot">
-					<hr class="second-dot">
-				</div>
-				<div class="col-md-8 col-md-offset-2 col-sm-12 paragraph">
-					<p class="section-desc">
-						{{ strip_tags($tentangKami->deskripsi) }}
-					</p>
-				</div>
-				<div class="col-md-12 reset-col wrap-btn-detail">
-						<a href="{{url('/about-us')}}" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="section-name">About Us</h5>
+                <h5 class="section-title">PT Andall Hasa Prima</h5>
+                <div class="border-devide">
+                    <hr class="first-dot">
+                    <hr class="second-dot">
+                </div>
+                <div class="col-md-8 col-md-offset-2 col-sm-12 paragraph">
+                    <p class="section-desc">
+                        {{ strip_tags($tentangKami->deskripsi) }}
+                    </p>
+                </div>
+                <div class="col-md-12 reset-col wrap-btn-detail">
+                        <a href="{{url('/about-us')}}" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="benefit">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 content">
-				<h5 class="section-name">benefit</h5>
-				<h5 class="section-title">{{ $benefits->title }}</h5>
-				<div class="border-devide">
-					<hr class="first-dot">
-					<hr class="second-dot">
-				</div>
-				<a href="#">
-					<img src="{{ url('../storage/'.$benefits->image1) }}" class="img-responsive img-abs hidden-sm hidden-xs" alt="">
-				</a>
-				<div class="clearfix"></div>
-				<div class="col-md-12 reset-col">
-					<div class="col-md-6 lparagraph">
-						<div class="col-md-12 reset-col paragraph">
-							<p class="section-desc">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 content">
+                <h5 class="section-name">benefit</h5>
+                <h5 class="section-title">{{ $benefits->title }}</h5>
+                <div class="border-devide">
+                    <hr class="first-dot">
+                    <hr class="second-dot">
+                </div>
+                <a href="#">
+                    <img src="{{ url('../storage/'.$benefits->image1) }}" class="img-responsive img-abs hidden-sm hidden-xs" alt="">
+                </a>
+                <div class="clearfix"></div>
+                <div class="col-md-12 reset-col">
+                    <div class="col-md-6 lparagraph">
+                        <div class="col-md-12 reset-col paragraph">
+                            <p class="section-desc">
                                 {{ strip_tags($benefits->benefit1) }}
-							</p>
-						</div>
-					</div>
-					<div class="col-md-6 rparagraph reset-col">
-						<a href="#">
-								<img src="{{ url('../storage/'.$benefits->image2) }}" class="img-responsive" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-				<div class="col-md-12 reset-col">
-					<div class="col-md-6 col-md-push-6 reset-col rparagraph2">
-							<h1 class="bg-name">benefit</h1>
-							<div class="col-md-12 reset-col paragraph">
-								<p class="section-desc">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 rparagraph reset-col">
+                        <a href="#">
+                                <img src="{{ url('../storage/'.$benefits->image2) }}" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 reset-col">
+                    <div class="col-md-6 col-md-push-6 reset-col rparagraph2">
+                            <h1 class="bg-name">benefit</h1>
+                            <div class="col-md-12 reset-col paragraph">
+                                <p class="section-desc">
                                     {{ strip_tags($benefits->benefit2) }}
-								</p>
-							</div>
-							<div class="col-md-12 reset-col wrap-btn-detail">
-								<a href="about-us.html" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
-							</div>
-					</div>
-					<div class="col-md-6 col-md-pull-6 reset-col lparagraph2 hidden-xs hidden-sm">
-						<a href="#">
-							<img src="{{ url('../storage/'.$benefits->image3) }}" class="img-responsive pull-right" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                                </p>
+                            </div>
+                            <div class="col-md-12 reset-col wrap-btn-detail">
+                                <a href="about-us.html" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
+                            </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6 reset-col lparagraph2 hidden-xs hidden-sm">
+                        <a href="#">
+                            <img src="{{ url('../storage/'.$benefits->image3) }}" class="img-responsive pull-right" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="container-fluid" id="product-promo">
@@ -153,14 +153,18 @@
             <div class="clearfix"></div>
             <div class="col-md-12 reset-col pp-tabs">
                 <ul id="tabs" class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#new" role="tab" data-toggle="tab">New</a></li>
-                    <li role="presentation"><a href="#offers" role="tab" data-toggle="tab">Offers</a></li>
-                    <li role="presentation"><a href="#best-sellers" role="tab" data-toggle="tab">Best Sellers</a></li>
+                @foreach ($productGroups as $group)
+                  @if ($loop->first)
+                    <li role="presentation" class="active"><a href="#{{ str_replace(' ', '', $group->group_name) }}" role="tab" data-toggle="tab">{{ $group->group_name }}</a></li>
+                  @else
+                    <li role="presentation"><a href="#{{ str_replace(' ', '', $group->group_name) }}" role="tab" data-toggle="tab">{{ $group->group_name }}</a></li>
+                  @endif
+                @endforeach
                 </ul>
                 <br>
                 <div class="tab-content">
                     <!-- New -->
-                    <div role="tabpanel" class="tab-pane fade in active" id="new">
+                    <div role="tabpanel" class="tab-pane fade in active" id="ProdukBaru">
                         <div class="col-md-12 reset-col">
                             <div class="col-sm-3 col-xs-6 product-caption-animate">
                                 <a href="product-detail.html">
@@ -305,7 +309,7 @@
                         </div>
                     </div>
                     <!-- Offers -->
-                    <div role="tabpanel" class="tab-pane fade" id="offers">
+                    <div role="tabpanel" class="tab-pane fade" id="PenjualanTerbaik">
                         <div class="col-sm-3 col-xs-6 product-caption-animate">
                             <a href="product-detail.html">
                                 <figure class="snip0016">
@@ -396,7 +400,7 @@
                         </div>
                     </div>
                     <!-- Best Sellers -->
-                    <div role="tabpanel" class="tab-pane fade" id="best-sellers">
+                    <div role="tabpanel" class="tab-pane fade" id="ProdukLainnya">
                         <div class="col-sm-4 col-xs-6 product-caption-animate">
                             <a href="product-detail.html">
                                 <figure class="snip0016">
@@ -511,7 +515,7 @@
                     <div class="col-md-12 form-box">
                         <h5 class="title">Download Katalog P
                         oduk</h5>
-                        <form class="form-vertical" role="form">
+                        <form class="form-vertical" role="form" id="formDownload">
                             <div class="form-group col-sm-6">
                                 <label for="input-fn" class="control-label">Nama Lengkap (*)</label>
                                 <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" id="input-fn" required >
@@ -538,10 +542,9 @@
                                 </div>
                             </div>
                             
-                            <a id="btnPdf" href="{{ url('/download/katalog.pdf') }}" download></a>
                             <div class="col-md-12 text-center">
-                                <button class="btn btn-default btn-submit" id="btnDownload" type="button">
-                                    Download Katalogs
+                                <button class="btn btn-default btn-submit" type="submit">
+                                    Download Katalog
                                 </button>
                             </div>
                         </form>
@@ -594,9 +597,6 @@
     </div>
 </section>
 
-
-
-
 <div class="container-fluid">
     <div class="row news">
         <div class="col-md-12">
@@ -621,8 +621,7 @@
             </div>
             <div class="col-md-4 updates unews">
                 <h5 class="utitle pull-left">NEWS</h5>
-                <h5 class="uallapdate pull-right"><a href="#">selengkapnya <i class="fa fa-long-arrow-right"
-                            aria-hidden="true"></i></a></h5>
+                <h5 class="uallapdate pull-right"><a href="#">selengkapnya <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h5>
                 <div class="clearfix"></div>
                 @foreach ($news as $data)
                 <div class="col-md-12 reset-col loop-list">
