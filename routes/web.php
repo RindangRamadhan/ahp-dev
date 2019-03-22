@@ -28,6 +28,10 @@ Route::get('/privacy-policy', 'PrivacyPolicyController@index');
 Route::get('/term-of-use', 'TermOfUSeController@index');
 // privacy-policy
 Route::get('/faq', 'FaqController@index');
+// privacy-policy
+Route::get('/about-us', 'AboutUsController@index');
+// privacy-policy
+Route::get('/news', 'NewsController@index');
 
 Auth::routes();
 
@@ -39,3 +43,7 @@ Route::post('/download-katalog', [
     'as'         => 'downloadKatalog',
     'uses'       => 'DownloadKatalogController@downloadKatalog',
 ]);
+
+Route::post('contact', [
+'as'        =>'contact',
+'uses'      =>'ContactController@sendEmail']);

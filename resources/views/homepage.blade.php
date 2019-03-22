@@ -72,7 +72,7 @@
 					</p>
 				</div>
 				<div class="col-md-12 reset-col wrap-btn-detail">
-						<a href="about-us.html" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
+						<a href="{{url('/about-us')}}" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
 				</div>
 			</div>
 		</div>
@@ -509,7 +509,8 @@
             <div class="col-md-12 katalog-content">
                 <div class="col-md-6 reset-col lcontent">
                     <div class="col-md-12 form-box">
-                        <h5 class="title">Download Katalog Produk</h5>
+                        <h5 class="title">Download Katalog P
+                        oduk</h5>
                         <form class="form-vertical" role="form">
                             <div class="form-group col-sm-6">
                                 <label for="input-fn" class="control-label">Nama Lengkap (*)</label>
@@ -540,7 +541,7 @@
                             <a id="btnPdf" href="{{ url('/download/katalog.pdf') }}" download></a>
                             <div class="col-md-12 text-center">
                                 <button class="btn btn-default btn-submit" id="btnDownload" type="button">
-                                    Download Katalog
+                                    Download Katalogs
                                 </button>
                             </div>
                         </form>

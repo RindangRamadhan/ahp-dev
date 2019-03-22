@@ -18,15 +18,8 @@
                                 </div>
                             </div>
                             <div class="col-md-7 reset-col paragraph">
-                                <p class="content-desc">Andall Hasa Prima is an consultant company for farming
-                                    consistency with best quality product.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum at
-                                    quo nemo obcaecati velit mollitia debitis officiis eos error reprehenderit, magnam
-                                    aspernatur pariatur soluta eum vero. Dolorum, illo dicta.
-                                    <br>
-                                    <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod necessitatibus
-                                    veniam autem et. Vel, quam deserunt dignissimos adipisci ipsam quae fugit, labore
-                                    perferendis beatae. Veniam, dicta, dolore! Eaque, eos, sed.
+                                <p class="content-desc">
+                                    {!! $aboutUs->deskripsi !!}
                                 </p>
                             </div>
                         </div>
@@ -46,11 +39,9 @@
                                     <hr class="first-dot">
                                     <hr class="second-dot">
                                 </div>
-                                <p class="section-desc">At Andall Hasa Prima our goal is assisting farmers to use
-                                    step-by-step
-                                    exercise guides, for them to apply it on their farming problems outside solutions
-                                    sessions.
-                                    moreover, we will provide farmers with consultation, knowledge, tools.</p>
+                                <p class="section-desc">
+                                    {!! $visiMisi->deskripsi !!}
+                                </p>
                             </div>
                             <div class="col-md-7 rparagraph reset-col">
                                 <img src="../assets/img/Office.jpg" class="img-responsive" alt="">
@@ -61,15 +52,8 @@
                             <div class="col-md-5 col-md-push-7 reset-col rparagraph2">
                                 <h1 class="bg-name">vision</h1>
                                 <div class="col-md-12 reset-col paragraph">
-                                    <p class="section-desc">As for our staffs, recommending this exercises for their
-                                        farmers as well as follow up on their farmers progress using the Andall Hasa
-                                        Prima
-                                        application on smart devices.
-                                        <br>
-                                        <br> Creating free educational materials on the importance of early detection
-                                        and early intervention, under the direction of the advanced communication
-                                        center and in
-                                        collaboration with our staff and other experts in the field.
+                                    <p class="section-desc">
+                                        {!! $visiMisi->deskripsi !!}
                                     </p>
                                 </div>
                             </div>
