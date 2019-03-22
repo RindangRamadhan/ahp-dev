@@ -94,11 +94,7 @@
             </div>
             <div class="col-md-4 col-sm-12 get-apps clear-x">
                 <h2 class="title">ABOUT US</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit enim officiis mollitia, ea ipsa
-                    quos aperiam facere labore impedit ipsam laudantium unde et ex accusantium corporis, eveniet
-                    dicta accusamus harum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad
-                    aliquid deleniti culpa, quis illo magni suscipit officia reiciendis pariatur. A hic itaque
-                    error deleniti, voluptate. Nesciunt repellat, quod optio.</p>
+                {!! $tentangKami->deskripsi !!}
             </div>
 
             <div class="col-md-12 foot-logo v-x540">

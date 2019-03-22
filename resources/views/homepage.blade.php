@@ -511,7 +511,7 @@
                     <div class="col-md-12 form-box">
                         <h5 class="title">Download Katalog P
                         oduk</h5>
-                        <form class="form-vertical" role="form">
+                        <form class="form-vertical" role="form" id="formDownload">
                             <div class="form-group col-sm-6">
                                 <label for="input-fn" class="control-label">Nama Lengkap (*)</label>
                                 <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control" id="input-fn" required >
@@ -538,10 +538,9 @@
                                 </div>
                             </div>
                             
-                            <a id="btnPdf" href="{{ url('/download/katalog.pdf') }}" download></a>
                             <div class="col-md-12 text-center">
-                                <button class="btn btn-default btn-submit" id="btnDownload" type="button">
-                                    Download Katalogs
+                                <button class="btn btn-default btn-submit" type="submit">
+                                    Download Katalog
                                 </button>
                             </div>
                         </form>

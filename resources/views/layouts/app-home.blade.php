@@ -36,13 +36,13 @@
 	<script src="{{ asset('assets/libraries/pushy/js/pushy.min.js') }}"></script>
 	<script src="{{ asset('assets/libraries/slick/slick.js') }}"></script>
 	<script src="{{ asset('assets/libraries/js/jquery.touchSwipe.min.js') }}"></script>
-	<!-- <script src="{{ asset('assets/libraries/jquery-mobile-custom/jquery.mobile.custom.min.js') }}"></script> -->
-	<script src="{{ asset('assets/js/main.js') }}"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	@yield('scripts')
   <!-- Download Katalog -->
   <script>
     $(document).ready(function(e){
-        $("#btnDownload").on("click", function () {
+        $("#formDownload").on("submit", function () {
             let nama_lengkap = $("#nama_lengkap").val();
             let perusahaan = $("#perusahaan").val();
             let email = $("#email").val();
@@ -50,15 +50,41 @@
 
             $.post('{{ route('downloadKatalog') }}',{'_token': $('meta[name=csrf-token]').attr('content'), nama_lengkap:nama_lengkap, perusahaan:perusahaan, email:email, no_telp:no_telp}, function(data){
               if(data == 200) {
-                $("#btnPdf").click();
+                $.ajax({
+                  url: '{{ url('/download/katalog.pdf') }}',
+                  method: 'GET',
+                  xhrFields: {
+                    responseType: 'blob'
+                  },
+                  success: function (data) {
+                    var a = document.createElement('a');
+                    var url = window.URL.createObjectURL(data);
+                    a.href = url;
+                    a.download = 'katalog.pdf';
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                  }
+                });
 
+                swal({
+                  title: "Terimakasih",
+                  text: "Kami Akan Segera Menghubungi Anda!",
+                  icon: "success",
+                  button: false,
+                });
+
+                setTimeout(() => {
+                  swal.close()
                 
-                $("#nama_lengkap").val('');
-                $("#perusahaan").val('');
-                $("#email").val('');
-                $("#phone-number").val('');
+                  $("#nama_lengkap").val('');
+                  $("#perusahaan").val('');
+                  $("#email").val('');
+                  $("#phone-number").val('');
+                }, 2000);
               }
             });
+
+            return false
         })
     });
 </script>
