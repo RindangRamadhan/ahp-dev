@@ -15,6 +15,9 @@ class Product extends Model
     'product_formulation', 
     'product_use', 
     'product_dose', 
-    'product_package'
+    'product_package',
+    'kelompok',
+    'kategori',
+    'gambar'
   ];
 }
