@@ -47,7 +47,7 @@ class HomeController extends Controller
 				// Masa akan direkam kembali
 				// Tujuan untuk menghindari merekam pengunjung yang sama dihari yang sama.
 				// Cookie akan disimpan selama 24 jam
-				$duration = time()+60*60*24;
+				$duration = time()+60*60*1;
 
 				// simpan kedalam cookie browser
 				setcookie('VISITOR', $browser, $duration);

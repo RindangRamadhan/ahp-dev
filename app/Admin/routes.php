@@ -29,5 +29,6 @@ Route::group([
     $router->resource('auth/pengunjung', PengunjungController::class);
     $router->resource('auth/testimonial', TestimonialController::class);
     $router->resource('auth/album-family', AlbumFamilyController::class);
-
+    $router->resource('auth/contact-profile', ContactProfileController::class);
+    $router->resource('auth/contact-support', ContactSupportController::class);
 });

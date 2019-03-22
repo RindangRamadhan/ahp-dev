@@ -24,13 +24,13 @@ Route::get('/contact', function () {
 });
 // privacy-policy
 Route::get('/privacy-policy', 'PrivacyPolicyController@index');
-// privacy-policy
+// term-of-use
 Route::get('/term-of-use', 'TermOfUSeController@index');
-// privacy-policy
+// faq
 Route::get('/faq', 'FaqController@index');
-// privacy-policy
+// about-us
 Route::get('/about-us', 'AboutUsController@index');
-// privacy-policy
+// news
 Route::get('/news', 'NewsController@index');
 
 Auth::routes();
@@ -46,4 +46,5 @@ Route::post('/download-katalog', [
 
 Route::post('contact', [
 'as'        =>'contact',
-'uses'      =>'ContactController@sendEmail']);
+'uses'      =>'ContactController@sendEmail'
+]);
