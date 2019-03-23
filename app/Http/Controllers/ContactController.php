@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use Illuminate\Http\Request;
 use Mail;
+use App\TentangKami;
 
 class ContactController extends Controller
 {
@@ -14,7 +15,11 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $tentangKami = TentangKami::first();
+        return view('contact', [
+            'tentangKami' => $tentangKami
+        ]);
+
     }
 
     /**
@@ -112,21 +117,6 @@ class ContactController extends Controller
             $message->from($request->c_email);
             $message->to('khoirulgeong123@gmail.com');
         });
-        return back()->with('success', 'Thanks for contacting us!');
-        // try{
-        //     Mail::send('email', [
-        //         'nama' => $request->c_name, 
-        //         'pesan' => $request->c_message
-        //     ], function ($message) use ($request)
-        //     {
-        //         $message->subject($request->c_subject);
-        //         $message->from($request->c_email, $request->c_name);
-        //         $message->to('khoirulgeong123@gmail.com');
-        //     });
-        //     return back()->with('alert-success','Berhasil Kirim Email');
-        // }
-        // catch (Exception $e){
-        //     return response (200);
-        // }
+        return back();
     }
 }

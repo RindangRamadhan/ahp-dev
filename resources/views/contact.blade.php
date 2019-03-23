@@ -79,6 +79,8 @@
                     <h4 class="wow fadeIn" data-wow-delay=".4">CONTACT</h4>
                     <h3 class="wow fadeIn" data-wow-delay=".4">FORM</h3>
                 </div>
+                <form method="POST" action="{{ route('contact') }}">
+                        @csrf
                 <div class="col-md-12 form-contact wow fadeIn" data-wow-delay=".4">
                     <div class="form-group">
                         <label class="sr-only" for="c_name">Name</label>
@@ -90,7 +92,7 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="c_email">Telephone</label>
-                        <input type="text" id="c_email" class="form-control" name="c_email" placeholder="Phone Number">
+                        <input type="text" id="c_email" class="form-control" name="c_phone_number" placeholder="Phone Number">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="c_subject">Subject</label>
@@ -99,10 +101,11 @@
                     <div class="form-group">
                         <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
                     </div>
-                    <button type="button" class="btn btn-default" data-wow-delay=".4s">
+                    <button type="submit" class="btn btn-default" data-wow-delay=".4s">
                         SUBMIT <i class="wow fadeIn fa fa-paper-plane"></i>
                     </button>
                 </div>
+            </form>
             </div>
         </div>
     </div>

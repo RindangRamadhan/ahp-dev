@@ -3,6 +3,8 @@
 namespace App\Admin\Controllers;
 
 use App\Product;
+use App\ProductGroup;
+use App\ProductCategory;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -107,17 +109,17 @@ class ProductController extends Controller
         $grid->product_package('Isi Kemasan')->limit(30)->display(function ($product_package) {
             return $product_package;
         });
-        $grid->kategori('Kategori');
-        $grid->kelompok('Kelompok');
+        $grid->kategori_id('Kategori')->display(function($kategori_id) {
+            return ProductCategory::find($kategori_id)->category_name;
+        });
+        $grid->kelompok_id('Kelompok')->display(function($kelompok_id) {
+            return ProductGroup::find($kelompok_id)->group_name;
+        });
         $grid->gambar('Gambar')->display(function($gambar) use ($app) {
             return $app->displayImage($gambar);
         });
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
-        // $grid->filter(function ($filter) {
-            // $filter->disableIdFilter();
-            // $filter->like('product_formulation', 'Product Ingredients');
-        // });
 
         return $grid;
     }
@@ -139,8 +141,8 @@ class ProductController extends Controller
         $show->product_use('tujuan Penggunaan');
         $show->product_dose('Dosis');
         $show->product_package('Isi Kemasan');
-        $show->kategori('Kategori');
-        $show->kelompok('Kelompok');
+        $show->kategori_id('Kategori');
+        $show->kelompok_id('Kelompok');
         $show->gambar('Gambar');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
@@ -163,9 +165,13 @@ class ProductController extends Controller
         $form->editor('product_use', 'Tujuan Penggunaan');
         $form->editor('product_dose', 'Dosis');
         $form->editor('product_package', 'Isi Kemasan');
-        $form->text('kategori', 'Kategori');
-        $form->text('kelompok', 'Kelompok');
-        $form->text('gambar', 'Gambar');
+        $form->select('kategori_id', 'Kategori')->options(
+            ProductCategory::all()->pluck('category_name', 'id')
+        );
+        $form->select('kelompok_id', 'Kelompok')->options(
+            ProductGroup::all()->pluck('group_name', 'id')
+        );
+        $form->image('gambar', 'Gambar');
 
         return $form;
     }
