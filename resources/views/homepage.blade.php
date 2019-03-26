@@ -158,53 +158,79 @@
               <div class="tab-content">                    
                   @foreach ($productGroups as $group)
                   @if ($loop->first)
-                      <div role="tabpanel" class="tab-pane fade in active" id="{{ str_replace(' ', '', $group->group_name) }}">
-                          <div class="col-md-12 reset-col">
-                          @foreach ($products as $data)
-                              @if($group->id == $data->kelompok_id)
-                                  @if ($loop->index < 12)
-                                  <div class="col-sm-3 col-xs-6 product-caption-animate">
-                                      <a href="{{ url('/product-detail?id='.$data->id) }}">
-                                          <figure class="snip0016">
-                                              <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
-                                              <figcaption>
-                                                  <h2>Product <span>{{ $data->product_name }}</span></h2>
-                                              </figcaption>
-                                          </figure>
-                                      </a>
-                                  </div>
-                                      @continue
-                                  @else
-                                      @break
-                                  @endif
-                              @endif                                
-                          @endforeach
-                          </div>
-                      </div>
+                  <div role="tabpanel" class="tab-pane fade in active" id="{{ str_replace(' ', '', $group->group_name) }}">
+                    <div class="col-md-12 reset-col">
+                    <?php $i = 1; ?>
+                    @foreach ($products as $data)
+                    @if($group->id == $data->kelompok_id)
+                    @if ($i++ < 13)
+                    @if($i > 5 && $i < 9)
+                    <div class="col-sm-4 col-xs-6 product-caption-animate">
+                      <a href="{{ url('/product-detail?id='.$data->id) }}">
+                        <figure class="snip0016">
+                          <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
+                          <figcaption>
+                            <h2>Product <span>{{ $data->product_name }}</span></h2>
+                            <p>{{ strip_tags($data->product_formulation) }}</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                    @else
+                    <div class="col-sm-3 col-xs-6 product-caption-animate">
+                      <a href="{{ url('/product-detail?id='.$data->id) }}">
+                        <figure class="snip0016">
+                          <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
+                          <figcaption>
+                            <h2>Product <span>{{ $data->product_name }}</span></h2>
+                            <p>{{ strip_tags($data->product_formulation) }}</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                    @endif
+                    @endif
+                    @endif
+                    @endforeach
+                    </div>
+                  </div>
                   @else
-                      <div role="tabpanel" class="tab-pane fade" id="{{ str_replace(' ', '', $group->group_name) }}">
-                          <div class="col-md-12 reset-col">
-                          @foreach ($products as $data)
-                              @if($group->id == $data->kelompok_id)
-                                  @if ($loop->index < 12)
-                                  <div class="col-sm-3 col-xs-6 product-caption-animate">
-                                      <a href="{{ url('/product-detail?id='.$data->id) }}">
-                                          <figure class="snip0016">
-                                              <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
-                                              <figcaption>
-                                                  <h2>Product <span>{{ $data->product_name }}</span></h2>
-                                              </figcaption>
-                                          </figure>
-                                      </a>
-                                  </div>
-                                      @continue
-                                  @else
-                                      @break
-                                  @endif
-                              @endif
-                          @endforeach
-                          </div>
-                      </div>
+                  <div role="tabpanel" class="tab-pane fade" id="{{ str_replace(' ', '', $group->group_name) }}">
+                    <div class="col-md-12 reset-col">
+                    <?php $i = 1; ?>
+                    @foreach ($products as $data)
+                    @if($group->id == $data->kelompok_id)
+                    @if ($i++ < 13)
+                    @if($i > 5 && $i < 9)
+                    <div class="col-sm-4 col-xs-6 product-caption-animate">
+                      <a href="{{ url('/product-detail?id='.$data->id) }}">
+                        <figure class="snip0016">
+                          <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
+                          <figcaption>
+                            <h2>Product <span>{{ $data->product_name }}</span></h2>
+                            <p>{{ strip_tags($data->product_formulation) }}</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                    @else
+                    <div class="col-sm-3 col-xs-6 product-caption-animate">
+                      <a href="{{ url('/product-detail?id='.$data->id) }}">
+                        <figure class="snip0016">
+                          <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
+                          <figcaption>
+                            <h2>Product <span>{{ $data->product_name }}</span></h2>
+                            <p>{{ strip_tags($data->product_formulation) }}</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                    @endif
+                    @endif
+                    @endif
+                    @endforeach
+                    </div>
+                  </div>
                   @endif
                   @endforeach
               </div>
@@ -222,8 +248,7 @@
           <div class="col-md-12 katalog-content">
               <div class="col-md-6 reset-col lcontent">
                   <div class="col-md-12 form-box">
-                      <h5 class="title">Download Katalog P
-                      oduk</h5>
+                      <h5 class="title">Download Katalog Produk</h5>
                       <form class="form-vertical" role="form" id="formDownload">
                           <div class="form-group col-sm-6">
                               <label for="input-fn" class="control-label">Nama Lengkap (*)</label>
