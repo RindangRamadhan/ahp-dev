@@ -8,6 +8,8 @@ use App\Benefit;
 use App\OurPartner;
 use App\News;
 use App\Pengunjung;
+use App\Product;
+use App\ProductCategory;
 use App\ProductGroup;
 use App\TentangKami;
 use Illuminate\Http\Request;
@@ -35,16 +37,18 @@ class HomeController extends Controller
     }
 
     public function homepage() {
-			$ip      			= Pengunjung::Ip();
-			$browser			= Pengunjung::Browser();
-			$os      			= Pengunjung::Os();
-			$tentangKami	= TentangKami::first();
-			$benefits			= Benefit::first();
-			$ourPartners	= OurPartner::get();
-			$news					= News::orderBy('created_at', 'desc')->get();
-			$productGroups= ProductGroup::get();
-			$banner				= Banner::get();
-			$mainProduct	= AboutProduct::first();
+			$ip      					= Pengunjung::Ip();
+			$browser					= Pengunjung::Browser();
+			$os      					= Pengunjung::Os();
+			$tentangKami			= TentangKami::first();
+			$benefits					= Benefit::first();
+			$ourPartners			= OurPartner::get();
+			$news							= News::orderBy('created_at', 'desc')->get();
+			$products 				= Product::inRandomOrder()->get();
+			$productCategorys = ProductCategory::get();
+			$productGroups		= ProductGroup::get();
+			$banner						= Banner::get();
+			$mainProduct			= AboutProduct::first();
 
 			// Check bila sebelumnya data pengunjung sudah terrekam
 			if (! isset($_COOKIE['VISITOR'])) {
@@ -70,6 +74,8 @@ class HomeController extends Controller
 				'benefits' => $benefits,
 				'ourPartners' => $ourPartners,
 				'news' => $news,
+				'productCategorys' => $productCategorys,
+				'products' => $products,
 				'productGroups' => $productGroups,
 				'mainProduct' => $mainProduct,
 			]);

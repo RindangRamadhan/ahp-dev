@@ -12,22 +12,18 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Product</a>
                     <ul class="dropdown-menu">
                         <i class="fa fa-caret-up"></i>
-                        <li><a href="product-herbisida.html">Herbisida</a></li>
-                        <li><a href="product-herbisida.html">Surfaktan</a></li>
-                        <li><a href="product-herbisida.html">Alsintan</a></li>
-                        <li><a href="product-herbisida.html">Hasa Seed</a></li>
-                        <li><a href="product-herbisida.html">Sparepart</a></li>
+                        @foreach ($productCategorys as $category)
+                            <li><a href="{{ url('/products?category='.$category->id) }}">{{ $category->category_name }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li class="active dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Others Product</a>
                     <ul class="dropdown-menu">
                         <i class="fa fa-caret-up"></i>
-                        <li><a href="product-herbisida.html">Herbisida</a></li>
-                        <li><a href="product-herbisida.html">Surfaktan</a></li>
-                        <li><a href="product-herbisida.html">Alsintan</a></li>
-                        <li><a href="product-herbisida.html">Hasa Seed</a></li>
-                        <li><a href="product-herbisida.html">Sparepart</a></li>
+                        @foreach ($productCategorys as $category)
+                            <li><a href="{{ url('/products?category='.$category->id) }}">{{ $category->category_name }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li class="active dropdown">
