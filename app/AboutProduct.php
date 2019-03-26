@@ -5,15 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Banner extends Model
+class AboutProduct extends Model
 {
     use Notifiable;
     
     protected $fillable = [
-        'foto',
-        'title',
-        'sub_title',
-        'button',
-        'url'
+        'deskripsi'
     ];
 }

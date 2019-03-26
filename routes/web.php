@@ -19,9 +19,7 @@ Route::get('/about-us', function () {
     return view('about-us');
 });
 // CONTACT
-Route::get('/contact', function () {
-    return view('contact');
-});
+
 // privacy-policy
 Route::get('/privacy-policy', 'PrivacyPolicyController@index');
 // term-of-use
@@ -32,6 +30,7 @@ Route::get('/faq', 'FaqController@index');
 Route::get('/about-us', 'AboutUsController@index');
 // news
 Route::get('/news', 'NewsController@index');
+Route::get('/contact', 'ContactController@index');
 
 Auth::routes();
 
@@ -48,3 +47,4 @@ Route::post('contact', [
 'as'        =>'contact',
 'uses'      =>'ContactController@sendEmail'
 ]);
+

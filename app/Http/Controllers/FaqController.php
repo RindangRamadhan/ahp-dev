@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Faq;
+use App\TentangKami;
 
 class FaqController extends Controller
 {
@@ -15,8 +16,11 @@ class FaqController extends Controller
     public function index()
     {
         $faq = Faq::first();
+        $tentangKami	= TentangKami::first();
+
         return view('faq', [
-            'faq' => $faq
+            'faq' => $faq,
+            'tentangKami' => $tentangKami
         ]);
     }
     /**

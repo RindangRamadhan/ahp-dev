@@ -15,11 +15,14 @@ class AboutUsController extends Controller
      */
     public function index()
     {
-        $about_us = TentangKami::first();
-        $visi_misi = VisiMisi::first();
+        $tentangKami = TentangKami::first();
+        $visi = VisiMisi::orderBy('id', 'asc')->first();
+        $misi = VisiMisi::orderBy('id', 'desc')->first();
+
         return view('about-us', [
-            'aboutUs' => $about_us,
-            'visiMisi' => $visi_misi
+            'tentangKami' => $tentangKami,
+            'visi' => $visi,
+            'misi' => $misi
         ]);
     }
 

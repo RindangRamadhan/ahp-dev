@@ -30,7 +30,7 @@ class ProductController extends Controller
 
     /**
      * Show interface.
-     *
+     *  
      * @param mixed $id
      * @param Content $content
      * @return Content
@@ -71,6 +71,11 @@ class ProductController extends Controller
             ->description('description')
             ->body($this->form());
     }
+    private function displayImage($path) {
+        
+        $src = Storage::disk(config('admin.upload.disk'))->url($path);
+        return "<img src='$src' style='max-width:100px;max-height:100px' class='img img-thumbnail' />";
+    }
 
     /**
      * Make a grid builder.
@@ -85,21 +90,26 @@ class ProductController extends Controller
         $grid->filter(function($filter){
         
             // Add a column filter
-            $filter->like('product_name', 'Product Name');
-            $filter->like('product_ingredients', 'Product Ingredients');
-            $filter->like('product_formulation', 'Product Formulation');
+            $filter->like('product_name', 'Nama Dagang');
+            $filter->like('product_ingredients', 'Bahan Aktif');
+            $filter->like('product_formulation', 'Bentuk Formulasi');
         });
-        $grid->product_name('Product Name');
-        $grid->product_ingredients('Product Ingredients');
-        $grid->product_formulation('Product Formulation');
-        $grid->product_use('Product Use')->display(function ($product_use) {
+        $grid->product_name('Nama Dagang');
+        $grid->product_ingredients('Bahan Aktif');
+        $grid->product_formulation('Bentuk Formulasi');
+        $grid->product_use('Tujuan Penggunaan')->display(function ($product_use) {
             return $product_use;
         });
-        $grid->product_dose('Product Dose')->display(function ($product_dose) {
+        $grid->product_dose('Dosis')->display(function ($product_dose) {
             return $product_dose;
         });
-        $grid->product_package('Product Package')->display(function ($product_package) {
+        $grid->product_package('Isi Kemasan')->display(function ($product_package) {
             return $product_package;
+        });
+        $grid->kategori('Kategori');
+        $grid->kelompok('Kelompok');
+        $grid->gambar('Gambar')->display(function($gambar) use ($app) {
+            return $app->displayImage($gambar);
         });
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
@@ -122,12 +132,15 @@ class ProductController extends Controller
         $show = new Show(Product::findOrFail($id));
 
         $show->id('Id');
-        $show->product_name('Product name');
-        $show->product_ingredients('Product ingredients');
-        $show->product_formulation('Product formulation');
-        $show->product_use('Product use');
-        $show->product_dose('Product dose');
-        $show->product_package('Product package');
+        $show->product_name('Nama Dagang');
+        $show->product_ingredients('Bahan Aktif');
+        $show->product_formulation('Bentuk Formulasi');
+        $show->product_use('tujuan Penggunaan');
+        $show->product_dose('Dosis');
+        $show->product_package('Isi Kemasan');
+        $show->kategori('Kategori');
+        $show->kelompok('Kelompok');
+        $show->gambar('Gambar');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -143,12 +156,15 @@ class ProductController extends Controller
     {
         $form = new Form(new Product);
 
-        $form->text('product_name', 'Product name');
-        $form->text('product_ingredients', 'Product ingredients');
-        $form->text('product_formulation', 'Product formulation');
-        $form->editor('product_use', 'Product use');
-        $form->editor('product_dose', 'Product dose');
-        $form->editor('product_package', 'Product package');
+        $form->text('product_name', 'Nama Dagang');
+        $form->text('product_ingredients', 'Bahan Aktif');
+        $form->text('product_formulation', 'Bentuk Formulasi');
+        $form->editor('product_use', 'Tujuan Penggunaan');
+        $form->editor('product_dose', 'Dosis');
+        $form->editor('product_package', 'Isi Kemasan');
+        $form->text('kategori', 'Kategori');
+        $form->text('kelompok', 'Kelompok');
+        $form->text('gambar', 'Gambar');
 
         return $form;
     }
