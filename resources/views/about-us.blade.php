@@ -19,7 +19,7 @@
                             </div>
                             <div class="col-md-7 reset-col paragraph">
                                 <p class="content-desc">
-                                    {!! $aboutUs->deskripsi !!}
+                                    {!! $tentangKami->deskripsi !!}
                                 </p>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                                     <hr class="second-dot">
                                 </div>
                                 <p class="section-desc">
-                                    {!! $visiMisi->deskripsi !!}
+                                    {{ strip_tags($visi->deskripsi) }}
                                 </p>
                             </div>
                             <div class="col-md-7 rparagraph reset-col">
@@ -50,12 +50,14 @@
                         <div class="clearfix"></div>
                         <div class="col-md-12 reset-col">
                             <div class="col-md-5 col-md-push-7 reset-col rparagraph2">
-                                <h1 class="bg-name">vision</h1>
-                                <div class="col-md-12 reset-col paragraph">
-                                    <p class="section-desc">
-                                        {!! $visiMisi->deskripsi !!}
-                                    </p>
+                                <h5 class="section-title">Our Mision</h5>
+                                <div class="border-devide">
+                                    <hr class="first-dot">
+                                    <hr class="second-dot">
                                 </div>
+                                <p class="section-desc">
+                                    {{ strip_tags($misi->deskripsi) }}
+                                </p>
                             </div>
                             <div class="col-md-7 col-md-pull-5 reset-col lparagraph2">
                                 <img src="../assets/img/home/pabrik.jpg" class="img-responsive pull-right" alt="">
@@ -93,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <div class="clearfix"></div>
+        <!-- <div class="clearfix"></div>
         <section>
             <div class="col-md-12 about-content">
                 <div class="col-md-12 reset-col ac-head">
@@ -148,7 +150,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <div class="clearfix"></div>
         <section class="story">
             <div class="container">
