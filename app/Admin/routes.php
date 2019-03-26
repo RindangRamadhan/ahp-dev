@@ -31,4 +31,5 @@ Route::group([
     $router->resource('auth/album-family', AlbumFamilyController::class);
     $router->resource('auth/contact-profile', ContactProfileController::class);
     $router->resource('auth/contact-support', ContactSupportController::class);
+    $router->resource('auth/main-product', MainTitleProductController::class);
 });

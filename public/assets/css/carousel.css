@@ -155,9 +155,7 @@ header .btn.btn-hero:focus {
   margin: 20px auto;
 }
 
-header .fade-carousel .slides .slide-1,
-header .fade-carousel .slides .slide-2,
-header .fade-carousel .slides .slide-3 {
+header .fade-carousel .slides {
   height: 100vh;
   background-size: cover;
   background-position: center center;

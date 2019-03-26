@@ -2,16 +2,16 @@
 
 namespace App\Admin\Controllers;
 
-use App\Banner;
+use App\AboutProduct;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
-use Illuminate\Support\Facades\Storage;
+use Encore\Admin\Facades\Admin;
 
-class BannerController extends Controller
+class MainTitleProductController extends Controller
 {
     use HasResourceActions;
 
@@ -24,7 +24,7 @@ class BannerController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Banner')
+            ->header('Main Title Produk')
             ->description('List')
             ->body($this->grid());
     }
@@ -39,7 +39,7 @@ class BannerController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Banner')
+            ->header('Main Title Produk')
             ->description('Detail')
             ->body($this->detail($id));
     }
@@ -54,7 +54,7 @@ class BannerController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Banner')
+            ->header('Main Title Produk')
             ->description('Edit')
             ->body($this->form()->edit($id));
     }
@@ -68,15 +68,9 @@ class BannerController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Banner')
+            ->header('Main Title Produk')
             ->description('Create')
             ->body($this->form());
-    }
-
-    private function displayImage($path) {
-        
-        $src = Storage::disk(config('admin.upload.disk'))->url($path);
-        return "<img src='$src' style='max-width:100px;max-height:100px' class='img img-thumbnail' />";
     }
 
     /**
@@ -86,19 +80,22 @@ class BannerController extends Controller
      */
     protected function grid()
     {
-        $app = $this;
-        $grid = new Grid(new Banner);
+        $grid = new Grid(new AboutProduct);
 
         $grid->id('Id');
-        $grid->foto('Foto')->display(function ($foto) use ($app) {
-            return $app->displayImage($foto);
-        });
-        $grid->title('Title');
-        $grid->sub_title('Sub Title');
-        $grid->button('Button');
-        $grid->url('URL');
+        
+        if (Admin::user()->cannot('auth.management')) {
+            $grid->disableCreateButton();
+        }
+
+        $grid->deskripsi('Deskripsi');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
+        $grid->actions(function (Grid\Displayers\Actions $actions) {
+            if (Admin::user()->cannot('auth.management')) {
+                $actions->disableDelete();
+            }
+        });
 
         return $grid;
     }
@@ -111,14 +108,10 @@ class BannerController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(Banner::findOrFail($id));
+        $show = new Show(AboutProduct::findOrFail($id));
 
         $show->id('Id');
-        $show->foto('Foto');
-        $show->title('Title');
-        $show->Sub_title('Sub Title');
-        $show->button('Button');
-        $show->url('URL');
+        $show->deskripsi('Deskripsi');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -132,13 +125,9 @@ class BannerController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Banner);
+        $form = new Form(new AboutProduct);
 
-        $form->image('foto', 'Foto');
-        $form->text('title', 'Title');
-        $form->text('sub_title', 'Sub Title');
-        $form->text('button', 'Button');
-        $form->text('url', 'URL');
+        $form->textarea('deskripsi', 'Deskripsi');
 
         return $form;
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\PrivacyPolicy;
+use App\TentangKami;
 
 class PrivacyPolicyController extends Controller
 {
@@ -15,9 +16,11 @@ class PrivacyPolicyController extends Controller
     public function index()
     {
         $privacy_policy = PrivacyPolicy::first();
+        $tentangKami	= TentangKami::first();
 
         return view('privacy-policy', [
-            'privacyPolicy' => $privacy_policy
+            'privacyPolicy' => $privacy_policy,
+            'tentangKami' => $tentangKami
         ]);
     }
 

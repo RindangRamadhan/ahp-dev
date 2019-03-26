@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TermOfUse;
+use App\TentangKami;
 
 class TermOfUSeController extends Controller
 {
@@ -15,8 +16,11 @@ class TermOfUSeController extends Controller
     public function index()
     {
         $term_of_use = TermOfUse::first();
+        $tentangKami	= TentangKami::first();
+        
         return view('term-of-use', [
-            'termOfUse' => $term_of_use
+            'termOfUse' => $term_of_use,
+            'tentangKami' => $tentangKami
         ]);
     }
 

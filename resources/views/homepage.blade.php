@@ -12,42 +12,35 @@
             </ol>
 
             <div class="carousel-inner">
-                <div class="item slides active">
-                    <div class="slide-1"></div>
-                    <div class="hero">
-                        <hgroup>
-                            <h1>PT ANDALL HASA PRIMA</h1>
-                            <h3>Your Agrochemicals Solution</h3>
-                        </hgroup>
-                            <a href="{{ url('/about-us') }}" class="btn btn-hero btn-lg" style="z-index:1000;">
-                                Learn More
-                            </a>
-                    </div>
-                </div>
-                <div class="item slides">
-                    <div class="slide-2"></div>
-                    <div class="hero">
+                @foreach($banner as $data)
+                    @if($loop->first)
+                    <div class="item slides active get-image" data-image="{{ url('/storage/'.$data->foto)}}" >
+                        <div class=""></div>
+                        <div class="hero">
                             <hgroup>
-                                <h1>Produk Kami</h1>
-                                <h3>Hadirkan solusi dengan produk terbaik</h3>
+                                <h1>{{$data->title}}</h1>
+                                <h3>{{$data->sub_title}}</h3>
                             </hgroup>
-                            <a href="product-herbisida.html" class="btn btn-hero btn-lg" style="z-index:1000;">
-                                See All Product
-                            </a>
+                                <a href="{{ url('/'.$data->url) }}" class="btn btn-hero btn-lg" style="z-index:1000;">
+                                    {{$data->button}}
+                                </a>
+                        </div>
                     </div>
-                </div>
-                <div class="item slides">
-                    <div class="slide-3"></div>
-                    <div class="hero">
-                        <hgroup>
-                            <h1>Modern Machine</h1>
-                            <h3>Mengoptimalkan hasil dengan mesin berteknologi mutakhir</h3>
-                        </hgroup>
-                            <a href="product-herbisida.html" class="btn btn-hero btn-lg" style="z-index:1000;">
-                                See All Alsintan
-                            </a>
+                    @else
+                    <div class="item slides get-image" data-image="{{ url('/storage/'.$data->foto)}}" >
+                        <div class=""></div>
+                        <div class="hero">
+                            <hgroup>
+                                <h1>{{$data->title}}</h1>
+                                <h3>{{$data->sub_title}}</h3>
+                            </hgroup>
+                                <a href="{{ url('/'.$data->url) }}" class="btn btn-hero btn-lg" style="z-index:1000;">
+                                    {{$data->button}}
+                                </a>
+                        </div>
                     </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -141,10 +134,9 @@
                     <hr class="second-dot">
                 </div>
                 <div class="col-md-8 col-md-offset-2 col-sm-12 paragraph">
-                    <p class="section-desc">Produk yang kami jual adalah produk dengan kualitas terbaik & sudah
-                        teruji di masayarakat luas. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
-                        nisi est nam consequatur neque perferendis vitae rerum doloribus, exercitationem maiores,
-                        omnis incidunt! Provident corrupti excepturi magnam quisquam temporibus aliquid velit.</p>
+                    <p class="section-desc">
+                    {!! $mainProduct->deskripsi !!}
+                    </p>
                 </div>
                 <div class="col-md-12 reset-col wrap-btn-detail">
                     <a href="product-herbisida.html" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
