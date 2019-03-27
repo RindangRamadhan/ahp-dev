@@ -43,7 +43,7 @@ class HomeController extends Controller
 			$tentangKami			= TentangKami::first();
 			$benefits					= Benefit::first();
 			$ourPartners			= OurPartner::get();
-			$news							= News::orderBy('created_at', 'desc')->get();
+			$news							= News::inRandomOrder()->limit(2)->get();
 			$products 				= Product::inRandomOrder()->get();
 			$productCategorys = ProductCategory::get();
 			$productGroups		= ProductGroup::get();

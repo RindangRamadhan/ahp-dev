@@ -341,7 +341,7 @@
         <div class="col-md-12">                    
         @foreach ($news as $data)
           <div class="col-md-6 updates">
-            <a href="#">
+            <a href="{{ url('/news/'.$data->id) }}">
               <img src="{{ url('../storage/'.$data->image) }}" alt="">
               <h5 class="ndate">{{ date('d, M, Y', strtotime($data->created_at)) }}</h5>
               <h4 class="ntitle">{{ $data->title }}</h4>
@@ -359,7 +359,7 @@
         <div class="clearfix"></div>
         @foreach ($news as $data)
         <div class="col-md-12 reset-col loop-list">
-          <a href="#">
+          <a href="{{ url('/news/'.$data->id) }}">
             <div class="col-md-5 reset-col">
               <span class="unews-date">
                 {{ date('d, M, Y', strtotime($data->created_at)) }}
