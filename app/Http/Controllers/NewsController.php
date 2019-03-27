@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
+use App\ProductCategory;
+use App\TentangKami;
 
 class NewsController extends Controller
 {
@@ -14,9 +16,34 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = News::first();
+        $productCategorys = ProductCategory::get();
+        $tentangKami = TentangKami::first();
+        $news = News::inRandomOrder()->paginate(3);
+        $beritaTerbaru = News::orderBy('updated_at', 'desc')->inRandomOrder()->limit(2)->get();
+        $pagination = $news->links();
+
         return view('news', [
-            'news' => $news
+            'news' => $news,
+            'beritaTerbaru' => $beritaTerbaru,
+            'pagination' => $pagination,
+            'productCategorys' => $productCategorys,
+            'tentangKami' => $tentangKami
+        ]);
+    }
+
+    public function detail($id) {
+        $productCategorys = ProductCategory::get();
+        $tentangKami = TentangKami::first();
+        $news = News::inRandomOrder()->paginate(3);
+        $details = News::find($id);
+        $beritaTerbaru = News::orderBy('updated_at', 'desc')->inRandomOrder()->limit(2)->get();
+
+        return view('news-detail', [
+            'news' => $news,
+            'details' => $details,
+            'beritaTerbaru' => $beritaTerbaru,
+            'productCategorys' => $productCategorys,
+            'tentangKami' => $tentangKami
         ]);
     }
 
@@ -49,7 +76,7 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

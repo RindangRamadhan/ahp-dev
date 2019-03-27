@@ -30,6 +30,7 @@ Route::get('/faq', 'FaqController@index');
 Route::get('/about-us', 'AboutUsController@index');
 // news
 Route::get('/news', 'NewsController@index');
+Route::get('/news/{id}', 'NewsController@detail');
 Route::get('/contact', 'ContactController@index');
 
 Auth::routes();

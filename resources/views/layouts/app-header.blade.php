@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
 </head>
 <body id="homepage">
-  <div class="site-overlay"></div>
-	    @extends('layouts.header')
+    <div class="site-overlay"></div>
+        @extends('layouts.header')
 
 	<main class="py-4">
 		@yield('content')

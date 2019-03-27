@@ -40,12 +40,14 @@ $(".get-image").each(function () {
 })(jQuery);
 
 $(window).scroll(function () {
-    if ($(".navbar").offset().top > 51) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-        $('.navbar-brand img').attr('src', '../assets/img/AHP-dark-logo.png');
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        $('.navbar-brand img').attr('src', '../assets/img/AHP-white-logo.png');
+    if($(".navbar").length > 0) {        
+        if ($(".navbar").offset().top > 51) {
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+            $('.navbar-brand img').attr('src', '../assets/img/AHP-dark-logo.png');
+        } else {
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+            $('.navbar-brand img').attr('src', '../assets/img/AHP-white-logo.png');
+        }
     }
 });
 /////// Slick Product
