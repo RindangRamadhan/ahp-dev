@@ -32,45 +32,32 @@
                     <hr>
                     <h4 class="wow fadeIn" data-wow-delay=".4">INFO</h4>
                     <h3 class="c-title wow fadeIn" data-wow-delay=".4">CONTACT US</h3>
-                    <p class="c-desc">Anda dapat mengunjungi kami untuk informasi lebih lanjut. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Nunc bibendum
-                        nibh eu consequat efficitur. Nam in nibh purus. Proin pretium enim nec urna vulputate,
-                        vel cursus turpis pharetra. Nullam id convallis purus.
+                    <p class="c-desc">
+                      {{ strip_tags($cProfile->info) }}
                     </p>
                 </div>
                 <div class="col-md-12 detail-contact wow fadeIn" data-wow-delay=".3">
                     <hr>
-                    <h4>ADDRESS</h4>
+                    <h4>ALAMAT</h4>
                     <p>
-                        Main Office :
-                        <br> <a href="#urlgooglepmap" target="_blank">Jl. Raya Hajimena No.6 Pemanggilan Natar
-                            Lampung Selatan 35362</a>
+                        <a href="#urlgooglepmap" target="_blank">
+                          {{ strip_tags($cProfile->alamat) }}
+                        </a>
                     </p>
                 </div>
-                <div class="col-md-12 detail-contact wow fadeIn" data-wow-delay=".4">
-                    <hr>
-                    <h4>OFFICE SUPPORT</h4>
-                    <p>
 
-                        CS Support : <a href="tel:+0721784985">0721-784985</a>
-                        <br>WhatsApp : <a href="tel:+6285269141777">0852-6914-1777</a>
-                    </p>
-                </div>
+                @foreach($cSupport as $data)
                 <div class="col-md-12 detail-contact wow fadeIn" data-wow-delay=".4">
                     <hr>
-                    <h4>MARKETING SUPPORT</h4>
-                    <p>
-                        CS Support : <a href="tel:+0721784985">0721-784985</a>
-                        <br>WhatsApp : <a href="tel:+6285269141777">0852-6914-1777</a>
-                    </p>
+                    <h4>{{ strtoupper($data->nama) }}</h4>
+                    
+                    <table style="font-size: 14px;">
+                      <tr><td width="25%">No. Telpon</td><td> &nbsp;:&nbsp;</td><td><a href="{{ url('tel:'.$data->no_telp) }}">{{ $data->no_telp }}</a></td></tr>
+                      <tr><td width="25%">WhatsApp</td><td> &nbsp;:&nbsp;</td><td><a href="{{ url('tel:'.$data->whatsapp) }}">{{ $data->whatsapp }}</a></td></tr>
+                      <tr><td width="25%">Email</td><td> &nbsp;:&nbsp;</td><td><a href="{{ url('mailto:'.$data->email) }}">{{ $data->email }}</a></td></tr>
+                    </table>
                 </div>
-                <div class="col-md-12 detail-contact wow fadeIn" data-wow-delay=".2">
-                    <hr>
-                    <h4>EMAIL ADDRESS</h4>
-                    <p>
-                        Mail Info : <a href="mailto:ptandallhasaprima@gmail.com"> ptandallhasaprima@gmail.com</a>
-                    </p>
-                </div>
+                @endforeach
             </div>
             <div class="col-lg-1 col-md-1"></div>
             <div class="col-lg-5 col-md-11 col-sm-11">

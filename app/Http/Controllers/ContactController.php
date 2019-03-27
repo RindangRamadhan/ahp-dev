@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Contact;
 use Illuminate\Http\Request;
-use Mail;
+use App\Contact;
+use App\ContactProfile;
+use App\ContactSupport;
 use App\TentangKami;
+use App\ProductCategory;
+use Mail;
 
 class ContactController extends Controller
 {
@@ -15,8 +18,14 @@ class ContactController extends Controller
      */
     public function index()
     {
+        $cProfile = ContactProfile::first();
+        $cSupport = ContactSupport::get();
+        $productCategorys = ProductCategory::get();
         $tentangKami = TentangKami::first();
         return view('contact', [
+            'cProfile' => $cProfile,
+            'cSupport' => $cSupport,
+            'productCategorys' => $productCategorys,
             'tentangKami' => $tentangKami
         ]);
 

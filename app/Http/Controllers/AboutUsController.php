@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ProductCategory;
+use App\Testimonial;
 use App\TentangKami;
 use App\VisiMisi;
 
@@ -15,11 +17,15 @@ class AboutUsController extends Controller
      */
     public function index()
     {
+        $productCategorys = ProductCategory::get();
+        $testimonials = Testimonial::get();
         $tentangKami = TentangKami::first();
         $visi = VisiMisi::orderBy('id', 'asc')->first();
         $misi = VisiMisi::orderBy('id', 'desc')->first();
 
         return view('about-us', [
+            'productCategorys' => $productCategorys,
+            'testimonials' => $testimonials,
             'tentangKami' => $tentangKami,
             'visi' => $visi,
             'misi' => $misi
