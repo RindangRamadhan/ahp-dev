@@ -35,7 +35,7 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
             <div class="inner">
-                <h3>150</h3>
+                <h3>{{ number_format($produk, 0, ',', '.') }}</h3>
 
                 <p>Produk</p>
             </div>

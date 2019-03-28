@@ -96,14 +96,19 @@ class ProductController extends Controller
             $filter->like('product_name', 'Nama Dagang');
             $filter->like('product_ingredients', 'Bahan Aktif');
             $filter->like('product_formulation', 'Bentuk Formulasi');
+            $filter->like('sifat_formulasi', 'Sifat Formulasi');
         });
         $grid->product_name('Nama Dagang');
         $grid->product_ingredients('Bahan Aktif');
         $grid->product_formulation('Bentuk Formulasi');
+        $grid->sifat_formulasi('Sifat Formulasi');
         $grid->product_use('Tujuan Penggunaan')->limit(100)->display(function ($product_use) {
             return $product_use;
         });
-        $grid->product_dose('Dosis')->limit(30)->display(function ($product_dose) {
+        $grid->manfaat('Manfaat Penggunaan')->limit(100)->display(function ($manfaat) {
+            return $manfaat;
+        });
+        $grid->product_dose('Petunjuk Penggunaan')->limit(30)->display(function ($product_dose) {
             return $product_dose;
         });
         $grid->product_package('Isi Kemasan')->limit(30)->display(function ($product_package) {
@@ -138,8 +143,10 @@ class ProductController extends Controller
         $show->product_name('Nama Dagang');
         $show->product_ingredients('Bahan Aktif');
         $show->product_formulation('Bentuk Formulasi');
-        $show->product_use('tujuan Penggunaan');
-        $show->product_dose('Dosis');
+        $show->sifat_formulasi('Sifat Formulasi');
+        $show->product_use('Tujuan Penggunaan');
+        $show->manfaat('Manfaat Penggunaan');
+        $show->product_dose('Petunjuk Penggunaan');
         $show->product_package('Isi Kemasan');
         $show->kategori_id('Kategori');
         $show->kelompok_id('Kelompok');
@@ -162,8 +169,10 @@ class ProductController extends Controller
         $form->text('product_name', 'Nama Dagang');
         $form->text('product_ingredients', 'Bahan Aktif');
         $form->text('product_formulation', 'Bentuk Formulasi');
+        $form->text('sifat_formulasi', 'Sifat Formulasi');
         $form->editor('product_use', 'Tujuan Penggunaan');
-        $form->editor('product_dose', 'Dosis');
+        $form->editor('manfaat', 'Manfaat Penggunaan');
+        $form->editor('product_dose', 'Petunjuk Penggunaan');
         $form->editor('product_package', 'Isi Kemasan');
         $form->select('kategori_id', 'Kategori')->options(
             ProductCategory::all()->pluck('category_name', 'id')

@@ -33,6 +33,7 @@ Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', 'NewsController@detail');
 Route::get('/contact', 'ContactController@index');
 Route::get('/product-category/{id}', 'ProductController@kategoriProduk');
+Route::get('/product-detail/{id}', 'ProductController@detailProduk');
 
 Auth::routes();
 

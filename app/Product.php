@@ -18,7 +18,9 @@ class Product extends Model
     'product_package',
     'kelompok',
     'kategori',
-    'gambar'
+    'gambar',
+    'sifat_formulasi',
+    'manfaat',
   ];
   
 

@@ -26,7 +26,7 @@
         <div class="col-md-12 wrap-gallery">
           @foreach($product as $data)
             <div class="col-md-3 col-sm-6 pl-loop">
-              <a href="product-detail.html">
+              <a href="{{ url('/product-detail/'.$data->id) }}">
                 <div class="post-module">
                   <div class="thumbnail">
                     <img src="{{ url('/storage/'.$data->gambar) }}" class="img-responsive" />

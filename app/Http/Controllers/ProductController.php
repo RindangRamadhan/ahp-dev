@@ -29,6 +29,7 @@ class ProductController extends Controller
             'pagination' => $pagination
         ]);
     }
+
     public function kategoriProduk($id) {
         $product = Product::with(['kelompokProduk'])->where('kategori_id', $id)->paginate(12);
         $productCategorys = ProductCategory::all();
@@ -44,6 +45,18 @@ class ProductController extends Controller
             'productGroup' => $productGroup,
             'tentangKami' => $tentangKami,
             'pagination' => $pagination
+        ]);
+    }
+    
+    public function detailProduk($id) {
+        $product = Product::find($id);
+        $productCategorys = ProductCategory::all();
+        $tentangKami = TentangKami::first();
+
+        return view('product-detail', [
+            'product' => $product,
+            'productCategorys' => $productCategorys,
+            'tentangKami' => $tentangKami
         ]);
     }
 
