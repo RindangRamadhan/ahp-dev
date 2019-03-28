@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\ProdukFaq;
 use App\ProductCategory;
 use App\ProductGroup;
 use App\TentangKami;
@@ -51,10 +52,12 @@ class ProductController extends Controller
     public function detailProduk($id) {
         $product = Product::find($id);
         $productCategorys = ProductCategory::all();
+        $productFaq = ProdukFaq::where('produk_id', $id)->get();
         $tentangKami = TentangKami::first();
 
         return view('product-detail', [
             'product' => $product,
+            'productFaq' => $productFaq,
             'productCategorys' => $productCategorys,
             'tentangKami' => $tentangKami
         ]);

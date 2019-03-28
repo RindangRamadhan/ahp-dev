@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ProductCategory;
 use App\PrivacyPolicy;
 use App\TentangKami;
 
@@ -15,10 +16,12 @@ class PrivacyPolicyController extends Controller
      */
     public function index()
     {
+        $productCategorys = ProductCategory::get();
         $privacy_policy = PrivacyPolicy::first();
         $tentangKami	= TentangKami::first();
 
         return view('privacy-policy', [
+            'productCategorys' => $productCategorys,
             'privacyPolicy' => $privacy_policy,
             'tentangKami' => $tentangKami
         ]);

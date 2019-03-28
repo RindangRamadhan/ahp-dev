@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ProductCategory;
 use App\TermOfUse;
 use App\TentangKami;
 
@@ -15,10 +16,12 @@ class TermOfUSeController extends Controller
      */
     public function index()
     {
+        $productCategorys = ProductCategory::get();
         $term_of_use = TermOfUse::first();
         $tentangKami	= TentangKami::first();
         
         return view('term-of-use', [
+            'productCategorys' => $productCategorys,
             'termOfUse' => $term_of_use,
             'tentangKami' => $tentangKami
         ]);

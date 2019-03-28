@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ProductCategory;
 use App\Faq;
 use App\TentangKami;
 
@@ -15,10 +16,12 @@ class FaqController extends Controller
      */
     public function index()
     {
+        $productCategorys = ProductCategory::get();
         $faq = Faq::first();
         $tentangKami	= TentangKami::first();
 
         return view('faq', [
+            'productCategorys' => $productCategorys,
             'faq' => $faq,
             'tentangKami' => $tentangKami
         ]);

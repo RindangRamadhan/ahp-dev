@@ -85,73 +85,30 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 product-faq">
-          <h4 class="title">Beberapa pertanyaan seputar Badai 160 SL :</h4>
+          <h4 class="title">Beberapa pertanyaan seputar {{ $product->product_name }} :</h4>
           <div class="panel-group" id="accordion">
+            @foreach($productFaq as $data)            
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
-                  <a href="#">Apakah aman apabila terkena kulit ?</a>
+                <h4 data-toggle="collapse" data-parent="#accordion" href="#{{ $data->id }}" class="panel-title expand">
+                  <a href="#">{{ $data->pertanyaan }}</a>
                 </h4>
               </div>
-              <div id="collapse1" class="panel-collapse collapse in">
+              @if($loop->first)
+              <div id="{{ $data->id }}" class="panel-collapse collapse in">
                 <div class="panel-body">
-                  Sangat aman, dikarenakan sudah diformulasi tidak berbahaya untuk kesehatan
-                  manusia. <br>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                {{ $data->penjelasan }}
                 </div>
               </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="panel-title expand">
-                  <a href="#">Dimana saya bisa membeli produk ini ?</a>
-                </h4>
-              </div>
-              <div id="collapse2" class="panel-collapse collapse">
+              @else
+              <div id="{{ $data->id }}" class="panel-collapse collapse">
                 <div class="panel-body">
-                  Produk Badai 160 SL sudah tersedia di seluruh outlet kami. <br>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                {{ $data->penjelasan }}
                 </div>
               </div>
+              @endif
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="panel-title expand">
-                  <a href="#">Bagaimana cara penggunaan Badai 160 SL ketika musim hujan ?</a>
-                </h4>
-              </div>
-              <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">
-                  Produk Badai 160 SL sudah tersedia di seluruh outlet kami. <br>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="panel-title expand">
-                  <a href="#">Dimana saya bisa membeli produk ini ?</a>
-                </h4>
-              </div>
-              <div id="collapse4" class="panel-collapse collapse">
-                <div class="panel-body">
-                  Produk Badai 160 SL sudah tersedia di seluruh outlet kami. <br>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>

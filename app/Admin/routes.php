@@ -32,4 +32,5 @@ Route::group([
     $router->resource('auth/contact-profile', ContactProfileController::class);
     $router->resource('auth/contact-support', ContactSupportController::class);
     $router->resource('auth/main-product', MainTitleProductController::class);
+    $router->resource('auth/product-faq', ProdukFaqController::class);
 });
