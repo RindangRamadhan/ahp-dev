@@ -20,4 +20,12 @@ class Product extends Model
     'kategori',
     'gambar'
   ];
+  
+
+  public function kategoriProduk() {
+    return $this->hasOne('App\ProductCategory', 'id', 'kategori_id');
+  }
+  public function kelompokProduk() {
+    return $this->hasOne('App\ProductGroup', 'id', 'kelompok_id');
+  }
 }

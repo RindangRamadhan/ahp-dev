@@ -13,7 +13,7 @@
                     <ul class="dropdown-menu">
                         <i class="fa fa-caret-up"></i>
                         @foreach ($productCategorys as $category)
-                            <li><a href="{{ url('/products?category='.$category->id) }}">{{ $category->category_name }}</a></li>
+                            <li><a href="{{ url('/product-category/'.$category->id) }}">{{ $category->category_name }}</a></li>
                         @endforeach
                     </ul>
                 </li>
@@ -22,7 +22,7 @@
                     <ul class="dropdown-menu">
                         <i class="fa fa-caret-up"></i>
                         @foreach ($productCategorys as $category)
-                            <li><a href="{{ url('/products?category='.$category->id) }}">{{ $category->category_name }}</a></li>
+                            <li><a href="{{ url('/product-category/'.$category->id) }}">{{ $category->category_name }}</a></li>
                         @endforeach
                     </ul>
                 </li>
