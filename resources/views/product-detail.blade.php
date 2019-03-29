@@ -63,16 +63,20 @@
           {!! $product->product_use !!}
         </div>
       </div>
+      
       <div class="col-md-12 reset-col desc-loop">
         <div class="col-md-12 reset-col gallery-slider">
         <h4>Implementasi Produk {{  $product->product_name }} :</h4>
         <div class="gallery gallery-responsive portfolio_slider">
+        @if($implementProduct)
           @foreach($implementProduct->pictures as $data)
           <div class="inner"><img src="{{url('/storage/'.$data) }}"></div>
           @endforeach
+        @endif
         </div>
         </div>
       </div>
+      
       </div>
     </div>
   </section>
