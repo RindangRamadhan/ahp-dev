@@ -129,7 +129,9 @@ class TermOfUseController extends Controller
     {
         $form = new Form(new TermOfUse);
 
-        $form->editor('deskripsi', 'Deskripsi');
+        $form->editor('deskripsi', 'Deskripsi')->rules('required', [
+            'required' => 'Deskripsi tidak boleh kosong',
+        ]);
 
         return $form;
     }

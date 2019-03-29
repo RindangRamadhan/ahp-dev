@@ -129,7 +129,9 @@ class FaqController extends Controller
     {
         $form = new Form(new Faq);
 
-        $form->editor('deskripsi', 'Deskripsi');
+        $form->editor('deskripsi', 'Deskripsi')->rules('required', [
+            'required' => 'Deskripsi tidak boleh kosong',
+        ]);
 
         return $form;
     }

@@ -127,7 +127,9 @@ class MainTitleProductController extends Controller
     {
         $form = new Form(new AboutProduct);
 
-        $form->textarea('deskripsi', 'Deskripsi');
+        $form->textarea('deskripsi', 'Deskripsi')->rules('required', [
+            'required' => 'Deskripsi tidak boleh kosong',
+        ]);
 
         return $form;
     }

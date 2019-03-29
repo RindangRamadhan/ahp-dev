@@ -134,8 +134,12 @@ class OurPartnerController extends Controller
     {
         $form = new Form(new OurPartner);
 
-        $form->text('partner', 'Partner');
-        $form->image('logo', 'Logo');
+        $form->text('partner', 'Partner')->rules('required', [
+            'required' => 'Partner tidak boleh kosong',
+        ]);
+        $form->image('logo', 'Logo')->rules('required', [
+            'required' => 'Logo tidak boleh kosong',
+        ]);
 
         return $form;
     }

@@ -135,8 +135,12 @@ class ContactProfileController extends Controller
     {
         $form = new Form(new ContactProfile);
 
-        $form->editor('info', 'Info');
-        $form->editor('alamat', 'Alamat');
+        $form->editor('info', 'Info')->rules('required', [
+            'required' => 'Info Kedua tidak boleh kosong',
+        ]);
+        $form->editor('alamat', 'Alamat')>rules('required', [
+            'required' => 'Alamat Kedua tidak boleh kosong',
+        ]);
 
         return $form;
     }

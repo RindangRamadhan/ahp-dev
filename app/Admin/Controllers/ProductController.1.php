@@ -166,21 +166,49 @@ class ProductController extends Controller
     {
         $form = new Form(new Product);
 
-        $form->text('product_name', 'Nama Dagang');
-        $form->text('product_ingredients', 'Bahan Aktif');
-        $form->text('product_formulation', 'Bentuk Formulasi');
-        $form->text('sifat_formulasi', 'Sifat Formulasi');
-        $form->editor('product_use', 'Tujuan Penggunaan');
-        $form->editor('manfaat', 'Manfaat Penggunaan');
-        $form->editor('product_dose', 'Petunjuk Penggunaan');
-        $form->editor('product_package', 'Isi Kemasan');
+        $form->text('product_name', 'Nama Dagang')->rules(function($form) {
+            if (!$id = $form->model()->id) {
+                return 'required|unique:product_categories,category_name';
+                # code...
+            }else {
+                return 'required|unique:product_categories,category_name,'.$id;
+                # code...
+            }
+        });
+        $form->text('product_ingredients', 'Bahan Aktif')->rules('required', [
+            'required' => 'Bahan Aktif tidak boleh kosong',
+        ]);
+        $form->text('product_formulation', 'Bentuk Formulasi')->rules('required', [
+            'required' => 'Bentuk Formulasi tidak boleh kosong',
+        ]);
+        $form->text('sifat_formulasi', 'Sifat Formulasi')->rules('required', [
+            'required' => 'Sifat Formulasi tidak boleh kosong',
+        ]);
+        $form->editor('product_use', 'Tujuan Penggunaan')->rules('required', [
+            'required' => 'Tujuan Penggunaan tidak boleh kosong',
+        ]);
+        $form->editor('manfaat', 'Manfaat Penggunaan')->rules('required', [
+            'required' => 'Manfaat Penggunaan tidak boleh kosong',
+        ]);
+        $form->editor('product_dose', 'Petunjuk Penggunaan')->rules('required', [
+            'required' => 'Petunjuk Penggunaan tidak boleh kosong',
+        ]);
+        $form->editor('product_package', 'Isi Kemasan')->rules('required', [
+            'required' => 'Isi Kemasan tidak boleh kosong',
+        ]);
         $form->select('kategori_id', 'Kategori')->options(
             ProductCategory::all()->pluck('category_name', 'id')
-        );
+        )->rules('required', [
+            'required' => 'Kategori tidak boleh kosong',
+        ]);
         $form->select('kelompok_id', 'Kelompok')->options(
             ProductGroup::all()->pluck('group_name', 'id')
-        );
-        $form->image('gambar', 'Gambar');
+        )->rules('required', [
+            'required' => 'Kelompok tidak boleh kosong',
+        ]);
+        $form->image('gambar', 'Gambar')->rules('required', [
+            'required' => 'Gambar tidak boleh kosong',
+        ]);
 
         return $form;
     }

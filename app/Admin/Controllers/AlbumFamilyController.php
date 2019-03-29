@@ -124,7 +124,9 @@ class AlbumFamilyController extends Controller
     {
         $form = new Form(new AlbumFamily);
 
-        $form->image('image', 'Image');
+        $form->image('image', 'Image')->rules('required', [
+            'required' => 'Image tidak boleh kosong',
+        ]);
 
         return $form;
     }

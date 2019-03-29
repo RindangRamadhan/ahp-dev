@@ -143,10 +143,20 @@ class NewsController extends Controller
     {
         $form = new Form(new News);
 
-        $form->text('title', 'Title');
-        $form->image('image', 'Image');
-        $form->editor('description', 'Description');
-        $form->text('source', 'Source');
+        $form->text('title', 'Title')->rules('required|min:1', [
+            'min'   => 'code can not be less than 10 characters',
+            'required' => 'title tidak boleh kosong',
+        ]);
+        $form->image('image', 'Image')->rules('required', [
+            'required' => 'Image tidak boleh kosong',
+        ]);
+        $form->editor('description', 'Description')->rules('required', [
+            'required' => 'description
+            Description tidak boleh kosong',
+        ]);
+        $form->text('source', 'Source')->rules('required', [
+            'required' => 'Source tidak boleh kosong',
+        ]);
 
         return $form;
     }

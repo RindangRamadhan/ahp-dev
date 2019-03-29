@@ -127,10 +127,25 @@ class ContactSupportController extends Controller
     {
         $form = new Form(new ContactSupport);
 
-        $form->text('nama', 'Nama');
-        $form->text('no_telp', 'No telp');
-        $form->text('whatsapp', 'Whatsapp');
-        $form->email('email', 'Email');
+        $form->text('nama', 'Nama')->rules('required', [
+            'required' => 'Nama tidak boleh kosong',
+        ]);
+        $form->text('no_telp', 'No telp')->rules('required|min:10', [
+            'min' => 'No Telp minimal 10 karakter',
+            'required' => 'No telp tidak boleh kosong',
+        ]);
+        $form->text('whatsapp', 'Whatsapp')->rules('required', [
+            'required' => 'Whatsapp tidak boleh kosong',
+        ]);
+        $form->email('email', 'Email')->rules(function($form) {
+            if (!$id = $form->model()->id) {
+                return 'required|unique:product_categories,category_name';
+                # code...
+            }else {
+                return 'required|unique:product_categories,category_name,'.$id;
+                # code...
+            }
+        });
 
         return $form;
     }

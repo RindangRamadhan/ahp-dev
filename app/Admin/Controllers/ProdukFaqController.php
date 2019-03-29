@@ -125,9 +125,15 @@ class ProdukFaqController extends Controller
 
         $form->select('produk_id', 'Produk')->options(
             Product::all()->pluck('product_name', 'id')
-        );
-        $form->text('pertanyaan', 'Pertanyaan');
-        $form->textarea('penjelasan', 'Penjelasan');
+        )->rules('required', [
+            'required' => 'Produk Aktif tidak boleh kosong',
+        ]);
+        $form->text('pertanyaan', 'Pertanyaan')->rules('required', [
+            'required' => 'Pertanyaan tidak boleh kosong',
+        ]);
+        $form->textarea('penjelasan', 'Penjelasan')->rules('required', [
+            'required' => 'Penjelasan tidak boleh kosong',
+        ]);
 
         return $form;
     }

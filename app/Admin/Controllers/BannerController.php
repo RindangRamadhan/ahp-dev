@@ -134,11 +134,21 @@ class BannerController extends Controller
     {
         $form = new Form(new Banner);
 
-        $form->image('foto', 'Foto');
-        $form->text('title', 'Title');
-        $form->text('sub_title', 'Sub Title');
-        $form->text('button', 'Button');
-        $form->text('url', 'URL');
+        $form->image('foto', 'Foto')->rules('required', [
+            'required' => 'Foto tidak boleh kosong',
+        ]);
+        $form->text('title', 'Title')->rules('required', [
+            'required' => 'Title tidak boleh kosong',
+        ]);
+        $form->text('sub_title', 'Sub Title')->rules('required', [
+            'required' => 'Sub Title tidak boleh kosong',
+        ]);
+        $form->text('button', 'Button')->rules('required', [
+            'required' => 'Button tidak boleh kosong',
+        ]);
+        $form->text('url', 'URL')->rules('required', [
+            'required' => 'URL tidak boleh kosong',
+        ]);
 
         return $form;
     }

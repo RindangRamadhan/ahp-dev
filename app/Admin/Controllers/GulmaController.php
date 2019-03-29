@@ -2,16 +2,17 @@
 
 namespace App\Admin\Controllers;
 
-use App\VisiMisi;
+use App\Gulma;
+use App\Product;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
-use Encore\Admin\Facades\Admin;
+use Illuminate\Support\Facades\Storage;
 
-class VisiMisiController extends Controller
+class GulmaController extends Controller
 {
     use HasResourceActions;
 
@@ -24,8 +25,8 @@ class VisiMisiController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Visi Misi')
-            ->description('List')
+            ->header('Index')
+            ->description('description')
             ->body($this->grid());
     }
 
@@ -39,8 +40,8 @@ class VisiMisiController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Visi Misi')
-            ->description('Detail')
+            ->header('Detail')
+            ->description('description')
             ->body($this->detail($id));
     }
 
@@ -54,8 +55,8 @@ class VisiMisiController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Visi Misi')
-            ->description('Edit')
+            ->header('Edit')
+            ->description('description')
             ->body($this->form()->edit($id));
     }
 
@@ -68,8 +69,8 @@ class VisiMisiController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Visi Misi')
-            ->description('Create')
+            ->header('Create')
+            ->description('description')
             ->body($this->form());
     }
 
@@ -78,26 +79,21 @@ class VisiMisiController extends Controller
      *
      * @return Grid
      */
+    private function displayImage($path) {
+        
+        $src = Storage::disk(config('admin.upload.disk'))->url($path);
+        return "<img src='$src' style='max-width:100px;max-height:100px' class='img img-thumbnail' />";
+    }
     protected function grid()
     {
-        $grid = new Grid(new VisiMisi);
+        $app = $this;
+        $grid = new Grid(new Gulma);
 
         $grid->id('Id');
-
-        if (Admin::user()->cannot('auth.management')) {
-            $grid->disableCreateButton();
-        }
-
-        $grid->deskripsi('Deskripsi')->display(function ($deskripsi) {
-            return $deskripsi;
-        });
+        $grid->produk_id('Produk id');
+        $grid->pictures('Foto')->image();
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
-        $grid->actions(function (Grid\Displayers\Actions $actions) {
-            if (Admin::user()->cannot('auth.management')) {
-                $actions->disableDelete();
-            }
-        });
 
         return $grid;
     }
@@ -110,10 +106,11 @@ class VisiMisiController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(VisiMisi::findOrFail($id));
+        $show = new Show(Gulma::findOrFail($id));
 
         $show->id('Id');
-        $show->deskripsi('Deskripsi');
+        $show->produk_id('Produk id');
+        $show->pictures('Foto');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -125,13 +122,17 @@ class VisiMisiController extends Controller
      *
      * @return Form
      */
+    
     protected function form()
     {
-        $form = new Form(new VisiMisi);
+        $form = new Form(new Gulma);
 
-        $form->editor('deskripsi', 'Deskripsi')->rules('required', [
-            'required' => 'Deskripsi tidak boleh kosong',
+        $form->select('produk_id', 'Produk')->options(
+            Product::all()->pluck('product_name', 'id')
+        )->rules('required', [
+            'required' => 'Produk Aktif tidak boleh kosong',
         ]);
+        $form->multipleImage('pictures', 'Foto')->removable();
 
         return $form;
     }

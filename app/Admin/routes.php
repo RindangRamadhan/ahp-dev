@@ -33,4 +33,5 @@ Route::group([
     $router->resource('auth/contact-support', ContactSupportController::class);
     $router->resource('auth/main-product', MainTitleProductController::class);
     $router->resource('auth/product-faq', ProdukFaqController::class);
+    $router->resource('auth/gulma', GulmaController::class);
 });

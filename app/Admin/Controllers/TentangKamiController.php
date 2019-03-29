@@ -131,7 +131,9 @@ class TentangKamiController extends Controller
     {
         $form = new Form(new TentangKami);
 
-        $form->editor('deskripsi', 'Deskripsi');
+        $form->editor('deskripsi', 'Deskripsi')->rules('required', [
+            'required' => 'Deskripsi tidak boleh kosong',
+        ]);
 
         return $form;
     }

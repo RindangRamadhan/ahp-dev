@@ -129,7 +129,9 @@ class PrivacyPolicyController extends Controller
     {
         $form = new Form(new PrivacyPolicy);
 
-        $form->editor('deskripsi', 'Deskripsi');
+        $form->editor('deskripsi', 'Deskripsi')->rules('required', [
+            'required' => 'Deskripsi tidak boleh kosong',
+        ]);
 
         return $form;
     }

@@ -167,12 +167,24 @@ class BenefitController extends Controller
     {
         $form = new Form(new Benefit);
 
-        $form->text('title', 'Judul');
-        $form->image('image1', 'Gambar Judul');
-        $form->editor('benefit1', 'Manfaat Pertama');
-        $form->image('image2', 'Gambar Pertama');
-        $form->editor('benefit2', 'Manfaat Kedua');
-        $form->image('image3', 'Gambar Kedua');
+        $form->text('title', 'Judul')->rules('required', [
+            'required' => 'Judul tidak boleh kosong',
+        ]);
+        $form->image('image1', 'Gambar Judul')->rules('required', [
+            'required' => 'Gambar Judul tidak boleh kosong',
+        ]);
+        $form->editor('benefit1', 'Manfaat Pertama')->rules('required', [
+            'required' => 'Manfaat Pertama tidak boleh kosong',
+        ]);
+        $form->image('image2', 'Gambar Pertama')->rules('required', [
+            'required' => 'Gambar Pertama tidak boleh kosong',
+        ]);
+        $form->editor('benefit2', 'Manfaat Kedua')->rules('required', [
+            'required' => 'Manfaat Kedua tidak boleh kosong',
+        ]);
+        $form->image('image3', 'Gambar Kedua')->rules('required', [
+            'required' => 'Gambar Kedua tidak boleh kosong',
+        ]);
 
         return $form;
     }

@@ -133,9 +133,15 @@ class TestimonialController extends Controller
     {
         $form = new Form(new Testimonial);
 
-        $form->text('nama', 'Nama');
-        $form->select('jenis_kelamin', 'Jenis kelamin')->options([1 => 'laki-laki', 2 => 'perempuan']);
-        $form->textarea('pesan', 'Pesan');
+        $form->text('nama', 'Nama')->rules('required', [
+            'required' => 'Nama tidak boleh kosong',
+        ]);
+        $form->select('jenis_kelamin', 'Jenis kelamin')->options([1 => 'laki-laki', 2 => 'perempuan'])->rules('required', [
+            'required' => 'Jenis kelamin tidak boleh kosong',
+        ]);
+        $form->textarea('pesan', 'Pesan')->rules('required', [
+            'required' => 'Pesan tidak boleh kosong',
+        ]);
         
         return $form;
     }
