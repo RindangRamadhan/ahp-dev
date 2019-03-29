@@ -65,16 +65,11 @@
       </div>
       <div class="col-md-12 reset-col desc-loop">
         <div class="col-md-12 reset-col gallery-slider">
-        <h4>Beberapa jenis gulma yang diberantas oleh Badai 160 SL :</h4>
+        <h4>Implementasi Produk {{  $product->product_name }} :</h4>
         <div class="gallery gallery-responsive portfolio_slider">
-          <div class="inner"><img src="../assets/img/gulma/g1.jpg"></div>
-          <div class="inner"><img src="../assets/img/gulma/g2.jpg"></div>
-          <div class="inner"><img src="../assets/img/gulma/g3.jpg"></div>
-          <div class="inner"><img src="../assets/img/gulma/g4.jpg"></div>
-          <div class="inner"><img src="../assets/img/gulma/g5.jpg"></div>
-          <div class="inner"><img src="../assets/img/gulma/g6.jpg"></div>
-          <div class="inner"><img src="../assets/img/gulma/g7.jpg"></div>
-          <div class="inner"><img src="../assets/img/gulma/g8.jpg"></div>
+          @foreach($implementProduct->pictures as $data)
+          <div class="inner"><img src="{{url('/storage/'.$data) }}"></div>
+          @endforeach
         </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Gulma;
 use App\Product;
 use App\ProdukFaq;
 use App\ProductCategory;
@@ -51,12 +52,14 @@ class ProductController extends Controller
     
     public function detailProduk($id) {
         $product = Product::find($id);
+        $implementProduct = Gulma::where('produk_id', $id)->first();
         $productCategorys = ProductCategory::all();
         $productFaq = ProdukFaq::where('produk_id', $id)->get();
         $tentangKami = TentangKami::first();
 
         return view('product-detail', [
             'product' => $product,
+            'implementProduct' => $implementProduct,
             'productFaq' => $productFaq,
             'productCategorys' => $productCategorys,
             'tentangKami' => $tentangKami

@@ -178,7 +178,7 @@
           </div>
           @else
           <div class="col-sm-3 col-xs-6 product-caption-animate">
-            <a href="{{ url('/product-detail?id='.$data->id) }}">
+            <a href="{{ url('/product-detail/'.$data->id) }}">
             <figure class="snip0016">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
               <figcaption>
@@ -203,7 +203,7 @@
           @if ($i++ < 13)
           @if($i > 5 && $i < 9)
           <div class="col-sm-4 col-xs-6 product-caption-animate">
-            <a href="{{ url('/product-detail?id='.$data->id) }}">
+            <a href="{{ url('/product-detail/'.$data->id) }}">
             <figure class="snip0016 sh">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
               <figcaption>
@@ -215,7 +215,7 @@
           </div>
           @else
           <div class="col-sm-3 col-xs-6 product-caption-animate">
-            <a href="{{ url('/product-detail?id='.$data->id) }}">
+            <a href="{{ url('/product-detail/'.$data->id) }}">
             <figure class="snip0016 sh">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
               <figcaption>

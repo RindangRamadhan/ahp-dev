@@ -25,8 +25,8 @@ class GulmaController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
-            ->description('description')
+            ->header('Implementasi Produk')
+            ->description('List')
             ->body($this->grid());
     }
 
@@ -40,8 +40,8 @@ class GulmaController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Detail')
-            ->description('description')
+            ->header('Implementasi Produk')
+            ->description('Detail')
             ->body($this->detail($id));
     }
 
@@ -55,8 +55,8 @@ class GulmaController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
-            ->description('description')
+            ->header('Implementasi Produk')
+            ->description('Edit')
             ->body($this->form()->edit($id));
     }
 
@@ -69,8 +69,8 @@ class GulmaController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
-            ->description('description')
+            ->header('Implementasi Produk')
+            ->description('Create')
             ->body($this->form());
     }
 
@@ -90,8 +90,10 @@ class GulmaController extends Controller
         $grid = new Grid(new Gulma);
 
         $grid->id('Id');
-        $grid->produk_id('Produk id');
-        $grid->pictures('Foto')->image();
+        $grid->produk_id('Produk')->display(function($produk_id){
+            return Product::find($produk_id)->product_name;
+        });
+        // $grid->pictures('Foto');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 
@@ -109,8 +111,15 @@ class GulmaController extends Controller
         $show = new Show(Gulma::findOrFail($id));
 
         $show->id('Id');
-        $show->produk_id('Produk id');
-        $show->pictures('Foto');
+        $show->produk_id('Produk')->as(function ($produk_id) {
+            return Product::find($produk_id)->product_name;
+        });
+        $show->pictures('Foto')->as(function ($pictures) {
+            $html = '';
+            foreach ($pictures as $picture)
+                $html .="<img src='/storage/$picture' style='max-height: 160px; margin-right: 10px;' >";
+            return $html;
+        })->unescape();
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -133,7 +142,7 @@ class GulmaController extends Controller
             'required' => 'Produk Aktif tidak boleh kosong',
         ]);
         $form->multipleImage('pictures', 'Foto')->removable();
-
+        
         return $form;
     }
 }
