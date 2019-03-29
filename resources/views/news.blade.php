@@ -34,7 +34,7 @@
                     <div class="col-md-4 col-sm-6 pl-loop">
                       <a href="{{ url('/news/'.$data->id) }}">
                         <div class="post-module">
-                          <div class="thumbnail" style="height: 200px !important">
+                          <div class="thumbnail sh">
                             <img src="{{ url('../storage/'.$data->image) }}" class="img-responsive" />
                             <div class="category">{{ date('d, M, Y', strtotime($data->created_at)) }}</div>
                           </div>

@@ -24,7 +24,7 @@
 html,
 body {
     height: 100% !important;
-    width: 100% !important;
+    // width: 100% !important;
     font-family: MontserratRegular;
     font-size: 12px;
     margin: 0;
@@ -34,6 +34,10 @@ body {
 #wrapper {
     min-height: 100%;
     padding-bottom: 40px;
+    overflow-x: hidden;
+}
+
+main {
     overflow-x: hidden;
 }
 

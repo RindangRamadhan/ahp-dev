@@ -1,6 +1,7 @@
 @import "../css/variables.scss";
 @import "../css/footer.scss";
 @import "../css/header.scss";
+@import "../css/canvas.scss";
 @import "../css/navbar.scss";
 @import "../css/main.scss";
 @import "../css/carousel.scss";
@@ -11,3 +12,12 @@
 @import "../css/our-values.scss";
 @import "../css/product-detail.scss";
 @import "../css/product-list.scss";
+
+
+@media only screen and (max-width: 768px) {
+    .s-katalog {
+        .lcontent {
+            padding-right: 0;
+        }
+    }
+}

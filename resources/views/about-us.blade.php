@@ -1,6 +1,7 @@
 @extends('layouts.app-about')
 
 @section('content')
+@include('layouts.canvas')
   <div class="site-overlay"></div>
   <div id="wrapper">
     @extends('layouts.header')

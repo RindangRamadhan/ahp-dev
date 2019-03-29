@@ -28,7 +28,7 @@
             <div class="col-md-3 col-sm-6 pl-loop">
               <a href="{{ url('/product-detail/'.$data->id) }}">
                 <div class="post-module">
-                  <div class="thumbnail">
+                  <div class="thumbnail sh">
                     <img src="{{ url('/storage/'.$data->gambar) }}" class="img-responsive" />
                   </div>
                   <div class="post-content">

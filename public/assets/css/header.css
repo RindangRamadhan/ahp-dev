@@ -274,4 +274,15 @@ header .btn-scroll img {
     margin-right: auto;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .navbar-toggle {
+    background-color: #fff;
+    border-radius: 2px;
+    margin-top: 15px;
+  }
+  .navbar-header {
+    height: 60px;
+  }
+}
 /*# sourceMappingURL=header.css.map */

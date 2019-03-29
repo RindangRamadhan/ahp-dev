@@ -285,7 +285,7 @@
           </div>
           <div class="clearfix"></div>
         </div>
-        <div class="col-md-6 reset-col rcontent">
+        <div class="col-md-6 reset-col rcontent hidden-xs">
           <h5 class="title">It’s time for join Us</h5>
           <p class="desc">Try our products and see the result. Lorem ipsum dolor sit, amet consectetur
             adipisicing elit.
@@ -342,7 +342,7 @@
         @foreach ($news as $data)
           <div class="col-md-6 updates">
             <a href="{{ url('/news/'.$data->id) }}">
-              <img src="{{ url('../storage/'.$data->image) }}" alt="">
+              <img src="{{ url('../storage/'.$data->image) }}" alt="" class="sh">
               <h5 class="ndate">{{ date('d, M, Y', strtotime($data->created_at)) }}</h5>
               <h4 class="ntitle">{{ $data->title }}</h4>
               <p class="ndesc">

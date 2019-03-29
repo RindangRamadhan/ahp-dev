@@ -6,6 +6,8 @@ $(document).ready(function () {
         });
     }
 });
+/*============================================================================================MatchHeight*/
+$('.sh').matchHeight();
 
 $(".get-image").each(function () {
     var dataImg = $(this).data("image");
@@ -40,7 +42,7 @@ $(".get-image").each(function () {
 })(jQuery);
 
 $(window).scroll(function () {
-    if($(".navbar").length > 0) {        
+    if ($(".navbar").length > 0) {
         if ($(".navbar").offset().top > 51) {
             $(".navbar-fixed-top").addClass("top-nav-collapse");
             $('.navbar-brand img').attr('src', '../assets/img/AHP-dark-logo.png');

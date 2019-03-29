@@ -17,8 +17,13 @@
     <link rel="stylesheet" href="../assets/libraries/slick/slick.css" type="text/css">
     <link rel="stylesheet" href="../assets/libraries/slick/slick-theme.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/canvas.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
 </head>
 <body id="homepage">
+  @include('layouts.canvas')
   <div class="site-overlay"></div>
 	@extends('layouts.header-home')
 
@@ -33,9 +38,10 @@
 	<script src="{{ asset('assets/libraries/js/jquery-3.3.1.min.js') }}"></script>
 	<script src="{{ asset('assets/libraries/js/jquery.easing.min.js') }}"></script>
 	<script src="{{ asset('assets/libraries/bootstrap/js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('assets/libraries/pushy/js/pushy.min.js') }}"></script>
+	<script src="{{ asset('assets/libraries/pushy/js/pushy.js') }}"></script>
 	<script src="{{ asset('assets/libraries/slick/slick.js') }}"></script>
-	<script src="{{ asset('assets/libraries/js/jquery.touchSwipe.min.js') }}"></script>
+  <script src="{{ asset('assets/libraries/js/jquery.touchSwipe.min.js') }}"></script>
+  <script src="{{ asset('assets/libraries/js/jquery.matchHeight-min.js') }}"></script>
   <script src="{{ asset('assets/js/main.js') }}"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	@yield('scripts')
