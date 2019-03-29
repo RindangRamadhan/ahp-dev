@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Product;
+use App\OurProduct;
 use App\ProductGroup;
 use App\ProductCategory;
 use App\Http\Controllers\Controller;
@@ -13,7 +13,7 @@ use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 use Illuminate\Support\Facades\Storage;
 
-class ProductController extends Controller
+class OurProductController extends Controller
 {
     use HasResourceActions;
 
@@ -33,7 +33,7 @@ class ProductController extends Controller
 
     /**
      * Show interface.
-     *  
+     *
      * @param mixed $id
      * @param Content $content
      * @return Content
@@ -74,11 +74,13 @@ class ProductController extends Controller
             ->description('description')
             ->body($this->form());
     }
+
     private function displayImage($path) {
         
         $src = Storage::disk(config('admin.upload.disk'))->url($path);
         return "<img src='$src' style='max-width:100px;max-height:100px' class='img img-thumbnail' />";
     }
+
 
     /**
      * Make a grid builder.
@@ -86,9 +88,9 @@ class ProductController extends Controller
      * @return Grid
      */
     protected function grid()
-    {   $app = $this;
-        $grid = new Grid(new Product);
-
+    {
+        $grid = new Grid(new OurProduct);
+        $app = $this;
         $grid->id('Id');
         $grid->filter(function($filter){
         
@@ -101,28 +103,26 @@ class ProductController extends Controller
         $grid->product_name('Nama Dagang');
         $grid->product_ingredients('Bahan Aktif');
         $grid->product_formulation('Bentuk Formulasi');
-        $grid->sifat_formulasi('Sifat Formulasi');
         $grid->product_use('Tujuan Penggunaan')->limit(100)->display(function ($product_use) {
             return $product_use;
         });
-        $grid->manfaat('Manfaat Penggunaan')->limit(100)->display(function ($manfaat) {
-            return $manfaat;
+        $grid->product_dose('Petunjuk Penggunaan')->limit(100)->display(function ($product_use) {
+            return $product_use;
         });
-        $grid->product_dose('Petunjuk Penggunaan')->limit(30)->display(function ($product_dose) {
-            return $product_dose;
+        $grid->product_package('Isi Kemasan')->limit(100)->display(function ($product_use) {
+            return $product_use;
         });
-        $grid->product_package('Isi Kemasan')->limit(30)->display(function ($product_package) {
-            return $product_package;
-        });
-        $grid->kategori_id('Kategori')->display(function($kategori_id) {
+        $grid->kategori_id('Kategori Produk')->display(function($kategori_id){
             return ProductCategory::find($kategori_id)->category_name;
         });
-        $grid->kelompok_id('Kelompok')->display(function($kelompok_id) {
+        $grid->kelompok_id('Kelompok Produk')->display(function($kelompok_id){
             return ProductGroup::find($kelompok_id)->group_name;
         });
         $grid->gambar('Gambar')->display(function($gambar) use ($app) {
             return $app->displayImage($gambar);
         });
+        $grid->sifat_formulasi('Sifat Formulasi');
+        $grid->manfaat('Manfaat');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 
@@ -137,19 +137,17 @@ class ProductController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(Product::findOrFail($id));
+        $show = new Show(OurProduct::findOrFail($id));
 
         $show->id('Id');
-        $show->product_name('Nama Dagang');
-        $show->product_ingredients('Bahan Aktif');
-        $show->product_formulation('Bentuk Formulasi');
-        $show->sifat_formulasi('Sifat Formulasi');
-        $show->product_use('Tujuan Penggunaan');
-        $show->manfaat('Manfaat Penggunaan');
-        $show->product_dose('Petunjuk Penggunaan');
-        $show->product_package('Isi Kemasan');
-        $show->kategori_id('Kategori');
-        $show->kelompok_id('Kelompok');
+        $show->product_name('Product name');
+        $show->product_ingredients('Product ingredients');
+        $show->product_formulation('Product formulation');
+        $show->product_use('Product use');
+        $show->product_dose('Product dose');
+        $show->product_package('Product package');
+        $show->kategori_id('Kategori id');
+        $show->kelompok_id('Kelompok id');
         $show->gambar('Gambar');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
@@ -164,14 +162,14 @@ class ProductController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Product);
+        $form = new Form(new OurProduct);
 
         $form->text('product_name', 'Nama Dagang')->rules(function($form) {
             if (!$id = $form->model()->id) {
-                return 'required|unique:products,product_name';
+                return 'required|unique:our_products,product_name';
                 # code...
             }else {
-                return 'required|unique:products,product_name,'.$id;
+                return 'required|unique:our_products,product_name,'.$id;
                 # code...
             }
         });
@@ -181,14 +179,8 @@ class ProductController extends Controller
         $form->text('product_formulation', 'Bentuk Formulasi')->rules('required', [
             'required' => 'Bentuk Formulasi tidak boleh kosong',
         ]);
-        $form->text('sifat_formulasi', 'Sifat Formulasi')->rules('required', [
-            'required' => 'Sifat Formulasi tidak boleh kosong',
-        ]);
         $form->editor('product_use', 'Tujuan Penggunaan')->rules('required', [
             'required' => 'Tujuan Penggunaan tidak boleh kosong',
-        ]);
-        $form->editor('manfaat', 'Manfaat Penggunaan')->rules('required', [
-            'required' => 'Manfaat Penggunaan tidak boleh kosong',
         ]);
         $form->editor('product_dose', 'Petunjuk Penggunaan')->rules('required', [
             'required' => 'Petunjuk Penggunaan tidak boleh kosong',
@@ -196,18 +188,24 @@ class ProductController extends Controller
         $form->editor('product_package', 'Isi Kemasan')->rules('required', [
             'required' => 'Isi Kemasan tidak boleh kosong',
         ]);
-        $form->select('kategori_id', 'Kategori')->options(
+        $form->select('kategori_id', 'Kategori Produk')->options(
             ProductCategory::all()->pluck('category_name', 'id')
         )->rules('required', [
-            'required' => 'Kategori tidak boleh kosong',
+            'required' => 'Kategori Produk tidak boleh kosong',
         ]);
-        $form->select('kelompok_id', 'Kelompok')->options(
+        $form->select('kelompok_id', 'Kelompok Produk')->options(
             ProductGroup::all()->pluck('group_name', 'id')
         )->rules('required', [
-            'required' => 'Kelompok tidak boleh kosong',
+            'required' => 'Kelompok Produk tidak boleh kosong',
         ]);
         $form->image('gambar', 'Gambar')->rules('required', [
             'required' => 'Gambar tidak boleh kosong',
+        ]);
+        $form->text('sifat_formulasi', 'Sifat Formulasi')->rules('required', [
+            'required' => 'Sifat Formulasi tidak boleh kosong',
+        ]);
+        $form->text('manfaat', 'Manfaat Penggunaan')->rules('required', [
+            'required' => 'Manfaat Penggunaan tidak boleh kosong',
         ]);
 
         return $form;

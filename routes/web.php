@@ -34,6 +34,8 @@ Route::get('/news/{id}', 'NewsController@detail');
 Route::get('/contact', 'ContactController@index');
 Route::get('/product-category/{id}', 'ProductController@kategoriProduk');
 Route::get('/product-detail/{id}', 'ProductController@detailProduk');
+Route::get('/our-product-category/{id}', 'OurProductController@kategoriProduk');
+Route::get('/our-product-detail/{id}', 'OurProductController@detailProduk');
 
 Auth::routes();
 

@@ -12,6 +12,8 @@ use App\Product;
 use App\ProductCategory;
 use App\ProductGroup;
 use App\TentangKami;
+use App\OurProductCategory;
+use App\OurProductGroup;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -46,7 +48,9 @@ class HomeController extends Controller
 			$news							= News::inRandomOrder()->limit(2)->get();
 			$products 				= Product::inRandomOrder()->get();
 			$productCategorys = ProductCategory::get();
+			$ourProductCategorys = OurProductCategory::get();
 			$productGroups		= ProductGroup::get();
+			$ourProductGroups = OurProductGroup::get();
 			$banner						= Banner::get();
 			$mainProduct			= AboutProduct::first();
 
@@ -75,8 +79,10 @@ class HomeController extends Controller
 				'ourPartners' => $ourPartners,
 				'news' => $news,
 				'productCategorys' => $productCategorys,
+				'ourProductCategorys' => $ourProductCategorys,
 				'products' => $products,
 				'productGroups' => $productGroups,
+				'ourProductGroup' => $ourProductGroups,
 				'mainProduct' => $mainProduct,
 			]);
     }

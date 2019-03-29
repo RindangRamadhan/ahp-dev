@@ -34,4 +34,9 @@ Route::group([
     $router->resource('auth/main-product', MainTitleProductController::class);
     $router->resource('auth/product-faq', ProdukFaqController::class);
     $router->resource('auth/implementasi-produk', GulmaController::class);
+    $router->resource('auth/our-product', OurProductController::class);
+    $router->resource('auth/our-products-categorys', OurProductCategoryController::class);
+    $router->resource('auth/our-products-groups', OurProductGroupController::class);
+    $router->resource('auth/implementasi-our-products', OurProductGulmaController::class);
+    $router->resource('auth/our-products-faq', OurProductFaqController::class);
 });

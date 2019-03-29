@@ -15,8 +15,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Product</a>
                     <ul class="dropdown-menu">
                         <i class="fa fa-caret-up"></i>
-                        @foreach ($productCategorys as $category)
-                            <li><a href="{{ url('/product-category/'.$category->id) }}">{{ $category->category_name }}</a></li>
+                        @foreach ($ourProductCategorys as $category)
+                            <li><a href="{{ url('/our-product-category/'.$category->id) }}">{{ $category->category_name }}</a></li>
                         @endforeach
                     </ul>
                 </li>

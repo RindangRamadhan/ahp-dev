@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Gulma;
-use App\Product;
-use App\ProdukFaq;
-use App\ProductCategory;
-use App\ProductGroup;
-use App\TentangKami;
 use App\OurProductCategory;
+use App\OurProductGroup;
+use App\TentangKami;
+use App\OurProduct;
+use App\OurProductGulma;
+use App\OurProductFaq;
+use App\ProductCategory;
 
-class ProductController extends Controller
+class OurProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,43 +21,33 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $product = Product::inRandomOrder()->paginate(3);
-        $product_kategori = ProductCategory::get();
-        $product_group = ProductGroup::get();
-        $pagination = $product->links();
-        return view('product-herbisida', [
-            'product' => $product,
-            'productKategori' => $product_kategori,
-            'productGroup' => $product_group,
-            'pagination' => $pagination
-        ]);
     }
 
     public function kategoriProduk($id) {
-        $product = Product::with(['kelompokProduk'])->where('kategori_id', $id)->paginate(12);
-        $productCategorys = ProductCategory::all();
-        $namaKategori = ProductCategory::find($id)->category_name;
-        $productGroup = ProductGroup::get();
-        $ourProductCategorys = OurProductCategory::get();
+        $product = OurProduct::with(['kelompokProduk'])->where('kategori_id', $id)->paginate(12);
+        $namaKategori = OurProductCategory::find($id)->category_name;
+        $productGroup = OurProductGroup::get();
+        $productCategorys = ProductCategory::get();
+		$ourProductCategorys = OurProductCategory::get();
         $tentangKami = TentangKami::first();
         $pagination = $product->links();
 
         return view('product-category', [
             'product' => $product,
-            'namaKategori' => $namaKategori,
             'productCategorys' => $productCategorys,
-            'productGroup' => $productGroup,
             'ourProductCategorys' => $ourProductCategorys,
+            'namaKategori' => $namaKategori,
+            'productGroup' => $productGroup,
             'tentangKami' => $tentangKami,
             'pagination' => $pagination
         ]);
     }
     
     public function detailProduk($id) {
-        $product = Product::find($id);
-        $implementProduct = Gulma::where('produk_id', $id)->first();
-        $productCategorys = ProductCategory::all();
-        $productFaq = ProdukFaq::where('produk_id', $id)->get();
+        $product = OurProduct::find($id);
+        $implementProduct = OurProductGulma::where('produk_id', $id)->first();
+        $productCategorys = OurProductCategory::all();
+        $productFaq = OurProductFaq::where('produk_id', $id)->get();
         $tentangKami = TentangKami::first();
 
         return view('product-detail', [
