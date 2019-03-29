@@ -42,7 +42,7 @@
                 </li>
                 <li class="phone-contact">
                     <a href="{{ url('/search') }}">
-                        <i class="fa fa-search"></i> Search
+                        <i class="fa fa-search"></i> <span>Search</span>
                     </a>
                 </li>
             </ul>

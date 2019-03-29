@@ -204,7 +204,7 @@
           @if($i > 5 && $i < 9)
           <div class="col-sm-4 col-xs-6 product-caption-animate">
             <a href="{{ url('/product-detail?id='.$data->id) }}">
-            <figure class="snip0016">
+            <figure class="snip0016 sh">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
               <figcaption>
               <h2>Product <span>{{ $data->product_name }}</span></h2>
@@ -216,7 +216,7 @@
           @else
           <div class="col-sm-3 col-xs-6 product-caption-animate">
             <a href="{{ url('/product-detail?id='.$data->id) }}">
-            <figure class="snip0016">
+            <figure class="snip0016 sh">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
               <figcaption>
               <h2>Product <span>{{ $data->product_name }}</span></h2>
@@ -285,7 +285,7 @@
           </div>
           <div class="clearfix"></div>
         </div>
-        <div class="col-md-6 reset-col rcontent hidden-xs">
+        <div class="col-md-6 reset-col rcontent hidden-xs hidden-sm">
           <h5 class="title">It’s time for join Us</h5>
           <p class="desc">Try our products and see the result. Lorem ipsum dolor sit, amet consectetur
             adipisicing elit.

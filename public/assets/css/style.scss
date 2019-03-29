@@ -13,6 +13,33 @@
 @import "../css/product-detail.scss";
 @import "../css/product-list.scss";
 
+@media only screen and (max-width: 1050px) {
+    .navbar-default li {
+        padding-right: 0 !important;
+    }
+
+    .phone-contact {
+        span {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .s-katalog {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .phone-contact {
+        display: none !important;
+    }
+
+    .banner-product-top {
+        margin-top: 50px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .s-katalog {
@@ -49,6 +76,10 @@
             padding: 0;
             margin-bottom: 15px;
         }
+    }
+
+    .banner-box {
+        display: none;
     }
 }
 
@@ -99,7 +130,7 @@
             cursor: pointer;
             background-color: transparent;
             border: none;
-            border-bottom: 2px solid $GreenBtn;
+            border-bottom: none;
         }
 
 
@@ -110,7 +141,7 @@
             cursor: pointer;
             background-color: transparent;
             border: none;
-            border-bottom: 2px solid $GreenBtn;
+            border-bottom: none;
         }
 
         .pp-content {

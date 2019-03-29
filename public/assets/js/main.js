@@ -7,8 +7,9 @@ $(document).ready(function () {
     }
 });
 /*============================================================================================MatchHeight*/
-$('.sh').matchHeight();
-
+$(document).ready(function () {
+    $('.sh').matchHeight();
+});
 $(".get-image").each(function () {
     var dataImg = $(this).data("image");
     $(this).css("background-image", "url('" + dataImg + "')");
