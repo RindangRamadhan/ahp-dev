@@ -38,7 +38,8 @@
 	<script src="{{ asset('assets/libraries/pushy/js/pushy.js') }}"></script>
 	<script src="{{ asset('assets/libraries/slick/slick.js') }}"></script>
 	<script src="{{ asset('assets/libraries/js/jquery.touchSwipe.min.js') }}"></script>
-	<script src="{{ asset('assets/libraries/jquery-mobile-custom/jquery.mobile.custom.min.js') }}"></script>
+    <script src="{{ asset('assets/libraries/jquery-mobile-custom/jquery.mobile.custom.min.js') }}"></script>
+    <script src="{{ asset('assets/libraries/js/jquery.matchHeight-min.js') }}"></script>
 	<script src="{{ asset('assets/js/main.js') }}"></script>
 	@yield('scripts')
 </html>

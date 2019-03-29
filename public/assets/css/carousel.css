@@ -180,12 +180,6 @@ header .fade-carousel .slides .slide-3 {
   }
 }
 
-@media screen and (max-width: 640px) {
-  header .hero h1 {
-    font-size: 4em;
-  }
-}
-
 .item.active .carousel-caption.fadeIn {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;

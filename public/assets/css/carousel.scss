@@ -123,12 +123,13 @@ header {
     //     background-position: center center;
     //     background-repeat: no-repeat;
     // }
-    .fade-carousel .slides  {
+    .fade-carousel .slides {
         height: 100vh;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
     }
+
     .fade-carousel .slides .slide-1 {
         background-image: url(../img/Office.jpg);
     }
@@ -150,11 +151,6 @@ header {
         }
     }
 
-    @media screen and (max-width: 640px) {
-        .hero h1 {
-            font-size: 4em;
-        }
-    }
 }
 
 // .carousel-inner {
