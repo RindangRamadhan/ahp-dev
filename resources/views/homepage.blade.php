@@ -165,7 +165,7 @@
           @if($group->id == $data->kelompok_id)
           @if ($i++ < 13)
           @if($i > 5 && $i < 9)
-          <div class="col-sm-4 col-xs-6 product-caption-animate">
+          <div class="col-sm-4 col-xs-6 product-caption-animate size4 sh">
             <a href="{{ url('/product-detail/'.$data->id) }}">
             <figure class="snip0016">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
@@ -177,7 +177,7 @@
             </a>
           </div>
           @else
-          <div class="col-sm-3 col-xs-6 product-caption-animate">
+          <div class="col-sm-3 col-xs-6 product-caption-animate size3 sh">
             <a href="{{ url('/product-detail/'.$data->id) }}">
             <figure class="snip0016">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
@@ -202,9 +202,9 @@
           @if($group->id == $data->kelompok_id)
           @if ($i++ < 13)
           @if($i > 5 && $i < 9)
-          <div class="col-sm-4 col-xs-6 product-caption-animate">
+          <div class="col-sm-4 col-xs-6 product-caption-animate size4 sh">
             <a href="{{ url('/product-detail/'.$data->id) }}">
-            <figure class="snip0016 sh">
+            <figure class="snip0016">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
               <figcaption>
               <h2>Product <span>{{ $data->product_name }}</span></h2>
@@ -214,9 +214,9 @@
             </a>
           </div>
           @else
-          <div class="col-sm-3 col-xs-6 product-caption-animate">
+          <div class="col-sm-3 col-xs-6 product-caption-animate size3 sh">
             <a href="{{ url('/product-detail/'.$data->id) }}">
-            <figure class="snip0016 sh">
+            <figure class="snip0016">
               <img src="{{ url('../storage/'.$data->gambar) }}" alt="Product" />
               <figcaption>
               <h2>Product <span>{{ $data->product_name }}</span></h2>
@@ -310,7 +310,7 @@
 </section>
 
 
-<section class="container-fluid" id="product-promo">
+<section class="container-fluid hidden-sm" id="product-promo">
   <div class="row product-promo our-partners">
     <div class="col-sm-12 content-loop reset-col">
       <div class="pp-content">
@@ -322,7 +322,7 @@
       </div>
     </div>
     <div class="col-md-12 reset-col gallery-slider">
-      <div class="gallery gallery-responsive partners_slider">
+      <div class="gallery partners_slider">
         @foreach ($ourPartners as $ourPartner)
         <div class="inner"><img src="{{ url('../storage/'.$ourPartner->logo) }}"></div>
         @endforeach
@@ -340,7 +340,7 @@
       <div class="col-md-8 updates">
         <div class="col-md-12">                    
         @foreach ($news as $data)
-          <div class="col-md-6 updates">
+          <div class="col-md-6 col-sm-6 updates">
             <a href="{{ url('/news/'.$data->id) }}">
               <img src="{{ url('../storage/'.$data->image) }}" alt="" class="sh">
               <h5 class="ndate">{{ date('d, M, Y', strtotime($data->created_at)) }}</h5>

@@ -13,7 +13,25 @@
 @import "../css/product-detail.scss";
 @import "../css/product-list.scss";
 
+@media only screen and (min-width: 768px)and (max-width: 1150px) {
+    .col-sm-3.product-caption-animate figure.snip0016 figcaption {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        padding: 10px 3em;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
 @media only screen and (max-width: 1050px) {
+
     .navbar-default li {
         padding-right: 0 !important;
     }
@@ -26,15 +44,61 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .news {
+        padding: 5px !important;
+
+        .updates {
+            padding: 5px !important;
+            margin-bottom: 50px !important;
+        }
+
+        .gtitle {
+            padding-left: 10px !important;
+        }
+
+    }
+
+
+
     .s-katalog {
         margin-top: 30px;
+    }
+
+    header {
+        .hero {
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .hero h3 {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .hero a {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 15px;
+        }
     }
 }
 
 @media only screen and (max-width: 890px) {
-    .phone-contact {
-        display: none !important;
-    }
+    // .phone-contact {
+    //     display: none !important;
+    // }
 
     .banner-product-top {
         margin-top: 50px;
@@ -42,6 +106,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
     .s-katalog {
         .lcontent {
             padding-right: 0;
@@ -83,7 +148,63 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .col-xs-6.product-caption-animate figure.snip0016 figcaption {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        padding: 10px 3em;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
 @media only screen and (max-width: 500px) {
+    // .col-xs-6.product-caption-animate {
+    //     width: 100% !important;
+    //     display: block;
+    // }
+
+    .s-katalog .bg-setup {
+        background-color: #f7f9fc;
+        background-size: cover;
+        background-position: center center;
+        padding-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .s-katalog .lcontent .form-box {
+        padding: 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1), 0 30px 50px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1), 0 30px 50px rgba(0, 0, 0, 0.12);
+        margin-bottom: -50px;
+        border-radius: 4px;
+    }
+
+    .s-katalog .lcontent .form-box .btn-submit {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font: 14px KarlaBold;
+        padding: 8px 20px;
+    }
+
+    .s-katalog .lcontent .form-box .title {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        font: 20px MerriweatherRegular;
+        color: #80bc73;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
     .product-promo {
         // background-color: #f5f5f569;
         background-color: #eeecec69;
@@ -208,5 +329,34 @@
             }
         }
 
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .s-katalog {
+        margin-top: 30px;
+    }
+
+    header {
+        .hero {
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 22px;
+        }
+
+        .hero h3 {
+            font-size: 12px;
+        }
+
+        .hero a {
+            font-size: 11px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 15px;
+        }
     }
 }
