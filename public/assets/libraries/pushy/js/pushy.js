@@ -161,8 +161,8 @@
 
         //toggle menu
         $(document).ready(function () {
-            $(".menu-btn").on('click', function () {
-                togglePushy();
+            $(".menu-btn").on('click', function (e) {
+                if(e.which !== undefined) togglePushy();
             });
         });
         //close menu when clicking site overlay
