@@ -56,12 +56,16 @@ class ProductController extends Controller
     public function detailProduk($id) {
         $product = Product::find($id);
         $implementProduct = Gulma::where('produk_id', $id)->first();
+        $productGroup = ProductGroup::get();
+        $ourProductCategorys = OurProductCategory::get();
         $productCategorys = ProductCategory::all();
         $productFaq = ProdukFaq::where('produk_id', $id)->get();
         $tentangKami = TentangKami::first();
 
         return view('product-detail', [
             'product' => $product,
+            'productCategorys' => $productCategorys,
+            'ourProductCategorys' => $ourProductCategorys,
             'implementProduct' => $implementProduct,
             'productFaq' => $productFaq,
             'productCategorys' => $productCategorys,

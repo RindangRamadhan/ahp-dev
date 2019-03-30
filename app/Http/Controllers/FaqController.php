@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ProductCategory;
 use App\Faq;
 use App\TentangKami;
+use App\OurProductCategory;
 
 class FaqController extends Controller
 {
@@ -17,11 +18,13 @@ class FaqController extends Controller
     public function index()
     {
         $productCategorys = ProductCategory::get();
+        $ourProductCategorys = OurProductCategory::get();
         $faq = Faq::first();
         $tentangKami	= TentangKami::first();
 
         return view('faq', [
             'productCategorys' => $productCategorys,
+            'ourProductCategorys' => $ourProductCategorys,
             'faq' => $faq,
             'tentangKami' => $tentangKami
         ]);

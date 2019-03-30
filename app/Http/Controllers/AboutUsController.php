@@ -7,6 +7,7 @@ use App\ProductCategory;
 use App\Testimonial;
 use App\TentangKami;
 use App\VisiMisi;
+use App\OurProductCategory;
 
 class AboutUsController extends Controller
 {
@@ -18,6 +19,7 @@ class AboutUsController extends Controller
     public function index()
     {
         $productCategorys = ProductCategory::get();
+        $ourProductCategorys = OurProductCategory::get();
         $testimonials = Testimonial::get();
         $tentangKami = TentangKami::first();
         $visi = VisiMisi::orderBy('id', 'asc')->first();
@@ -25,6 +27,7 @@ class AboutUsController extends Controller
 
         return view('about-us', [
             'productCategorys' => $productCategorys,
+            'ourProductCategorys' => $ourProductCategorys,
             'testimonials' => $testimonials,
             'tentangKami' => $tentangKami,
             'visi' => $visi,

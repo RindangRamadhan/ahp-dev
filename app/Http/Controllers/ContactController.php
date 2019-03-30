@@ -8,6 +8,7 @@ use App\ContactSupport;
 use App\TentangKami;
 use App\ProductCategory;
 use Mail;
+use App\OurProductCategory;
 
 class ContactController extends Controller
 {
@@ -21,11 +22,13 @@ class ContactController extends Controller
         $cProfile = ContactProfile::first();
         $cSupport = ContactSupport::get();
         $productCategorys = ProductCategory::get();
+        $ourProductCategorys = OurProductCategory::get();
         $tentangKami = TentangKami::first();
         return view('contact', [
             'cProfile' => $cProfile,
             'cSupport' => $cSupport,
             'productCategorys' => $productCategorys,
+            'ourProductCategorys' => $ourProductCategorys,
             'tentangKami' => $tentangKami
         ]);
 

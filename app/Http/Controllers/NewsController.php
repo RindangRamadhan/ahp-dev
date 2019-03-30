@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\News;
 use App\ProductCategory;
 use App\TentangKami;
+use App\OurProductCategory;
 
 class NewsController extends Controller
 {
@@ -17,6 +18,7 @@ class NewsController extends Controller
     public function index()
     {
         $productCategorys = ProductCategory::get();
+        $ourProductCategorys = OurProductCategory::get();
         $tentangKami = TentangKami::first();
         $news = News::inRandomOrder()->paginate(3);
         $beritaTerbaru = News::orderBy('updated_at', 'desc')->inRandomOrder()->limit(2)->get();
@@ -27,6 +29,7 @@ class NewsController extends Controller
             'beritaTerbaru' => $beritaTerbaru,
             'pagination' => $pagination,
             'productCategorys' => $productCategorys,
+            'ourProductCategorys' => $ourProductCategorys,
             'tentangKami' => $tentangKami
         ]);
     }
