@@ -17,8 +17,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $productCategorys = ProductCategory::get();
-        $ourProductCategorys = OurProductCategory::get();
+        $productCategorys = ProductCategory::all();
+        $ourProductCategorys = OurProductCategory::all();
         $tentangKami = TentangKami::first();
         $news = News::inRandomOrder()->paginate(3);
         $beritaTerbaru = News::orderBy('updated_at', 'desc')->inRandomOrder()->limit(2)->get();
@@ -35,7 +35,8 @@ class NewsController extends Controller
     }
 
     public function detail($id) {
-        $productCategorys = ProductCategory::get();
+        $productCategorys = ProductCategory::all();
+        $ourProductCategorys = OurProductCategory::all();
         $tentangKami = TentangKami::first();
         $news = News::inRandomOrder()->paginate(3);
         $details = News::find($id);
@@ -46,6 +47,7 @@ class NewsController extends Controller
             'details' => $details,
             'beritaTerbaru' => $beritaTerbaru,
             'productCategorys' => $productCategorys,
+            'ourProductCategorys' => $ourProductCategorys,
             'tentangKami' => $tentangKami
         ]);
     }

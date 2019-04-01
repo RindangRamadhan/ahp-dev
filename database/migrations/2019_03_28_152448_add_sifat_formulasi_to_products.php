@@ -14,8 +14,8 @@ class AddSifatFormulasiToProducts extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {            
-            $table->string('sifat_formulasi');            
-            $table->string('manfaat');
+            $table->text('sifat_formulasi');            
+            $table->text('manfaat');
         });
     }
 

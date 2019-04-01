@@ -102,18 +102,18 @@ class ProductController extends Controller
         $grid->product_ingredients('Bahan Aktif');
         $grid->product_formulation('Bentuk Formulasi');
         $grid->sifat_formulasi('Sifat Formulasi');
-        $grid->product_use('Tujuan Penggunaan')->limit(100)->display(function ($product_use) {
-            return $product_use;
-        });
-        $grid->manfaat('Manfaat Penggunaan')->limit(100)->display(function ($manfaat) {
-            return $manfaat;
-        });
-        $grid->product_dose('Petunjuk Penggunaan')->limit(30)->display(function ($product_dose) {
-            return $product_dose;
-        });
-        $grid->product_package('Isi Kemasan')->limit(30)->display(function ($product_package) {
-            return $product_package;
-        });
+        // $grid->product_use('Tujuan Penggunaan')->limit(100)->display(function ($product_use) {
+        //     return $product_use;
+        // });
+        // $grid->manfaat('Manfaat Penggunaan')->limit(100)->display(function ($manfaat) {
+        //     return $manfaat;
+        // });
+        // $grid->product_dose('Petunjuk Penggunaan')->limit(30)->display(function ($product_dose) {
+        //     return $product_dose;
+        // });
+        // $grid->product_package('Isi Kemasan')->limit(30)->display(function ($product_package) {
+        //     return $product_package;
+        // });
         $grid->kategori_id('Kategori')->display(function($kategori_id) {
             return ProductCategory::find($kategori_id)->category_name;
         });

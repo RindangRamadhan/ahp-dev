@@ -8,7 +8,7 @@ use App\Benefit;
 use App\OurPartner;
 use App\News;
 use App\Pengunjung;
-use App\Product;
+use App\OurProduct;
 use App\ProductCategory;
 use App\ProductGroup;
 use App\TentangKami;
@@ -46,7 +46,7 @@ class HomeController extends Controller
 			$benefits					= Benefit::first();
 			$ourPartners			= OurPartner::get();
 			$news							= News::inRandomOrder()->limit(2)->get();
-			$products 				= Product::inRandomOrder()->get();
+			$products 				= OurProduct::inRandomOrder()->get();
 			$productCategorys = ProductCategory::get();
 			$ourProductCategorys = OurProductCategory::get();
 			$productGroups		= ProductGroup::get();

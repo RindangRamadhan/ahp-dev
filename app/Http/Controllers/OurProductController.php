@@ -32,7 +32,7 @@ class OurProductController extends Controller
         $tentangKami = TentangKami::first();
         $pagination = $product->links();
 
-        return view('product-category', [
+        return view('our-product-category', [
             'product' => $product,
             'productCategorys' => $productCategorys,
             'ourProductCategorys' => $ourProductCategorys,
@@ -46,14 +46,18 @@ class OurProductController extends Controller
     public function detailProduk($id) {
         $product = OurProduct::find($id);
         $implementProduct = OurProductGulma::where('produk_id', $id)->first();
-        $productCategorys = OurProductCategory::all();
+        $productGroup = OurProductGroup::all();
+        $ourProductCategorys = OurProductCategory::all();
+        $productCategorys = ProductCategory::all();
         $productFaq = OurProductFaq::where('produk_id', $id)->get();
         $tentangKami = TentangKami::first();
 
-        return view('product-detail', [
+        return view('our-product-detail', [
             'product' => $product,
             'implementProduct' => $implementProduct,
             'productFaq' => $productFaq,
+            'productGroup' => $productGroup,
+            'ourProductCategorys' => $ourProductCategorys,
             'productCategorys' => $productCategorys,
             'tentangKami' => $tentangKami
         ]);
