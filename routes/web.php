@@ -37,6 +37,8 @@ Route::get('/product-detail/{id}', 'ProductController@detailProduk');
 Route::get('/our-product-category/{id}', 'OurProductController@kategoriProduk');
 Route::get('/our-product-detail/{id}', 'OurProductController@detailProduk');
 
+Route::get('/search', 'SearchProductController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
