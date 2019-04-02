@@ -78,10 +78,9 @@
             <div class="col-md-2 col-sm-3 col-xs-3 x-540-50 get-apps">
                 <h2 class="title">SOCIAL MEDIA</h2>
                 <ul class="list-unstyled">
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> <span>Twitter</span></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i> <span>Google +</span></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a></li>
+                    <li><a href="https://www.facebook.com/andallhasaprimalampung/" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a></li>
+                    <li><a href="https://twitter.com/andallhasaprima" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i> <span>Twitter</span></a></li>
+                    <li><a href="https://www.instagram.com/ahplampung/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a></li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-3 x-540-50 get-apps">
