@@ -56,27 +56,31 @@
 
             $.post('{{ route('downloadKatalog') }}',{'_token': $('meta[name=csrf-token]').attr('content'), nama_lengkap:nama_lengkap, perusahaan:perusahaan, email:email, no_telp:no_telp}, function(data){
               if(data == 200) {
-                $.ajax({
-                  url: '{{ url('/download/katalog.pdf') }}',
-                  method: 'GET',
-                  xhrFields: {
-                    responseType: 'blob'
-                  },
-                  success: function (data) {
-                    var a = document.createElement('a');
-                    var url = window.URL.createObjectURL(data);
-                    a.href = url;
-                    a.download = 'katalog.pdf';
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                  }
-                });
+                // $.ajax({
+                //   url: '{{ url('/download/katalog.pdf') }}',
+                //   method: 'GET',
+                //   xhrFields: {
+                //     responseType: 'blob'
+                //   },
+                //   success: function (data) {
+                //     var a = document.createElement('a');
+                //     var url = window.URL.createObjectURL(data);
+                //     a.href = url;
+                //     a.download = 'katalog.pdf';
+                //     a.click();
+                //     window.URL.revokeObjectURL(url);
+                //   }
+                // });
 
                 swal({
                   title: "Terimakasih",
                   text: "Kami Akan Segera Menghubungi Anda!",
                   icon: "success",
-                  button: false,
+                  button: true,
+                }).then(() => {
+                  let url = $("#downloadPdf").attr("href");
+
+                  window.open(url);
                 });
 
                 setTimeout(() => {

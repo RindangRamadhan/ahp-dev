@@ -242,6 +242,7 @@
 
 <div class="clearfix"></div>
 
+
 <section class="s-katalog">
   <div class="container-fluid">
     <div class="col-md-12 bg-setup get-image" data-image="../assets/img/home/brosur.jpg">
@@ -282,9 +283,12 @@
                 </button>
               </div>
             </form>
+            <!-- Download Katalog -->
+            <a id="downloadPdf" target="blank" href="{{ url('/download/katalog.pdf') }}" download></a>
           </div>
           <div class="clearfix"></div>
         </div>
+
         <div class="col-md-6 reset-col rcontent hidden-xs hidden-sm">
           <h5 class="title">It’s time for join Us</h5>
           <p class="desc">Try our products and see the result. Lorem ipsum dolor sit, amet consectetur
