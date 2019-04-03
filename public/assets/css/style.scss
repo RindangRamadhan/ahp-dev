@@ -12,6 +12,12 @@
 @import "../css/our-values.scss";
 @import "../css/product-detail.scss";
 @import "../css/product-list.scss";
+@import "../css/product-category.scss";
+
+
+.maps {
+    padding-bottom: 40px;
+}
 
 @media only screen and (min-width: 768px)and (max-width: 1150px) {
     .col-sm-3.product-caption-animate figure.snip0016 figcaption {
