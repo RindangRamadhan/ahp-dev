@@ -1,37 +1,33 @@
 <nav class="pushy pushy-left">
     <ul>
         <li class="pushy-link">
-            <a href="index.html">Home</a>
+            <a href="{{ url('/') }}">Home</a>
         </li>
         <li class="pushy-submenu">
             <a href="#">Our Product</a>
             <ul>
-                <li class="pushy-link"><a href="">HERBISIDA</a></li>
-                <li class="pushy-link"><a href="#">Surfaktan</a></li>
-                <li class="pushy-link"><a href="#">ALSINTAN (Alat Mesin Pertanian)</a></li>
-                <li class="pushy-link"><a href="#">HASA SEED (Benih)</a></li>
-                <li class="pushy-link"><a href="#">SPAREPART</a></li>                
+                @foreach ($ourProductCategorys as $category)
+                    <li><a href="{{ url('/our-product-category/'.$category->id) }}">{{ $category->category_name }}</a></li>
+                @endforeach            
             </ul>
         </li>
         <li class="pushy-submenu">
             <a href="#">Other Product</a>
             <ul>
-                <li class="pushy-link"><a href="">HERBISIDA</a></li>
-                <li class="pushy-link"><a href="#">Surfaktan</a></li>
-                <li class="pushy-link"><a href="#">ALSINTAN (Alat Mesin Pertanian)</a></li>
-                <li class="pushy-link"><a href="#">HASA SEED (Benih)</a></li>
-                <li class="pushy-link"><a href="#">SPAREPART</a></li>                
+                @foreach ($productCategorys as $category)
+                    <li><a href="{{ url('/product-category/'.$category->id) }}">{{ $category->category_name }}</a></li>
+                @endforeach         
             </ul>
         </li>
         <li class="pushy-submenu">
             <a href="#">About Us</a>
             <ul>
-                <li class="pushy-link"><a href="#">Profile</a></li>
-                <li class="pushy-link"><a href="#">News</a></li>              
+                <li><a href="{{ url('/about-us') }}">Profile</a></li>
+                <li><a href="{{ url('/news')}}">News</a></li>         
             </ul>
         </li>
-        <li class="pushy-link"><a href="contact.html">CONTACT US</a></li>
-        <li class="pushy-link"><a href="search.html">SEARCH <i class="fa fa-search pull-right"
+        <li class="pushy-link"><a href="{{ url('/contact') }}">CONTACT US</a></li>
+        <li class="pushy-link"><a href="{{ url('/search') }}">SEARCH <i class="fa fa-search pull-right"
                     aria-hidden="true"></i></a></li>
     </ul>
 </nav>
