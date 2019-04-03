@@ -108,9 +108,9 @@
                   {{ strip_tags($benefits->benefit2) }}
                 </p>
               </div>
-              <div class="col-md-12 reset-col wrap-btn-detail">
+              <!-- <div class="col-md-12 reset-col wrap-btn-detail">
                 <a href="about-us.html" class="btn-detail">selengkapnya <span class="plus-mark">+</span></a>
-              </div>
+              </div> -->
           </div>
           <div class="col-md-6 col-md-pull-6 reset-col lparagraph2 hidden-xs hidden-sm">
             <a href="#">

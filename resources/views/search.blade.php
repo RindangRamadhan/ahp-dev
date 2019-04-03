@@ -9,31 +9,29 @@
               <img src="../assets/img/banner-search.jpg" alt="" class="img-responsive image-bg">
               <div class="overlay"></div>
             </div>
-
             <div class="col-md-12">
               <div class="banner-title">
                 <h2 class="wow fadeIn" data-wow-delay=".4">Search Product </h2>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
+
     <div class="clearfix"></div>
+
     <section class="product-list news-page">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12" style="height:100px;">
-            <form class="search-container">
-              <input type="text" id="search-bar" placeholder="Tulis kata pencarian anda ...">
+          <div class="col-md-12 reset-col" style="height:60px;">
+            <form class="search-container" style="padding-top: 0px" method="GET" action="{{ route('searchProduk') }}">
+              <input type="text" name="s" id="search-bar" placeholder="Tulis kata pencarian anda ...">
               <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
             </form>
           </div>
           
           <!-- START OUR PRODUCTS -->
-          <div class="col-md-12 wrap-gallery"> <h2 class="tittle">Our Products</h2> </div>
           <div class="col-md-12 reset-col">
             @foreach ($products as $data)
             <div class="col-sm-4 col-xs-6 product-caption-animate size4 sh">
@@ -52,7 +50,6 @@
           <!-- END OUR PRODUCTS -->
           
           <!-- START OTHER PRODUCTS -->
-          <div class="col-md-12 wrap-gallery"> <h2 class="tittle">Other Products</h2> </div>
           <div class="col-md-12 reset-col">
             @foreach($otherProducts as $data)
             <div class="col-sm-4 col-xs-6 product-caption-animate size4 sh">

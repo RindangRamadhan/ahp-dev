@@ -38,6 +38,10 @@ Route::get('/our-product-category/{id}', 'OurProductController@kategoriProduk');
 Route::get('/our-product-detail/{id}', 'OurProductController@detailProduk');
 
 Route::get('/search', 'SearchProductController@index');
+Route::get('/search-produk', [
+    'as'    => 'searchProduk',
+    'uses'  => 'SearchProductController@search',
+]);
 
 Auth::routes();
 
