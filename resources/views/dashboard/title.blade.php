@@ -37,27 +37,26 @@
             <div class="inner">
                 <h3>{{ number_format($produk, 0, ',', '.') }}</h3>
 
-                <p>Produk</p>
+                <p>Other Product</p>
             </div>
             <div class="icon">
                 <i class="fa fa-cubes"></i>
             </div>
-            <a href="#" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ url('/admin/auth/products') }}" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
-    <!-- ./col -->
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-green">
             <div class="inner">
-                <h3>{{ number_format($user, 0, ',', '.') }}</h3>
+                <h3>{{ number_format($ourProduk, 0, ',', '.') }}</h3>
 
-                <p>User</p>
-                </div>
-            <div class="icon">
-                <i class="fa fa-users"></i>
+                <p>Our Product</p>
             </div>
-            <a href="{{ url('/admin/auth/users') }}" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+            <div class="icon">
+                <i class="fa fa-cubes"></i>
+            </div>
+            <a href="{{ url('/admin/auth/our-product') }}" class="small-box-footer">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->

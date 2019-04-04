@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\News;
 use App\Pengunjung;
+use App\OurProduct;
 use App\Product;
 use Encore\Admin\Admin;
 use Illuminate\Support\Facades\DB;
@@ -17,6 +18,7 @@ class Dashboard
     {
         $pengunjung = Pengunjung::count();
         $produk = Product::count();
+        $ourProduk = OurProduct::count();
         $news = News::count();
         $user = DB::table('admin_users')->count();
 
@@ -24,7 +26,7 @@ class Dashboard
             'pengunjung' => $pengunjung,
             'produk' => $produk,
             'news' => $news,
-            'user' => $user
+            'ourProduk' => $ourProduk
         ]);
     }
 
