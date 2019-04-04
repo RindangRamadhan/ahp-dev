@@ -184,6 +184,9 @@ class OurProductController extends Controller
         $form->editor('product_use', 'Tujuan Penggunaan')->rules('required', [
             'required' => 'Tujuan Penggunaan tidak boleh kosong',
         ]);
+        $form->editor('manfaat', 'Manfaat Penggunaan')->rules('required', [
+            'required' => 'Manfaat Penggunaan tidak boleh kosong',
+        ]);
         $form->editor('product_dose', 'Petunjuk Penggunaan')->rules('required', [
             'required' => 'Petunjuk Penggunaan tidak boleh kosong',
         ]);
@@ -206,9 +209,9 @@ class OurProductController extends Controller
         $form->text('sifat_formulasi', 'Sifat Formulasi')->rules('required', [
             'required' => 'Sifat Formulasi tidak boleh kosong',
         ]);
-        $form->text('manfaat', 'Manfaat Penggunaan')->rules('required', [
-            'required' => 'Manfaat Penggunaan tidak boleh kosong',
-        ]);
+        // $form->text('manfaat', 'Manfaat Penggunaan')->rules('required', [
+        //     'required' => 'Manfaat Penggunaan tidak boleh kosong',
+        // ]);
 
         return $form;
     }
