@@ -14,13 +14,13 @@
               {{ $data->product_formulation }}
             </p>
             <div class="links">
-              <a href="{{ url('/product-detail/'.$data->id) }}">
+              <a href="{{ url('/our-product-detail/'.$data->id) }}">
                 Selengkapnya ...
               </a>
             </div>
           </div>
           <div class="col-md-12 product-img">
-            <a href="{{ url('/product-detail/'.$data->id) }}">
+            <a href="{{ url('/our-product-detail/'.$data->id) }}">
               <img class="img-responsive" src="{{ url('/storage/'.$data->gambar) }}" alt="">
             </a>
           </div>
@@ -37,11 +37,11 @@
                     {{ $data->product_formulation }}
                   </p>
                   <div class="links">
-                    <a href="{{ url('/product-detail/'.$data->id) }}">
+                    <a href="{{ url('/our-product-detail/'.$data->id) }}">
                       Selengkapnya ...
                     </a>
                   </div>
-                  <a href="{{ url('/product-detail/'.$data->id) }}">
+                  <a href="{{ url('/our-product-detail/'.$data->id) }}">
                     <img class="img-responsive" src="{{ url('/storage/'.$data->gambar) }}" alt="">
                   </a>
                 </div>
@@ -54,11 +54,11 @@
                     {{ $data->product_formulation }}
                   </p>
                   <div class="links">
-                    <a href="{{ url('/product-detail/'.$data->id) }}">
+                    <a href="{{ url('/our-product-detail/'.$data->id) }}">
                       Selengkapnya ...
                     </a>
                   </div>
-                  <a href="{{ url('/product-detail/'.$data->id) }}">
+                  <a href="{{ url('/our-product-detail/'.$data->id) }}">
                     <img class="img-responsive" src="{{ url('/storage/'.$data->gambar) }}" alt="">
                   </a>
                 </div>
