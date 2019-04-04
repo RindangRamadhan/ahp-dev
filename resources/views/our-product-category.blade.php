@@ -1,62 +1,82 @@
 @extends('layouts.app-header')
 
 @section('content')  
-  <div class="container-fluid banner-product-top">
-    <div class="row">
-      <div class="col-md-12 reset-col">
-        <div class="banner-box">
-          <div class="image-item">
-          <img src="../assets/img/banner-seed.png" alt="" class="img-responsive image-bg">
-          <div class="overlay"></div>
-          </div>
-
-          <div class="col-md-12">
-          <div class="banner-title">
-            <h2 class="wow fadeIn" data-wow-delay=".4">{!! $namaKategori !!}</h2>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <section class="product-list">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12 wrap-gallery">
-          @foreach($product as $data)
-            <div class="col-md-3 col-sm-6 pl-loop">
-              <a href="{{ url('/our-product-detail/'.$data->id) }}">
-                <div class="post-module">
-                  <div class="thumbnail sh">
-                    <img src="{{ url('/storage/'.$data->gambar) }}" class="img-responsive" />
-                  </div>
-                  <div class="post-content">
-                    <div class="category">{{ $data->kelompokProduk->group_name }}</div>
-                    <h1 class="title">{{ $data->product_name }}</h1>
-                    <h2 class="sub_title">
-                      {{ $data->product_formulation }}
-                    </h2>
-                    <button class="btn btn-info">Baca Selengkapnya ...</button>
-                  </div>
-                </div>
+  <div class="product-category">
+  <!-- Section 2 -->
+  <?php $i = 1; ?>
+  @foreach($product as $data)
+    @if ($loop->first)
+      <section class="s-dark">
+        <div class="container clear-xs">
+          <div class="col-md-12 text-center">
+            <h2 class="title">{{ $data->product_name }}</h2>
+            <p class="desc">
+              {{ $data->product_formulation }}
+            </p>
+            <div class="links">
+              <a href="{{ url('/product-detail/'.$data->id) }}">
+                Selengkapnya ...
               </a>
             </div>
-          @endforeach
+          </div>
+          <div class="col-md-12 product-img">
+            <a href="{{ url('/product-detail/'.$data->id) }}">
+              <img class="img-responsive" src="{{ url('/storage/'.$data->gambar) }}" alt="">
+            </a>
+          </div>
         </div>
-
-        <div class="col-md-12 paging">
-          <ul>
-            <li>
-              <nav class="text-center">
-                <ul class="pagination" role="navigation">
-                  {{ $pagination }}
-                </ul>
-              </nav>
-            </li>
+      </section>
+    @else    
+      <!-- Section 3 -->
+      <section class="s-product">
+          @if ($i++ == 1)
+              <div class="col-md-12 product-loop">
+                <div class="product-box box">
+                  <h2 class="title">{{ $data->product_name }}</h2>
+                  <p class="desc">
+                    {{ $data->product_formulation }}
+                  </p>
+                  <div class="links">
+                    <a href="{{ url('/product-detail/'.$data->id) }}">
+                      Selengkapnya ...
+                    </a>
+                  </div>
+                  <a href="{{ url('/product-detail/'.$data->id) }}">
+                    <img class="img-responsive" src="{{ url('/storage/'.$data->gambar) }}" alt="">
+                  </a>
+                </div>
+              </div>
+          @else
+              <div class="col-md-6 product-loop">
+                <div class="product-box box c-black">
+                  <h2 class="title">{{ $data->product_name }}</h2>
+                  <p class="desc">
+                    {{ $data->product_formulation }}
+                  </p>
+                  <div class="links">
+                    <a href="{{ url('/product-detail/'.$data->id) }}">
+                      Selengkapnya ...
+                    </a>
+                  </div>
+                  <a href="{{ url('/product-detail/'.$data->id) }}">
+                    <img class="img-responsive" src="{{ url('/storage/'.$data->gambar) }}" alt="">
+                  </a>
+                </div>
+              </div>
+          @endif 
+      </section> 
+    @endif
+  @endforeach
+  <div class="col-md-12 paging">
+    <ul>
+      <li>
+        <nav class="text-center">
+          <ul class="pagination" role="navigation">
+            {{ $pagination }}
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+        </nav>
+      </li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
 @endsection

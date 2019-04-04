@@ -34,7 +34,7 @@ class ProductController extends Controller
     }
 
     public function kategoriProduk($id) {
-        $product = Product::with(['kelompokProduk'])->where('kategori_id', $id)->paginate(12);
+        $product = Product::with(['kelompokProduk'])->where('kategori_id', $id)->paginate(6);
         $productCategorys = ProductCategory::all();
         $namaKategori = ProductCategory::find($id)->category_name;
         $productGroup = ProductGroup::get();

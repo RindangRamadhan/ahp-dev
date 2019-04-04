@@ -24,7 +24,7 @@ class OurProductController extends Controller
     }
 
     public function kategoriProduk($id) {
-        $product = OurProduct::with(['kelompokProduk'])->where('kategori_id', $id)->paginate(12);
+        $product = OurProduct::with(['kelompokProduk'])->where('kategori_id', $id)->paginate(6);
         $namaKategori = OurProductCategory::find($id)->category_name;
         $productGroup = OurProductGroup::get();
         $productCategorys = ProductCategory::get();

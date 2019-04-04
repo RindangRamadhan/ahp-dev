@@ -8,7 +8,7 @@ $(document).ready(function () {
 });
 /*============================================================================================MatchHeight*/
 $(document).ready(function () {
-    $('.sh', '.box').matchHeight();
+    $('.sh, .box').matchHeight();
 });
 $(".get-image").each(function () {
     var dataImg = $(this).data("image");
