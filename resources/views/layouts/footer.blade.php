@@ -75,7 +75,7 @@
                 <p>created by <a href="#" target="_blank"><i>AHP IT</i></a></p>
             </div>
 
-            <div class="col-md-2 col-sm-3 col-xs-3 x-540-50 get-apps">
+            <div class="col-md-2 col-sm-3 col-xs-6 x-540-50 get-apps center-m">
                 <h2 class="title">SOCIAL MEDIA</h2>
                 <ul class="list-unstyled">
                     <li><a href="https://www.facebook.com/andallhasaprimalampung/" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a></li>
@@ -83,7 +83,7 @@
                     <li><a href="https://www.instagram.com/ahplampung/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a></li>
                 </ul>
             </div>
-            <div class="col-md-2 col-sm-3 col-xs-3 x-540-50 get-apps">
+            <div class="col-md-2 col-sm-3 col-xs-6 x-540-50 get-apps center-m">
                 <h2 class="title">Sitemap</h2>
                 <ul class="list-unstyled">
                     <li> <a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
@@ -95,7 +95,7 @@
                 <h2 class="title">ABOUT US</h2>
                 {!! $tentangKami->deskripsi !!}
             </div>
-
+<div class="clearfix"></div>
             <div class="col-md-12 foot-logo v-x540">
                 <a href="#"><img src="{{ asset('assets/img/logo.png') }}" alt="" class="img-responsive"></a>
                 <p>&copy; 2019 PT ANDALL HASA PRIMA - All rights reserved

@@ -1,4 +1,4 @@
-<nav id="mainNav" class="navbar2 navbar-default navbar-fixed-top affix top-nav-collapse">
+<nav id="mainNav" class="navbar2 navbar-default navbar-fixed-top affix top-nav-collapse nav-inline">
     <div class="container-fluid">
         <div class="navbar-header">
            <button type="button" class="navbar-toggle menu-btn">

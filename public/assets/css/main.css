@@ -78,7 +78,6 @@ body {
 
 #wrapper {
   min-height: 100%;
-  padding-bottom: 40px;
   overflow-x: hidden;
 }
 
@@ -206,5 +205,30 @@ input[type="color"]:focus,
   color: #000;
   z-index: 100;
   font-size: 40px;
+}
+
+.paging {
+  padding: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer .col-sm-12.get-apps {
+    clear: both;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .footer .foot-logo {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0;
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .navbar-brand > img {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

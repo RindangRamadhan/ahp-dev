@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/canvas.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/product-category.css" type="text/css">
+     <link rel="stylesheet" href="../assets/css/footer.css" type="text/css">
 </head>
 <body id="homepage">
   @include('layouts.canvas')

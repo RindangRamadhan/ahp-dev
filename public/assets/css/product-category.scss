@@ -1,6 +1,6 @@
 .product-category {
     padding-top: 60px;
-    padding-bottom: 120px;
+    padding-bottom: 40px;
 
     .s-dark {
         background-color: #000;
@@ -250,5 +250,23 @@
         line-height: 36px;
         color: #757575;
         margin-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product-category .s-product .product-loop .product-box {
+        .desc {
+            font-size: 14px !important;
+        }
+    }
+
+    .s-dark {
+        .desc {
+            font-size: 14px !important;
+        }
+    }
+
+    .product-category .s-dark .links a {
+        font-size: 16px !important;
     }
 }
