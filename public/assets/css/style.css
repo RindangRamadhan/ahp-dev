@@ -5744,7 +5744,7 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 .maps {
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1150px) {
