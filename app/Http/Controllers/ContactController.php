@@ -127,7 +127,7 @@ class ContactController extends Controller
         ], function($message) use ($request) {
             $message->subject($request->c_subject);
             $message->from($request->c_email);
-            $message->to('khoirulgeong123@gmail.com');
+            $message->to(env('MAIL_USERNAME'));
         });
         return back();
     }

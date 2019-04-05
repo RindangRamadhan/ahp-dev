@@ -291,9 +291,9 @@
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
-                                        <p>Hi {{ $nama }}</p>
-                                        <p>Terimakasih telah mengirimkan email :)</p>
-
+                                        <p>Pesan Baru dari :</p>
+                                        <p>Nama : {{ $nama }}</p>
+                                        <p>Email : {{ $email }}</p>
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                             <tr>
@@ -302,11 +302,11 @@
                                                         <tbody>
                                                         <tr>
                                                             <td> <div class="container">
-                                                                    <center><p>Pesanmu Yaitu :</p></center>
+                                                                    <center><p>Isi Pesan :</p></center>
                                                                     <hr>
                                                                     <center><p>{{ $pesan }}</p></center>
                                                                     <hr>
-                                                                    <center><p>Telah Disampaikan! <br> Terimakasih telah menghubungi kami!</p></center>
+                                                                    <center><p>Telah Disampaikan! <br> Terimakasih</p></center>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -338,7 +338,7 @@
                         </tr>
                         <tr>
                             <td class="content-block powered-by">
-                                Powered by <a href="http://medium.com/@kiddy.xyz">Anak IT</a>.
+                                Powered by <a href="">Programmer</a>.
                             </td>
                         </tr>
                     </table>
