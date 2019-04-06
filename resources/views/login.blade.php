@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
 
         <title>PT Andall Hasa Prima</title>
 
@@ -14,6 +14,7 @@
     <div class="container">
         <div id="login" class="login">
             <form action="{{ admin_base_path('auth/login') }}" method="POST">
+            @csrf
                 <div class="login-icon-field">
                     <img src="{{ asset('assets/img/logo.png') }}" alt="" width="100%">
                 </div>
